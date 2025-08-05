@@ -1,3 +1,177 @@
+// Add this at the VERY BEGINNING of your JavaScript file
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Loading screen elements
+    const luxuryLoader = document.getElementById('luxuryLoader');
+    const progressFill = document.getElementById('progressFill');
+    const progressPercentage = document.getElementById('progressPercentage');
+    const loadingText = document.getElementById('loadingText');
+    const subLoadingText = document.getElementById('subLoadingText');
+    
+    // Loading messages in different languages
+    const loadingMessages = [
+        {
+            main: 'Islamic Experience',
+            sub: 'Preparing your spiritual journey...',
+            lang: 'English'
+        },
+        {
+            main: 'تجربة إسلامية',
+            sub: 'نحن نعد رحلتك الروحية...',
+            lang: 'Arabic'
+        },
+        {
+            main: 'اسلامی تجربہ',
+            sub: 'آپ کا روحانی سفر تیار کر رہے ہیں...',
+            lang: 'Urdu'
+        },
+        {
+            main: 'ইসলামিক অভিজ্ঞতা',
+            sub: 'আপনার আধ্যাত্মিক যাত্রা প্রস্তুত করছি...',
+            lang: 'Bengali'
+        },
+        {
+            main: 'इस्लामिक अनुभव',
+            sub: 'आपकी आध्यात्मिक यात्रा तैयार कर रहे हैं...',
+            lang: 'Hindi'
+        }
+    ];
+    
+    let currentProgress = 0;
+    let currentMessageIndex = 0;
+    
+    // Start loading sequence
+    startLoadingSequence();
+    
+    function startLoadingSequence() {
+        // Initial delay
+        setTimeout(() => {
+            simulateLoading();
+            cycleLoadingMessages();
+        }, 500);
+    }
+    
+    // Simulate loading progress
+    function simulateLoading() {
+        const loadingInterval = setInterval(() => {
+            currentProgress += Math.random() * 15 + 5; // Random increment between 5-20
+            
+            if (currentProgress >= 100) {
+                currentProgress = 100;
+                clearInterval(loadingInterval);
+                setTimeout(() => {
+                    completeLoading();
+                }, 800);
+            }
+            
+            updateProgress(currentProgress);
+        }, 200);
+    }
+    
+    // Update progress bar
+    function updateProgress(progress) {
+        progressFill.style.width = progress + '%';
+        progressPercentage.textContent = Math.round(progress) + '%';
+    }
+    
+    // Cycle through loading messages
+    function cycleLoadingMessages() {
+        const messageInterval = setInterval(() => {
+            if (currentProgress >= 100) {
+                clearInterval(messageInterval);
+                return;
+            }
+            
+            currentMessageIndex = (currentMessageIndex + 1) % loadingMessages.length;
+            const message = loadingMessages[currentMessageIndex];
+            
+            // Fade out
+            loadingText.style.opacity = '0';
+            subLoadingText.style.opacity = '0';
+            
+            setTimeout(() => {
+                loadingText.textContent = message.main;
+                subLoadingText.textContent = message.sub;
+                
+                // Fade in
+                loadingText.style.opacity = '1';
+                subLoadingText.style.opacity = '1';
+            }, 300);
+            
+        }, 2000);
+    }
+    
+    // Complete loading and hide loader
+    function completeLoading() {
+        // Final message
+        loadingText.style.opacity = '0';
+        subLoadingText.style.opacity = '0';
+        
+        setTimeout(() => {
+            loadingText.textContent = 'Welcome!';
+            subLoadingText.textContent = 'اهلا وسهلا - أهلاً وسهلاً';
+            loadingText.style.opacity = '1';
+            subLoadingText.style.opacity = '1';
+            
+            setTimeout(() => {
+                hideLoader();
+            }, 1000);
+        }, 300);
+    }
+    
+    // Hide loader with animation
+    function hideLoader() {
+        luxuryLoader.classList.add('fade-out');
+        
+        setTimeout(() => {
+            luxuryLoader.style.display = 'none';
+            
+            // Initialize main website
+            initMainWebsite();
+        }, 800);
+    }
+    
+    // Initialize main website functionality
+    function initMainWebsite() {
+        // Trigger staggered animations for main content
+        const allCards = document.querySelectorAll('.luxury-card, .compact-mood-card');
+        allCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
+            
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+        
+        // Show success notification
+        setTimeout(() => {
+            createLuxuryNotification('🌙 Welcome to your Islamic Experience! ✨');
+        }, 1000);
+    }
+    
+    // Preload important assets while loading
+    function preloadAssets() {
+        const imagesToPreload = [
+            // Add any important images here
+        ];
+        
+        imagesToPreload.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }
+    
+    // Start preloading
+    preloadAssets();
+    
+    // Rest of your existing JavaScript code goes below this...
+});
+
+
+
 // Language translations
 const translations = {
     en: {
@@ -658,4 +832,197 @@ document.addEventListener('DOMContentLoaded', function() {
             }, index * 50);
         });
     }, 500);
+});
+
+
+// Add this to your existing JavaScript
+
+document.addEventListener('DOMContentLoaded', function() {
+    const compactMoodCards = document.querySelectorAll('.compact-mood-card');
+    const moodDetailSection = document.getElementById('moodDetailSection');
+    const moodSection = document.getElementById('moodSection');
+    const backToMoodsBtn = document.getElementById('backToMoods');
+    
+    // Mood data template
+    const moodDataTemplate = {
+        confident: {
+            title: 'Confident',
+            subtitle: 'Building inner strength through faith',
+            icon: 'fas fa-crown',
+            arabic: 'وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ',
+            translation: 'And whoever relies upon Allah - then He is sufficient for him.',
+            reference: 'Quran 65:3',
+            hadith: 'The believer is not one who eats his fill while his neighbor goes hungry.',
+            hadithSource: 'Prophet Muhammad (PBUH), Sahih Bukhari',
+            duaArabic: 'رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي',
+            duaTranslation: 'My Lord, expand for me my breast and ease for me my task.',
+            duaBenefit: 'Recite this dua to gain confidence and ease in difficult situations.',
+            advice: [
+                'Trust in Allah\'s plan and timing',
+                'Remember your past successes',
+                'Seek guidance through prayer',
+                'Surround yourself with positive believers'
+            ],
+            videoTitle: 'Building Confidence Through Faith',
+            videoDescription: 'Learn how Islamic teachings can help build unshakeable confidence...'
+        },
+        // Add more moods as needed - template structure for each mood
+        default: {
+            title: 'Spiritual Journey',
+            subtitle: 'Finding peace through Islamic guidance',
+            icon: 'fas fa-heart',
+            arabic: 'وَاللَّهُ مَعَ الصَّابِرِينَ',
+            translation: 'And Allah is with the patient.',
+            reference: 'Quran 2:249',
+            hadith: 'Amazing is the affair of the believer, verily all of his affair is good.',
+            hadithSource: 'Prophet Muhammad (PBUH), Sahih Muslim',
+            duaArabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
+            duaTranslation: 'O Allah, help me remember You, thank You, and worship You in the best way.',
+            duaBenefit: 'This dua helps in maintaining spiritual connection and gratitude.',
+            advice: [
+                'Maintain regular prayer and dhikr',
+                'Seek knowledge of Islamic teachings',
+                'Practice patience and gratitude',
+                'Connect with the Muslim community'
+            ],
+            videoTitle: 'Islamic Guidance for Life',
+            videoDescription: 'Discover how Islamic principles guide us through life\'s challenges...'
+        }
+    };
+    
+    // Handle mood card clicks
+    compactMoodCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const mood = this.getAttribute('data-feeling');
+            const moodData = moodDataTemplate[mood] || moodDataTemplate.default;
+            
+            // Populate mood detail page
+            populateMoodDetail(moodData);
+            
+            // Show mood detail page
+            showMoodDetail();
+        });
+    });
+    
+    // Back to moods button
+    backToMoodsBtn.addEventListener('click', function() {
+        hideMoodDetail();
+    });
+    
+    // Populate mood detail content
+    function populateMoodDetail(data) {
+        document.getElementById('moodTitle').textContent = data.title;
+        document.getElementById('moodSubtitle').textContent = data.subtitle;
+        document.getElementById('moodIcon').innerHTML = `<i class="${data.icon}"></i>`;
+        
+        document.getElementById('arabicVerse').textContent = data.arabic;
+        document.getElementById('verseTranslation').textContent = data.translation;
+        document.getElementById('verseReference').textContent = data.reference;
+        
+        document.getElementById('hadithText').textContent = data.hadith;
+        document.getElementById('hadithSource').textContent = data.hadithSource;
+        
+        document.getElementById('duaArabic').textContent = data.duaArabic;
+        document.getElementById('duaTranslation').textContent = data.duaTranslation;
+        document.getElementById('duaBenefit').textContent = data.duaBenefit;
+        
+        // Populate advice list
+        const adviceList = document.getElementById('adviceList');
+        adviceList.innerHTML = data.advice.map(advice => `
+            <div class="advice-item">
+                <i class="fas fa-check-circle"></i>
+                <span>${advice}</span>
+            </div>
+        `).join('');
+        
+        document.getElementById('videoTitle').textContent = data.videoTitle;
+        document.getElementById('videoDescription').textContent = data.videoDescription;
+    }
+    
+    // Show mood detail page
+    function showMoodDetail() {
+        moodSection.classList.remove('active');
+        moodDetailSection.classList.add('active');
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Hide mood detail page
+    function hideMoodDetail() {
+        moodDetailSection.classList.remove('active');
+        moodSection.classList.add('active');
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Comment functionality
+    const postCommentBtn = document.getElementById('postComment');
+    const commentInput = document.getElementById('commentInput');
+    const commentsList = document.getElementById('commentsList');
+    
+    postCommentBtn.addEventListener('click', function() {
+        const commentText = commentInput.value.trim();
+        
+        if (commentText) {
+            addComment(commentText);
+            commentInput.value = '';
+            createLuxuryNotification('✨ Your comment has been posted!');
+        } else {
+            createLuxuryNotification('❌ Please write a comment first.');
+        }
+    });
+    
+    // Add comment function
+    function addComment(text) {
+        const newComment = document.createElement('div');
+        newComment.className = 'comment-item';
+        newComment.innerHTML = `
+            <div class="user-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <span class="username">You</span>
+                    <span class="comment-time">Just now</span>
+                </div>
+                <p class="comment-text">${text}</p>
+                <div class="comment-actions">
+                    <button class="like-btn">
+                        <i class="fas fa-heart"></i>
+                        <span>0</span>
+                    </button>
+                    <button class="reply-btn">
+                        <i class="fas fa-reply"></i>
+                        Reply
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        commentsList.insertBefore(newComment, commentsList.firstChild);
+        
+        // Update comment count
+        const commentCount = document.getElementById('commentCount');
+        const currentCount = parseInt(commentCount.textContent.match(/\d+/)[0]);
+        commentCount.textContent = `${currentCount + 1} Comments`;
+    }
+    
+    // Like button functionality
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.like-btn')) {
+            const likeBtn = e.target.closest('.like-btn');
+            const countSpan = likeBtn.querySelector('span');
+            const currentCount = parseInt(countSpan.textContent);
+            
+            if (likeBtn.classList.contains('active')) {
+                likeBtn.classList.remove('active');
+                countSpan.textContent = currentCount - 1;
+            } else {
+                likeBtn.classList.add('active');
+                countSpan.textContent = currentCount + 1;
+            }
+        }
+    });
 });

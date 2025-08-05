@@ -13,6 +13,59 @@
 </head>
 
 <body>
+<!-- Add this RIGHT AFTER opening <body> tag, BEFORE everything else -->
+<div class="luxury-loader" id="luxuryLoader">
+    <div class="loader-container">
+        <!-- Animated Background -->
+        <div class="loader-bg">
+            <div class="floating-star star-1">✦</div>
+            <div class="floating-star star-2">✧</div>
+            <div class="floating-star star-3">✦</div>
+            <div class="floating-star star-4">✧</div>
+            <div class="floating-star star-5">✦</div>
+        </div>
+        
+        <!-- Main Logo/Icon -->
+        <div class="loader-logo">
+            <div class="logo-circle">
+                <i class="fas fa-star-and-crescent"></i>
+            </div>
+            <div class="logo-rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+            </div>
+        </div>
+        
+        <!-- Loading Text -->
+        <div class="loading-text">
+            <h2 class="main-loading-text" id="loadingText">Islamic Pearls</h2>
+            <p class="sub-loading-text" id="subLoadingText">Preparing your spiritual journey...</p>
+        </div>
+        
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-percentage" id="progressPercentage">0%</div>
+        </div>
+        
+        <!-- Loading Dots -->
+        <div class="loading-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        
+        <!-- Islamic Quote -->
+        <div class="islamic-quote">
+            <div class="arabic-quote" id="arabicQuote">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+            <div class="quote-translation" id="quoteTranslation">In the name of Allah, the Most Gracious, the Most Merciful</div>
+        </div>
+    </div>
+</div>
+
     <!-- Luxury Navigation -->
     <nav class="luxury-nav">
         <div class="nav-container">
@@ -101,8 +154,8 @@
                             <div class="feeling-icon">
                                 <i class="fas fa-scroll"></i>
                             </div>
-                            <h3 data-text="prophet-stories">Prophet Stories</h3>
-                            <p data-text="prophet-stories-desc">Learn from the lives of holy messengers</p>
+                            <h3 data-text="prophet-stories">Story Of Prophets</h3>
+                            <p data-text="prophet-stories-desc">All the Prophet stories given below are from the Quran and Hadiths.</p>
                             <div class="card-accent"></div>
                         </div>
                     </div>
@@ -163,6 +216,18 @@
                             </div>
                             <h3 data-text="daily-ayah">Daily Ayah</h3>
                             <p data-text="daily-ayah-desc">Your daily dose of divine wisdom</p>
+                            <div class="card-accent"></div>
+                        </div>
+                    </div>
+
+                     <div class="luxury-card" data-category="quran" data-type="daily">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="feeling-icon">
+                            <i class="fas fa-mosque" style="margin-left: 5px;"></i>
+                        </div>
+                            <h3 data-text="daily-ayah">Prayer Time</h3>
+                            <p data-text="daily-ayah-desc">Pause the world — it's time to connect with the Creator through prayer.</p>
                             <div class="card-accent"></div>
                         </div>
                     </div>
@@ -377,6 +442,251 @@
     </div>
 </div>
 
+<!-- Add this AFTER the moodSection div -->
+<div class="section" id="moodDetailSection">
+    <div class="mood-detail-container">
+        <!-- Back Button -->
+        <button class="back-btn" id="backToMoods">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Moods</span>
+        </button>
+        
+        <!-- Mood Header -->
+        <div class="mood-detail-header">
+            <div class="mood-icon" id="moodIcon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h1 class="mood-title" id="moodTitle">Confident</h1>
+            <p class="mood-subtitle" id="moodSubtitle">Building inner strength through faith</p>
+        </div>
+        
+        <!-- Content Grid -->
+        <div class="mood-content-grid">
+            
+            <!-- Quran Section -->
+            <div class="content-card quran-card">
+                <div class="card-header">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Quran Ayah</h3>
+                </div>
+                <div class="card-content">
+                    <div class="arabic-text" id="arabicVerse">
+                        وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ
+                    </div>
+                    <div class="translation" id="verseTranslation">
+                        "And whoever relies upon Allah - then He is sufficient for him."
+                    </div>
+                    <div class="reference" id="verseReference">
+                        - Quran 65:3
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hadith Section -->
+            <div class="content-card hadith-card">
+                <div class="card-header">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>Hadith</h3>
+                </div>
+                <div class="card-content">
+                    <div class="hadith-text" id="hadithText">
+                        "The believer is not one who eats his fill while his neighbor goes hungry."
+                    </div>
+                    <div class="hadith-source" id="hadithSource">
+                        - Prophet Muhammad (PBUH), Sahih Bukhari
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dua Section -->
+            <div class="content-card dua-card">
+                <div class="card-header">
+                    <i class="fas fa-praying-hands"></i>
+                    <h3>Dua</h3>
+                </div>
+                <div class="card-content">
+                    <div class="arabic-text" id="duaArabic">
+                        رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي
+                    </div>
+                    <div class="translation" id="duaTranslation">
+                        "My Lord, expand for me my breast and ease for me my task."
+                    </div>
+                    <div class="dua-benefit" id="duaBenefit">
+                        Recite this dua to gain confidence and ease in difficult situations.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advice Section -->
+            <div class="content-card advice-card">
+                <div class="card-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Islamic Advice</h3>
+                </div>
+                <div class="card-content">
+                    <div class="advice-list" id="adviceList">
+                        <div class="advice-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Trust in Allah's plan and timing</span>
+                        </div>
+                        <div class="advice-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Remember your past successes</span>
+                        </div>
+                        <div class="advice-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Seek guidance through prayer</span>
+                        </div>
+                        <div class="advice-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Surround yourself with positive believers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- YouTube Video Section -->
+            <div class="content-card video-card">
+                <div class="card-header">
+                    <i class="fab fa-youtube"></i>
+                    <h3>Watch & Learn</h3>
+                </div>
+                <div class="card-content">
+                    <div class="video-placeholder" id="videoContainer">
+                        <div class="video-thumbnail">
+                            <i class="fab fa-youtube"></i>
+                            <p>Video will be loaded here</p>
+                            <span>Duration: 10:30</span>
+                        </div>
+                        <!-- YouTube iframe will be inserted here -->
+                        <iframe 
+                            id="youtubeVideo" 
+                            width="100%" 
+                            height="315" 
+                            src="" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            style="display: none;">
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4 id="videoTitle">Building Confidence Through Faith</h4>
+                        <p id="videoDescription">Learn how Islamic teachings can help build unshakeable confidence...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Comment Section -->
+            <div class="content-card comment-card full-width">
+                <div class="card-header">
+                    <i class="fas fa-comments"></i>
+                    <h3>Share Your Thoughts</h3>
+                    <span class="comment-count" id="commentCount">3 Comments</span>
+                </div>
+                <div class="card-content">
+                    <!-- Comment Form -->
+                    <div class="comment-form">
+                        <div class="user-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="comment-input-area">
+                            <textarea 
+                                id="commentInput" 
+                                placeholder="Share your experience or ask a question..."
+                                rows="3"></textarea>
+                            <div class="comment-actions">
+                                <button class="post-comment-btn" id="postComment">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Post Comment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Comments List -->
+                    <div class="comments-list" id="commentsList">
+                        <div class="comment-item">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <span class="username">Ahmad Ali</span>
+                                    <span class="comment-time">2 hours ago</span>
+                                </div>
+                                <p class="comment-text">This really helped me during a difficult time. JazakAllah khair!</p>
+                                <div class="comment-actions">
+                                    <button class="like-btn">
+                                        <i class="fas fa-heart"></i>
+                                        <span>5</span>
+                                    </button>
+                                    <button class="reply-btn">
+                                        <i class="fas fa-reply"></i>
+                                        Reply
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comment-item">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <span class="username">Fatima Khan</span>
+                                    <span class="comment-time">5 hours ago</span>
+                                </div>
+                                <p class="comment-text">Beautiful explanation. May Allah strengthen us all.</p>
+                                <div class="comment-actions">
+                                    <button class="like-btn">
+                                        <i class="fas fa-heart"></i>
+                                        <span>12</span>
+                                    </button>
+                                    <button class="reply-btn">
+                                        <i class="fas fa-reply"></i>
+                                        Reply
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comment-item">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <span class="username">Omar Ibrahim</span>
+                                    <span class="comment-time">1 day ago</span>
+                                </div>
+                                <p class="comment-text">Subhanallah! The Quran verse really touched my heart.</p>
+                                <div class="comment-actions">
+                                    <button class="like-btn active">
+                                        <i class="fas fa-heart"></i>
+                                        <span>8</span>
+                                    </button>
+                                    <button class="reply-btn">
+                                        <i class="fas fa-reply"></i>
+                                        Reply
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="load-more-btn" id="loadMoreComments">
+                        <i class="fas fa-chevron-down"></i>
+                        Load More Comments
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     </div>
 
     <script src="script.js"></script>
@@ -483,7 +793,7 @@
         <!-- Bottom Section -->
         <div class="footer-bottom">
             <div class="copyright">
-                <p>&copy; 2025 Islamic Experience. All rights reserved.</p>
+                <p>&copy; 2025 Islamic Pearls | All rights reserved | created by Sheikh</p>
                 <p class="inspiration">
                     Inspired by <a href="https://www.islamestic.com" target="_blank" class="credit-link">
                         <i class="fas fa-external-link-alt"></i>
