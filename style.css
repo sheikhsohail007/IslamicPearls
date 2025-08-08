@@ -2126,6 +2126,54 @@ body {
     color: var(--text-light);
 }
 
+/* Add these styles to your existing comment CSS */
+
+.delete-btn {
+    color: #ff6b6b !important;
+    margin-left: 8px;
+}
+
+.delete-btn:hover {
+    color: #ff5252 !important;
+    background: rgba(255, 107, 107, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.comment-item.new-comment {
+    animation: slideInComment 0.5s ease;
+    border-left: 3px solid var(--primary-gold);
+    padding-left: 16px;
+    margin-left: -16px;
+}
+
+@keyframes slideInComment {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.user-name-prompt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, var(--dark-luxury), var(--deep-purple));
+    border: 2px solid var(--primary-gold);
+    border-radius: 16px;
+    padding: 32px;
+    color: var(--text-light);
+    text-align: center;
+    z-index: 10000;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .mood-content-grid {
@@ -2154,3 +2202,87 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* 👇 CSS File के अंत में ADD करें 👇 */
+
+/* User Setup Modal */
+.user-setup-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, var(--dark-luxury), var(--deep-purple));
+    border: 2px solid var(--primary-gold);
+    border-radius: 16px;
+    padding: 32px;
+    color: var(--text-light);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    margin-bottom: 20px;
+}
+
+.modal-header i {
+    font-size: 3rem;
+    color: var(--primary-gold);
+    margin-bottom: 12px;
+}
+
+.modal-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+.modal-body p {
+    margin-bottom: 16px;
+    color: var(--text-muted);
+}
+
+#userNameInput {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+#userNameInput:focus {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.modal-btn {
+    background: linear-gradient(135deg, var(--primary-gold), #B8860B);
+    color: var(--dark-luxury);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+}
+
+/* 👆 यहाँ तक ADD करें 👆 */
