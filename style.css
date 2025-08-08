@@ -2285,4 +2285,302 @@ body {
     box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
 }
 
-/* 👆 यहाँ तक ADD करें 👆 */
+
+/* Add this to your existing CSS file */
+
+/* Prophets Section Styles */
+#prophetsSection {
+    display: none;
+    padding: 0;
+}
+
+#prophetsSection.active {
+    display: block;
+}
+
+/* Compact Prophets Grid */
+.compact-prophets-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.compact-prophet-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 20px 16px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 2px solid transparent;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.compact-prophet-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--card-color, #f8f9fa);
+    opacity: 0.8;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.compact-prophet-card span {
+    position: relative;
+    z-index: 2;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2d3748;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.compact-prophet-card:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: rgba(212, 175, 55, 0.5);
+}
+
+.compact-prophet-card:hover::before {
+    opacity: 1;
+}
+
+.compact-prophet-card:hover span {
+    color: #1a1a2e;
+    font-weight: 700;
+    transform: scale(1.1);
+}
+
+.compact-prophet-card.active {
+    transform: translateY(-6px) scale(1.08);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.3);
+    border-color: var(--primary-gold);
+}
+
+.compact-prophet-card.active::before {
+    opacity: 1;
+    filter: brightness(1.1);
+}
+
+.compact-prophet-card.active span {
+    color: #1a1a2e;
+    font-weight: 700;
+    transform: scale(1.15);
+}
+
+/* Individual Prophet Card Colors */
+.compact-prophet-card[data-prophet="muhammad"] { --card-color: #00B04F; }
+.compact-prophet-card[data-prophet="ibrahim"] { --card-color: #FFD700; }
+.compact-prophet-card[data-prophet="musa"] { --card-color: #4169E1; }
+.compact-prophet-card[data-prophet="isa"] { --card-color: #87CEEB; }
+.compact-prophet-card[data-prophet="nuh"] { --card-color: #20B2AA; }
+.compact-prophet-card[data-prophet="adam"] { --card-color: #DEB887; }
+.compact-prophet-card[data-prophet="yusuf"] { --card-color: #FF6347; }
+.compact-prophet-card[data-prophet="dawud"] { --card-color: #9370DB; }
+.compact-prophet-card[data-prophet="sulaiman"] { --card-color: #32CD32; }
+.compact-prophet-card[data-prophet="yunus"] { --card-color: #FF1493; }
+.compact-prophet-card[data-prophet="idris"] { --card-color: #8FBC8F; }
+.compact-prophet-card[data-prophet="ismail"] { --card-color: #F0E68C; }
+.compact-prophet-card[data-prophet="ishaq"] { --card-color: #DDA0DD; }
+.compact-prophet-card[data-prophet="yaqub"] { --card-color: #98FB98; }
+.compact-prophet-card[data-prophet="lut"] { --card-color: #F5DEB3; }
+.compact-prophet-card[data-prophet="harun"] { --card-color: #FFB6C1; }
+.compact-prophet-card[data-prophet="zakariyya"] { --card-color: #AFEEEE; }
+.compact-prophet-card[data-prophet="yahya"] { --card-color: #D3D3D3; }
+.compact-prophet-card[data-prophet="ilyas"] { --card-color: #FFA07A; }
+.compact-prophet-card[data-prophet="alyasa"] { --card-color: #F0F8FF; }
+.compact-prophet-card[data-prophet="hud"] { --card-color: #E6E6FA; }
+.compact-prophet-card[data-prophet="saleh"] { --card-color: #FFEFD5; }
+.compact-prophet-card[data-prophet="shuayb"] { --card-color: #FFE4E1; }
+.compact-prophet-card[data-prophet="ayub"] { --card-color: #F5F5DC; }
+.compact-prophet-card[data-prophet="dhulkifl"] { --card-color: #E0FFFF; }
+
+/* Prophet Detail Page Styles */
+#prophetDetailSection {
+    display: none;
+    padding: 0;
+}
+
+#prophetDetailSection.active {
+    display: block;
+}
+
+.prophet-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 32px;
+    min-height: calc(100vh - var(--nav-height));
+}
+
+.prophet-detail-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.prophet-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, var(--primary-gold), var(--accent-teal));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--dark-luxury);
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+}
+
+.prophet-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--primary-gold), var(--primary-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.prophet-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.prophet-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* Story Card Styles */
+.story-text {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Timeline Styles */
+.timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-gold);
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: var(--primary-gold);
+    min-width: 80px;
+}
+
+.timeline-event {
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* Lessons Styles */
+.lessons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.lesson-item:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.lesson-item i {
+    color: var(--primary-gold);
+    font-size: 1rem;
+}
+
+.lesson-item span {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Mobile Responsive for Prophets */
+@media (max-width: 768px) {
+    .compact-prophets-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    
+    .compact-prophet-card {
+        padding: 16px 12px;
+        min-height: 70px;
+    }
+    
+    .compact-prophet-card span {
+        font-size: 0.8rem;
+    }
+    
+    .prophet-content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .prophet-detail-container {
+        padding: 20px 16px;
+    }
+    
+    .prophet-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .compact-prophets-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .compact-prophet-card {
+        padding: 14px 10px;
+        min-height: 60px;
+    }
+    
+    .compact-prophet-card span {
+        font-size: 0.75rem;
+    }
+}
+

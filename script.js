@@ -2099,3 +2099,229 @@ function initializeDefaultComments() {
         localStorage.setItem('islamicExperienceComments', JSON.stringify(defaultComments));
     }
 }
+
+
+// Add this to your existing JavaScript file
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Prophet elements
+    const prophetsSection = document.getElementById('prophetsSection');
+    const prophetDetailSection = document.getElementById('prophetDetailSection');
+    const homeSection = document.getElementById('homeSection');
+    const backToHomeBtn = document.getElementById('backToHome');
+    const backToProphetsBtn = document.getElementById('backToProphets');
+    const prophetCards = document.querySelectorAll('.compact-prophet-card');
+    
+    // Home card click - Story of Prophets
+    const storyOfProphetsCard = document.querySelector('[data-category="prophets"][data-type="stories"]');
+    if (storyOfProphetsCard) {
+        storyOfProphetsCard.addEventListener('click', function() {
+            showProphetsSection();
+        });
+    }
+    
+    // Back navigation buttons
+    backToHomeBtn.addEventListener('click', function() {
+        hideProphetsSection();
+    });
+    
+    backToProphetsBtn.addEventListener('click', function() {
+        hideProphetDetail();
+    });
+    
+    // Prophet card clicks
+    prophetCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const prophet = this.getAttribute('data-prophet');
+            showProphetDetail(prophet);
+        });
+    });
+    
+    // Show prophets section
+    function showProphetsSection() {
+        homeSection.classList.remove('active');
+        prophetsSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Hide prophets section
+    function hideProphetsSection() {
+        prophetsSection.classList.remove('active');
+        homeSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Show prophet detail
+    function showProphetDetail(prophetName) {
+        const prophetData = prophetDataTemplate[prophetName] || prophetDataTemplate.default;
+        populateProphetDetail(prophetData);
+        
+        prophetsSection.classList.remove('active');
+        prophetDetailSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Hide prophet detail
+    function hideProphetDetail() {
+        prophetDetailSection.classList.remove('active');
+        prophetsSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Prophet data template (sample for 5 popular prophets)
+    const prophetDataTemplate = {
+        muhammad: {
+            title: 'Muhammad (SAW)',
+            subtitle: 'The Final Messenger of Allah',
+            icon: 'fas fa-moon',
+            story: 'Prophet Muhammad (SAW) was born in Mecca in 570 CE. He was known as Al-Amin (the trustworthy) even before his prophethood. At age 40, he received the first revelation from Angel Jibreel in the Cave of Hira. He spent 23 years spreading the message of Islam, facing persecution in Mecca and later migrating to Medina. He united the Arabian tribes under Islam and established a just society. He passed away in 632 CE, leaving behind the complete message of Islam.',
+            arabic: 'وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ',
+            translation: 'And We sent you not, [O Muhammad], except as a mercy to the worlds.',
+            reference: 'Quran 21:107',
+            lessons: [
+                'Honesty and trustworthiness in all dealings',
+                'Patience in the face of persecution',
+                'Compassion towards all of creation',
+                'Justice and equality for all people',
+                'The importance of seeking knowledge'
+            ],
+            timeline: [
+                { date: '570 CE', event: 'Born in Mecca during the Year of the Elephant' },
+                { date: '610 CE', event: 'First revelation received in Cave of Hira' },
+                { date: '622 CE', event: 'Migration (Hijra) to Medina' },
+                { date: '630 CE', event: 'Conquest of Mecca and forgiveness of enemies' },
+                { date: '632 CE', event: 'Farewell pilgrimage and passing away' }
+            ],
+            videoTitle: 'The Life of Prophet Muhammad (SAW)',
+            videoDescription: 'Complete story of the final messenger of Allah.',
+            videoUrl: 'https://www.youtube.com/embed/MUHAMMAD_VIDEO_ID'
+        },
+        
+        ibrahim: {
+            title: 'Ibrahim (AS)',
+            subtitle: 'Khalil Allah - The Friend of Allah',
+            icon: 'fas fa-kaaba',
+            story: 'Prophet Ibrahim (AS) is known as the father of monotheism. Born in Babylon, he questioned his people\'s idol worship from a young age. He famously destroyed the idols in his father\'s shop, demonstrating that they had no power. He was thrown into a fire by King Nimrod but Allah made it cool and safe for him. He migrated to various lands, spreading the message of Tawheed. Along with his son Ismail, he built the Kaaba in Mecca. His willingness to sacrifice his son showed his complete submission to Allah.',
+            arabic: 'وَاتَّخَذَ اللَّهُ إِبْرَاهِيمَ خَلِيلًا',
+            translation: 'And Allah took Ibrahim as an intimate friend.',
+            reference: 'Quran 4:125',
+            lessons: [
+                'Unwavering faith in Allah despite opposition',
+                'Courage to stand against falsehood',
+                'Complete submission to Allah\'s commands',
+                'Hospitality and kindness to guests',
+                'The importance of building places of worship'
+            ],
+            timeline: [
+                { date: '~2000 BCE', event: 'Born in Babylon (modern-day Iraq)' },
+                { date: 'Youth', event: 'Destroyed idols and questioned polytheism' },
+                { date: 'Early Life', event: 'Survived being thrown into fire by Nimrod' },
+                { date: 'Adulthood', event: 'Built the Kaaba with son Ismail in Mecca' },
+                { date: 'Later Life', event: 'Prepared to sacrifice Ismail in obedience to Allah' }
+            ],
+            videoTitle: 'The Story of Prophet Ibrahim (AS)',
+            videoDescription: 'The life and trials of Allah\'s beloved friend.',
+            videoUrl: 'https://www.youtube.com/embed/IBRAHIM_VIDEO_ID'
+        },
+        
+        musa: {
+            title: 'Musa (AS)',
+            subtitle: 'Kalim Allah - The One Who Spoke to Allah',
+            icon: 'fas fa-tablets',
+            story: 'Prophet Musa (AS) was born during the time when Pharaoh was killing all newborn Hebrew boys. By Allah\'s plan, he was raised in Pharaoh\'s palace. After accidentally killing an Egyptian, he fled to Midian where he married and worked as a shepherd. Allah called him at Mount Sinai and gave him the mission to free the Israelites from slavery. He performed many miracles including turning his staff into a snake and parting the Red Sea. He received the Torah and led his people through 40 years in the desert.',
+            arabic: 'وَكَلَّمَ اللَّهُ مُوسَىٰ تَكْلِيمًا',
+            translation: 'And Allah spoke to Musa with [direct] speech.',
+            reference: 'Quran 4:164',
+            lessons: [
+                'Allah can turn apparent weakness into strength',
+                'Standing up against oppression and tyranny',
+                'Patience with difficult people and situations',
+                'The importance of following Allah\'s guidance',
+                'Trust in Allah during seemingly impossible situations'
+            ],
+            timeline: [
+                { date: '~1400 BCE', event: 'Born in Egypt during Hebrew persecution' },
+                { date: 'Infancy', event: 'Saved from Pharaoh\'s decree, raised in palace' },
+                { date: 'Adulthood', event: 'Fled to Midian after killing Egyptian taskmaster' },
+                { date: 'Age 40', event: 'Received prophethood at Mount Sinai' },
+                { date: 'Later', event: 'Led Israelites out of Egypt and through desert' }
+            ],
+            videoTitle: 'The Story of Prophet Musa (AS)',
+            videoDescription: 'From palace to prophethood - the liberation of Israelites.',
+            videoUrl: 'https://www.youtube.com/embed/MUSA_VIDEO_ID'
+        },
+        
+        // Add more prophets as needed...
+        
+        default: {
+            title: 'Prophet of Allah',
+            subtitle: 'Messenger and Guide',
+            icon: 'fas fa-user',
+            story: 'This prophet was chosen by Allah to guide his people to the straight path. Like all prophets, he called people to worship Allah alone and live righteously.',
+            arabic: 'وَمَا نُرْسِلُ الْمُرْسَلِينَ إِلَّا مُبَشِّرِينَ وَمُنذِرِينَ',
+            translation: 'And We send not the messengers except as bringers of good tidings and warners.',
+            reference: 'Quran 18:56',
+            lessons: [
+                'Worship Allah alone without partners',
+                'Live a life of righteousness and justice',
+                'Be patient in calling others to truth',
+                'Trust in Allah\'s wisdom and timing'
+            ],
+            timeline: [
+                { date: 'Birth', event: 'Born into a community needing guidance' },
+                { date: 'Prophethood', event: 'Received message from Allah' },
+                { date: 'Mission', event: 'Called people to worship Allah alone' },
+                { date: 'Legacy', event: 'Left behind lessons for future generations' }
+            ],
+            videoTitle: 'Stories of Prophets in Islam',
+            videoDescription: 'Learn from the lives of Allah\'s chosen messengers.',
+            videoUrl: 'https://www.youtube.com/embed/DEFAULT_PROPHET_VIDEO_ID'
+        }
+    };
+    
+    // Populate prophet detail page
+    function populateProphetDetail(data) {
+        document.getElementById('prophetTitle').textContent = data.title;
+        document.getElementById('prophetSubtitle').textContent = data.subtitle;
+        document.getElementById('prophetIcon').innerHTML = `<i class="${data.icon}"></i>`;
+        
+        document.getElementById('prophetStory').textContent = data.story;
+        document.getElementById('prophetArabic').textContent = data.arabic;
+        document.getElementById('prophetTranslation').textContent = data.translation;
+        document.getElementById('prophetReference').textContent = '- ' + data.reference;
+        
+        // Populate lessons
+        const lessonsList = document.getElementById('prophetLessons');
+        lessonsList.innerHTML = data.lessons.map(lesson => `
+            <div class="lesson-item">
+                <i class="fas fa-check-circle"></i>
+                <span>${lesson}</span>
+            </div>
+        `).join('');
+        
+        // Populate timeline
+        const timelineList = document.getElementById('prophetTimeline');
+        timelineList.innerHTML = data.timeline.map(item => `
+            <div class="timeline-item">
+                <div class="timeline-date">${item.date}</div>
+                <div class="timeline-event">${item.event}</div>
+            </div>
+        `).join('');
+        
+        document.getElementById('prophetVideoTitle').textContent = data.videoTitle;
+        document.getElementById('prophetVideoDescription').textContent = data.videoDescription;
+        
+        // Handle video URL
+        const youtubeIframe = document.getElementById('prophetYoutubeVideo');
+        const videoThumbnail = document.querySelector('#prophetVideoContainer .video-thumbnail');
+        
+        if (data.videoUrl) {
+            youtubeIframe.src = data.videoUrl;
+            youtubeIframe.style.display = 'block';
+            videoThumbnail.style.display = 'none';
+        } else {
+            youtubeIframe.style.display = 'none';
+            videoThumbnail.style.display = 'flex';
+        }
+    }
+});
