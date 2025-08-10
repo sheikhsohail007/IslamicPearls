@@ -5011,425 +5011,425 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Add these 6 prayers to your existing salahDataTemplate object:
 
-hajat: {
-    title: {
-        arabic: 'صلاة الحاجة',
-        english: 'Salatul Hajat',
-        hindi: 'हाजत की नमाज़',
-        bengali: 'হাজাতের নামাজ'
-    },
-    subtitle: {
-        arabic: 'صلاة الحاجة - ركعتان',
-        english: 'The Prayer of Need - 2 Rakat',
-        hindi: 'आवश्यकता की नमाज़ - 2 रकात',
-        bengali: 'প্রয়োজনের নামাজ - ২ রাকাত'
-    },
-    description: {
-        arabic: 'صلاة الحاجة سنة مستحبة تُصلى عند الحاجة إلى شيء من أمور الدنيا أو الآخرة. يدعو فيها المسلم ربه ويطلب منه قضاء حاجته وتفريج كربه.',
-        english: 'Salatul Hajat is a recommended Sunnah prayer performed when in need of something from worldly or religious matters. The Muslim supplicates to Allah and asks for fulfillment of needs and relief from distress[23][24].',
-        hindi: 'सलातुल हाजत एक मुस्तहब सुन्नत नमाज़ है जो दुनियावी या धार्मिक मामलों में किसी चीज़ की ज़रूरत के समय पढ़ी जाती है। इसमें मुसलमान अपने रब से दुआ करता है और अपनी ज़रूरत पूरी करने की प्रार्थना करता है।',
-        bengali: 'সালাতুল হাজাত একটি মুস্তাহাব সুন্নাত নামাজ যা পার্থিব বা ধর্মীয় বিষয়ে কোনো প্রয়োজনের সময় পড়া হয়। এতে মুসলিম আল্লাহর কাছে দোয়া করে এবং প্রয়োজন পূরণের জন্য প্রার্থনা করে।'
-    },
-    method: {
-        arabic: '1. الوضوء الكامل والنية لصلاة الحاجة\n2. صلاة ركعتين بالفاتحة وسورة\n3. التسليم من الصلاة\n4. الصلاة على النبي صلى الله عليه وسلم\n5. قراءة دعاء الحاجة\n6. الدعاء بما يريد من خير الدنيا والآخرة',
-        english: '1. Perform complete Wudu and make intention for Hajat prayer[24]\n2. Pray 2 rakats with Al-Fatiha and another Surah\n3. Give Salam to complete the prayer\n4. Send blessings upon Prophet Muhammad (PBUH)[24]\n5. Recite the specific Hajat dua\n6. Make personal supplications for worldly and religious needs',
-        hindi: '1. पूरा वुज़ू करें और हाजत की नमाज़ की नीयत करें\n2. फ़ातिहा और दूसरी सूरह के साथ 2 रकात पढ़ें\n3. सलाम फेरकर नमाज़ पूरी करें\n4. नबी صلى الله عليه وسلم पर दरूद भेजें\n5. हाजत की खास दुआ पढ़ें\n6. दुनिया और आख़िरत की भलाई के लिए निजी दुआ करें',
-        bengali: '1. সম্পূর্ণ ওযু করুন ও হাজাত নামাজের নিয়ত করুন\n2. ফাতিহা ও অন্য সূরা দিয়ে ২ রাকাত পড়ুন\n3. সালাম ফিরিয়ে নামাজ সম্পূর্ণ করুন\n4. নবী صلى الله عليه وسلم এর ওপর দরূদ পাঠান\n5. হাজাতের বিশেষ দোয়া পড়ুন\n6. দুনিয়া ও আখেরাতের কল্যাণের জন্য ব্যক্তিগত দোয়া করুন'
-    },
-    duas: [
-        {
-            arabic: 'لَا إِلَٰهَ إِلَّا اللَّهُ الْحَلِيمُ الْكَرِيمُ سُبْحَانَ اللَّهِ رَبِّ الْعَرْشِ الْعَظِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
-            transliteration: 'La ilaha illa Allah al-Haleem al-Kareem, Subhan Allah Rabbi\'l-\'arsh al-\'azeem, al-hamdu lillahi Rabbi\'l-\'alameen',
-            translation: {
-                english: 'There is no god but Allah, the Forbearing, the Generous. Glory be to Allah, Lord of the Mighty Throne. Praise be to Allah, Lord of the worlds[24]',
-                hindi: 'अल्लाह के सिवा कोई माबूद नहीं जो सबर वाला और करीम है। अल्लाह पाक है जो अर्श-ए-अज़ीम का रब है। सारी तारीफ़ अल्लाह के लिए है जो आलमों का रब है',
-                bengali: 'আল্লাহ ছাড়া কোনো ইলাহ নেই যিনি ধৈর্যশীল ও দানশীল। আল্লাহ পবিত্র যিনি মহান আরশের প্রভু। সমস্ত প্রশংসা আল্লাহর যিনি জগতসমূহের প্রতিপালক'
+        hajat: {
+            title: {
+                arabic: 'صلاة الحاجة',
+                english: 'Salatul Hajat',
+                hindi: 'हाजत की नमाज़',
+                bengali: 'হাজাতের নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة الحاجة - ركعتان',
+                english: 'The Prayer of Need - 2 Rakat',
+                hindi: 'आवश्यकता की नमाज़ - 2 रकात',
+                bengali: 'প্রয়োজনের নামাজ - ২ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة الحاجة سنة مستحبة تُصلى عند الحاجة إلى شيء من أمور الدنيا أو الآخرة. يدعو فيها المسلم ربه ويطلب منه قضاء حاجته وتفريج كربه.',
+                english: 'Salatul Hajat is a recommended Sunnah prayer performed when in need of something from worldly or religious matters. The Muslim supplicates to Allah and asks for fulfillment of needs and relief from distress[23][24].',
+                hindi: 'सलातुल हाजत एक मुस्तहब सुन्नत नमाज़ है जो दुनियावी या धार्मिक मामलों में किसी चीज़ की ज़रूरत के समय पढ़ी जाती है। इसमें मुसलमान अपने रब से दुआ करता है और अपनी ज़रूरत पूरी करने की प्रार्थना करता है।',
+                bengali: 'সালাতুল হাজাত একটি মুস্তাহাব সুন্নাত নামাজ যা পার্থিব বা ধর্মীয় বিষয়ে কোনো প্রয়োজনের সময় পড়া হয়। এতে মুসলিম আল্লাহর কাছে দোয়া করে এবং প্রয়োজন পূরণের জন্য প্রার্থনা করে।'
+            },
+            method: {
+                arabic: '1. الوضوء الكامل والنية لصلاة الحاجة\n2. صلاة ركعتين بالفاتحة وسورة\n3. التسليم من الصلاة\n4. الصلاة على النبي صلى الله عليه وسلم\n5. قراءة دعاء الحاجة\n6. الدعاء بما يريد من خير الدنيا والآخرة',
+                english: '1. Perform complete Wudu and make intention for Hajat prayer[24]\n2. Pray 2 rakats with Al-Fatiha and another Surah\n3. Give Salam to complete the prayer\n4. Send blessings upon Prophet Muhammad (PBUH)[24]\n5. Recite the specific Hajat dua\n6. Make personal supplications for worldly and religious needs',
+                hindi: '1. पूरा वुज़ू करें और हाजत की नमाज़ की नीयत करें\n2. फ़ातिहा और दूसरी सूरह के साथ 2 रकात पढ़ें\n3. सलाम फेरकर नमाज़ पूरी करें\n4. नबी صلى الله عليه وسلم पर दरूद भेजें\n5. हाजत की खास दुआ पढ़ें\n6. दुनिया और आख़िरत की भलाई के लिए निजी दुआ करें',
+                bengali: '1. সম্পূর্ণ ওযু করুন ও হাজাত নামাজের নিয়ত করুন\n2. ফাতিহা ও অন্য সূরা দিয়ে ২ রাকাত পড়ুন\n3. সালাম ফিরিয়ে নামাজ সম্পূর্ণ করুন\n4. নবী صلى الله عليه وسلم এর ওপর দরূদ পাঠান\n5. হাজাতের বিশেষ দোয়া পড়ুন\n6. দুনিয়া ও আখেরাতের কল্যাণের জন্য ব্যক্তিগত দোয়া করুন'
+            },
+            duas: [
+                {
+                    arabic: 'لَا إِلَٰهَ إِلَّا اللَّهُ الْحَلِيمُ الْكَرِيمُ سُبْحَانَ اللَّهِ رَبِّ الْعَرْشِ الْعَظِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+                    transliteration: 'La ilaha illa Allah al-Haleem al-Kareem, Subhan Allah Rabbi\'l-\'arsh al-\'azeem, al-hamdu lillahi Rabbi\'l-\'alameen',
+                    translation: {
+                        english: 'There is no god but Allah, the Forbearing, the Generous. Glory be to Allah, Lord of the Mighty Throne. Praise be to Allah, Lord of the worlds[24]',
+                        hindi: 'अल्लाह के सिवा कोई माबूद नहीं जो सबर वाला और करीम है। अल्लाह पाक है जो अर्श-ए-अज़ीम का रब है। सारी तारीफ़ अल्लाह के लिए है जो आलमों का रब है',
+                        bengali: 'আল্লাহ ছাড়া কোনো ইলাহ নেই যিনি ধৈর্যশীল ও দানশীল। আল্লাহ পবিত্র যিনি মহান আরশের প্রভু। সমস্ত প্রশংসা আল্লাহর যিনি জগতসমূহের প্রতিপালক'
+                    }
+                },
+                {
+                    arabic: 'أَسْأَلُكَ مِنْ فَضْلِكَ وَرَحْمَتِكَ فَإِنَّهُ لَا يَمْلِكُهَا إِلَّا أَنْتَ',
+                    transliteration: 'As\'aluka min fadlika wa rahmatika fa\'innahu la yamlikuha illa ant',
+                    translation: {
+                        english: 'I ask You of Your favor and mercy, for indeed no one possesses them except You[23]',
+                        hindi: 'मैं तुझसे तेरे फ़ज़्ल और रहमत की दरख्वास्त करता हूं क्योंकि तेरे सिवा किसी के पास यह नहीं है',
+                        bengali: 'আমি তোমার অনুগ্রহ ও রহমত প্রার্থনা করি, কারণ তুমি ছাড়া কারো কাছে এগুলো নেই'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Fatiha',
+                    arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+                    translation: {
+                        english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, Lord of all the worlds...',
+                        hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो सभी जगतों का पालनहार है...',
+                        bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সকল জগতের প্রতিপালক...'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ',
+                    transliteration: 'Allahumma salli ala Muhammadin wa ala ali Muhammad',
+                    translation: {
+                        english: 'O Allah, send blessings upon Muhammad and upon the family of Muhammad',
+                        hindi: 'हे अल्लाह! मुहम्मद पर और मुहम्मद के परिवार पर रहमत भेज',
+                        bengali: 'হে আল্লাহ! মুহাম্মদের উপর এবং মুহাম্মদের পরিবারের উপর রহমত পাঠান'
+                    },
+                    count: '3 times'
+                }
+            ],
+            benefits: {
+                arabic: ['إجابة الدعوات', 'قضاء الحوائج', 'تفريج الكروب', 'راحة القلب'],
+                english: ['Acceptance of supplications[23]', 'Fulfillment of needs[24]', 'Relief from distress', 'Peace of heart'],
+                hindi: ['दुआओं की स्वीकृति', 'ज़रूरतों की पूर्ति', 'परेशानियों से राहत', 'दिल की शांति'],
+                bengali: ['দোয়া কবুল', 'প্রয়োজন পূরণ', 'সমস্যা থেকে মুক্তি', 'মানসিক শান্তি']
             }
         },
-        {
-            arabic: 'أَسْأَلُكَ مِنْ فَضْلِكَ وَرَحْمَتِكَ فَإِنَّهُ لَا يَمْلِكُهَا إِلَّا أَنْتَ',
-            transliteration: 'As\'aluka min fadlika wa rahmatika fa\'innahu la yamlikuha illa ant',
-            translation: {
-                english: 'I ask You of Your favor and mercy, for indeed no one possesses them except You[23]',
-                hindi: 'मैं तुझसे तेरे फ़ज़्ल और रहमत की दरख्वास्त करता हूं क्योंकि तेरे सिवा किसी के पास यह नहीं है',
-                bengali: 'আমি তোমার অনুগ্রহ ও রহমত প্রার্থনা করি, কারণ তুমি ছাড়া কারো কাছে এগুলো নেই'
-            }
-        }
-    ],
-    surahs: [
-        {
-            name: 'Al-Fatiha',
-            arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
-            translation: {
-                english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, Lord of all the worlds...',
-                hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो सभी जगतों का पालनहार है...',
-                bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সকল জগতের প্রতিপালক...'
-            }
-        }
-    ],
-    tasbih: [
-        {
-            arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ',
-            transliteration: 'Allahumma salli ala Muhammadin wa ala ali Muhammad',
-            translation: {
-                english: 'O Allah, send blessings upon Muhammad and upon the family of Muhammad',
-                hindi: 'हे अल्लाह! मुहम्मद पर और मुहम्मद के परिवार पर रहमत भेज',
-                bengali: 'হে আল্লাহ! মুহাম্মদের উপর এবং মুহাম্মদের পরিবারের উপর রহমত পাঠান'
-            },
-            count: '3 times'
-        }
-    ],
-    benefits: {
-        arabic: ['إجابة الدعوات', 'قضاء الحوائج', 'تفريج الكروب', 'راحة القلب'],
-        english: ['Acceptance of supplications[23]', 'Fulfillment of needs[24]', 'Relief from distress', 'Peace of heart'],
-        hindi: ['दुआओं की स्वीकृति', 'ज़रूरतों की पूर्ति', 'परेशानियों से राहत', 'दिल की शांति'],
-        bengali: ['দোয়া কবুল', 'প্রয়োজন পূরণ', 'সমস্যা থেকে মুক্তি', 'মানসিক শান্তি']
-    }
-},
 
-tawbah: {
-    title: {
-        arabic: 'صلاة التوبة',
-        english: 'Salatul Tawbah',
-        hindi: 'तौबा की नमाज़',
-        bengali: 'তওবার নামাজ'
-    },
-    subtitle: {
-        arabic: 'صلاة التوبة - ركعتان',
-        english: 'The Prayer of Repentance - 2 Rakat',
-        hindi: 'पश्चाताप की नमाज़ - 2 रकात',
-        bengali: 'অনুতাপের নামাজ - ২ রাকাত'
-    },
-    description: {
-        arabic: 'صلاة التوبة سنة مشروعة تُصلى عند التوبة من أي ذنب صغير أو كبير. يصليها المسلم ندماً على ما فعل وطلباً للمغفرة من الله تعالى.',
-        english: 'Salatul Tawbah is a legislated Sunnah prayer performed when repenting from any sin, whether major or minor. Muslims pray it in regret for their actions and seeking Allah\'s forgiveness[25][31].',
-        hindi: 'सलातुल तौबा एक मशरू सुन्नत नमाज़ है जो किसी भी छोटे या बड़े गुनाह से तौबा करते समय पढ़ी जाती है। मुसलमान इसे अपने कार्यों पर पछतावे और अल्लाह की माफी की तलब में पढ़ता है।',
-        bengali: 'সালাতুল তওবা একটি বৈধ সুন্নাত নামাজ যা যেকোনো ছোট বা বড় গুনাহ থেকে তওবা করার সময় পড়া হয়। মুসলিমরা নিজেদের কর্মের জন্য অনুশোচনা ও আল্লাহর ক্ষমা প্রার্থনায় এটি পড়ে।'
-    },
-    method: {
-        arabic: '1. الوضوء الكامل بعد ارتكاب الذنب\n2. النية للتوبة وصلاة ركعتين\n3. قراءة الفاتحة وسورة بخشوع\n4. التسليم من الصلاة\n5. الاستغفار والتوبة النصوح\n6. العزم على عدم العودة للذنب',
-        english: '1. Perform complete Wudu after committing the sin\n2. Make intention for repentance and pray 2 rakats[31]\n3. Recite Al-Fatiha and Surah with humility\n4. Complete prayer with Salam\n5. Seek forgiveness and sincere repentance[25]\n6. Resolve not to return to the sin',
-        hindi: '1. गुनाह करने के बाद पूरा वुज़ू करें\n2. तौबा की नीयत करके 2 रकात पढ़ें\n3. विनम्रता के साथ फ़ातिहा और सूरह पढ़ें\n4. सलाम के साथ नमाज़ पूरी करें\n5. इस्तिग़फ़ार और सच्ची तौबा करें\n6. गुनाह की तरफ़ वापस न जाने का इरादा करें',
-        bengali: '1. গুনাহ করার পর সম্পূর্ণ ওযু করুন\n2. তওবার নিয়ত করে ২ রাকাত পড়ুন\n3. বিনয়ের সাথে ফাতিহা ও সূরা পড়ুন\n4. সালামের সাথে নামাজ সম্পূর্ণ করুন\n5. ইস্তেগফার ও সত্যিকারের তওবা করুন\n6. গুনাহের দিকে ফিরে না যাওয়ার সংকল্প করুন'
-    },
-    duas: [
-        {
-            arabic: 'اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ وَارْحَمْنِي إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ',
-            transliteration: 'Allahumma inni zalamtu nafsi zulman kathiran wa la yaghfiru\'dh-dhunuba illa ant, faghfir li maghfiratan min \'indika warhamni innaka anta\'l-Ghafur ar-Rahim',
-            translation: {
-                english: 'O Allah, indeed I have wronged myself with great injustice. And no one can forgive sins except You. So forgive me with forgiveness from Your side and have mercy on me. You are indeed Oft-Forgiving, Most Merciful[25]',
-                hindi: 'हे अल्लाह! मैंने अपने नफ़्स पर बहुत ज़ुल्म किया है और तेरे सिवा कोई गुनाहों को माफ नहीं कर सकता। तो अपनी तरफ़ से मुझे माफ कर दे और मुझ पर रहम कर। तू बख़्शने वाला और रहम करने वाला है',
-                bengali: 'হে আল্লাহ! আমি নিজের ওপর বড় অন্যায় করেছি এবং তুমি ছাড়া কেউ গুনাহ মাফ করতে পারে না। তাই তোমার পক্ষ থেকে আমাকে ক্ষমা কর ও দয়া কর। তুমি অবশ্যই ক্ষমাশীল ও দয়ালু'
+        tawbah: {
+            title: {
+                arabic: 'صلاة التوبة',
+                english: 'Salatul Tawbah',
+                hindi: 'तौबा की नमाज़',
+                bengali: 'তওবার নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة التوبة - ركعتان',
+                english: 'The Prayer of Repentance - 2 Rakat',
+                hindi: 'पश्चाताप की नमाज़ - 2 रकात',
+                bengali: 'অনুতাপের নামাজ - ২ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة التوبة سنة مشروعة تُصلى عند التوبة من أي ذنب صغير أو كبير. يصليها المسلم ندماً على ما فعل وطلباً للمغفرة من الله تعالى.',
+                english: 'Salatul Tawbah is a legislated Sunnah prayer performed when repenting from any sin, whether major or minor. Muslims pray it in regret for their actions and seeking Allah\'s forgiveness[25][31].',
+                hindi: 'सलातुल तौबा एक मशरू सुन्नत नमाज़ है जो किसी भी छोटे या बड़े गुनाह से तौबा करते समय पढ़ी जाती है। मुसलमान इसे अपने कार्यों पर पछतावे और अल्लाह की माफी की तलब में पढ़ता है।',
+                bengali: 'সালাতুল তওবা একটি বৈধ সুন্নাত নামাজ যা যেকোনো ছোট বা বড় গুনাহ থেকে তওবা করার সময় পড়া হয়। মুসলিমরা নিজেদের কর্মের জন্য অনুশোচনা ও আল্লাহর ক্ষমা প্রার্থনায় এটি পড়ে।'
+            },
+            method: {
+                arabic: '1. الوضوء الكامل بعد ارتكاب الذنب\n2. النية للتوبة وصلاة ركعتين\n3. قراءة الفاتحة وسورة بخشوع\n4. التسليم من الصلاة\n5. الاستغفار والتوبة النصوح\n6. العزم على عدم العودة للذنب',
+                english: '1. Perform complete Wudu after committing the sin\n2. Make intention for repentance and pray 2 rakats[31]\n3. Recite Al-Fatiha and Surah with humility\n4. Complete prayer with Salam\n5. Seek forgiveness and sincere repentance[25]\n6. Resolve not to return to the sin',
+                hindi: '1. गुनाह करने के बाद पूरा वुज़ू करें\n2. तौबा की नीयत करके 2 रकात पढ़ें\n3. विनम्रता के साथ फ़ातिहा और सूरह पढ़ें\n4. सलाम के साथ नमाज़ पूरी करें\n5. इस्तिग़फ़ार और सच्ची तौबा करें\n6. गुनाह की तरफ़ वापस न जाने का इरादा करें',
+                bengali: '1. গুনাহ করার পর সম্পূর্ণ ওযু করুন\n2. তওবার নিয়ত করে ২ রাকাত পড়ুন\n3. বিনয়ের সাথে ফাতিহা ও সূরা পড়ুন\n4. সালামের সাথে নামাজ সম্পূর্ণ করুন\n5. ইস্তেগফার ও সত্যিকারের তওবা করুন\n6. গুনাহের দিকে ফিরে না যাওয়ার সংকল্প করুন'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ وَارْحَمْنِي إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ',
+                    transliteration: 'Allahumma inni zalamtu nafsi zulman kathiran wa la yaghfiru\'dh-dhunuba illa ant, faghfir li maghfiratan min \'indika warhamni innaka anta\'l-Ghafur ar-Rahim',
+                    translation: {
+                        english: 'O Allah, indeed I have wronged myself with great injustice. And no one can forgive sins except You. So forgive me with forgiveness from Your side and have mercy on me. You are indeed Oft-Forgiving, Most Merciful[25]',
+                        hindi: 'हे अल्लाह! मैंने अपने नफ़्स पर बहुत ज़ुल्म किया है और तेरे सिवा कोई गुनाहों को माफ नहीं कर सकता। तो अपनी तरफ़ से मुझे माफ कर दे और मुझ पर रहम कर। तू बख़्शने वाला और रहम करने वाला है',
+                        bengali: 'হে আল্লাহ! আমি নিজের ওপর বড় অন্যায় করেছি এবং তুমি ছাড়া কেউ গুনাহ মাফ করতে পারে না। তাই তোমার পক্ষ থেকে আমাকে ক্ষমা কর ও দয়া কর। তুমি অবশ্যই ক্ষমাশীল ও দয়ালু'
+                    }
+                },
+                {
+                    arabic: 'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ',
+                    transliteration: 'Allahumma anta rabbi la ilaha illa ant, khalaqtani wa ana \'abduk, wa ana ala \'ahdika wa wa\'dika mastata\'t',
+                    translation: {
+                        english: 'O Allah, You are my Lord, there is no god but You. You created me and I am Your servant, and I am upon Your covenant and promise as much as I am able[25]',
+                        hindi: 'हे अल्लाह! तू मेरा रब है, तेरे सिवा कोई माबूद नहीं। तूने मुझे पैदा किया है और मैं तेरा बंदा हूं, और मैं तेरे अहद और वादे पर हूं जितनी मेरी ताकत है',
+                        bengali: 'হে আল্লাহ! তুমি আমার প্রভু, তুমি ছাড়া কোনো ইলাহ নেই। তুমি আমাকে সৃষ্টি করেছ এবং আমি তোমার বান্দা, আর আমি তোমার প্রতিশ্রুতি ও অঙ্গীকারের ওপর আছি যতটুকু সক্ষম'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Fatiha',
+                    arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+                    translation: {
+                        english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, Lord of all the worlds...',
+                        hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो सभी जगतों का पालनहार है...',
+                        bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সকল জগতের প্রতিপালক...'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ',
+                    transliteration: 'Astaghfiru Allah alladhi la ilaha illa Huwa\'l-Hayy al-Qayyum wa atubu ilayh',
+                    translation: {
+                        english: 'I seek forgiveness from Allah besides whom there is no god, the Living, the Sustainer, and I repent to Him',
+                        hindi: 'मैं अल्लाह से माफी मांगता हूं जिसके सिवा कोई माबूद नहीं, जो ज़िंदा और कायम रहने वाला है, और मैं उससे तौबा करता हूं',
+                        bengali: 'আমি আল্লাহর কাছে ক্ষমা প্রার্থনা করি যিনি ছাড়া কোনো ইলাহ নেই, যিনি চিরঞ্জীব ও চিরস্থায়ী, এবং আমি তাঁর কাছে তওবা করি'
+                    },
+                    count: '100 times'
+                }
+            ],
+            benefits: {
+                arabic: ['محو جميع الذنوب', 'قبول التوبة', 'راحة الضمير', 'القرب من الله'],
+                english: ['Erasure of all sins[31]', 'Acceptance of repentance[25]', 'Peace of conscience', 'Closeness to Allah'],
+                hindi: ['सभी गुनाहों का मिटना', 'तौबा की स्वीकृति', 'अंतरात्मा की शांति', 'अल्लाह से निकटता'],
+                bengali: ['সমস্ত গুনাহ মিটে যাওয়া', 'তওবা কবুল', 'বিবেকের শান্তি', 'আল্লাহর নৈকট্য']
             }
         },
-        {
-            arabic: 'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ',
-            transliteration: 'Allahumma anta rabbi la ilaha illa ant, khalaqtani wa ana \'abduk, wa ana ala \'ahdika wa wa\'dika mastata\'t',
-            translation: {
-                english: 'O Allah, You are my Lord, there is no god but You. You created me and I am Your servant, and I am upon Your covenant and promise as much as I am able[25]',
-                hindi: 'हे अल्लाह! तू मेरा रब है, तेरे सिवा कोई माबूद नहीं। तूने मुझे पैदा किया है और मैं तेरा बंदा हूं, और मैं तेरे अहद और वादे पर हूं जितनी मेरी ताकत है',
-                bengali: 'হে আল্লাহ! তুমি আমার প্রভু, তুমি ছাড়া কোনো ইলাহ নেই। তুমি আমাকে সৃষ্টি করেছ এবং আমি তোমার বান্দা, আর আমি তোমার প্রতিশ্রুতি ও অঙ্গীকারের ওপর আছি যতটুকু সক্ষম'
-            }
-        }
-    ],
-    surahs: [
-        {
-            name: 'Al-Fatiha',
-            arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
-            translation: {
-                english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, Lord of all the worlds...',
-                hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो सभी जगतों का पालनहार है...',
-                bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সকল জগতের প্রতিপালক...'
-            }
-        }
-    ],
-    tasbih: [
-        {
-            arabic: 'أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ',
-            transliteration: 'Astaghfiru Allah alladhi la ilaha illa Huwa\'l-Hayy al-Qayyum wa atubu ilayh',
-            translation: {
-                english: 'I seek forgiveness from Allah besides whom there is no god, the Living, the Sustainer, and I repent to Him',
-                hindi: 'मैं अल्लाह से माफी मांगता हूं जिसके सिवा कोई माबूद नहीं, जो ज़िंदा और कायम रहने वाला है, और मैं उससे तौबा करता हूं',
-                bengali: 'আমি আল্লাহর কাছে ক্ষমা প্রার্থনা করি যিনি ছাড়া কোনো ইলাহ নেই, যিনি চিরঞ্জীব ও চিরস্থায়ী, এবং আমি তাঁর কাছে তওবা করি'
-            },
-            count: '100 times'
-        }
-    ],
-    benefits: {
-        arabic: ['محو جميع الذنوب', 'قبول التوبة', 'راحة الضمير', 'القرب من الله'],
-        english: ['Erasure of all sins[31]', 'Acceptance of repentance[25]', 'Peace of conscience', 'Closeness to Allah'],
-        hindi: ['सभी गुनाहों का मिटना', 'तौबा की स्वीकृति', 'अंतरात्मा की शांति', 'अल्लाह से निकटता'],
-        bengali: ['সমস্ত গুনাহ মিটে যাওয়া', 'তওবা কবুল', 'বিবেকের শান্তি', 'আল্লাহর নৈকট্য']
-    }
-},
 
-tasbih: {
-    title: {
-        arabic: 'صلاة التسبيح',
-        english: 'Salatul Tasbih',
-        hindi: 'तसबीह की नमाज़',
-        bengali: 'তাসবিহ নামাজ'
-    },
-    subtitle: {
-        arabic: 'صلاة التسبيح - أربع ركعات',
-        english: 'The Prayer of Glorification - 4 Rakat',
-        hindi: 'तस्बीह की नमाज़ - 4 रकात',
-        bengali: 'তাসবিহ নামাজ - ৪ রাকাত'
-    },
-    description: {
-        arabic: 'صلاة التسبيح أربع ركعات يُقرأ فيها تسبيح معين 300 مرة. وهي صلاة عظيمة الأجر تُكفر الذنوب وتجلب البركات، 75 تسبيحة في كل ركعة.',
-        english: 'Salatul Tasbih is a 4-rakat prayer with specific glorifications recited 300 times. It is a prayer of great reward that forgives sins and brings blessings, with 75 glorifications in each rakat[28][33][36].',
-        hindi: 'सलातुल तसबीह 4 रकात की नमाज़ है जिसमें विशेष तस्बीह 300 बार पढ़ी जाती है। यह महान पुण्य की नमाज़ है जो गुनाहों को माफ करती है और बरकत लाती है, हर रकात में 75 तस्बीह।',
-        bengali: 'সালাতুল তাসবিহ ৪ রাকাতের নামাজ যাতে নির্দিষ্ট তাসবিহ ৩০০ বার পড়া হয়। এটি মহান সওয়াবের নামাজ যা গুনাহ মাফ করে ও বরকত আনে, প্রতি রাকাতে ৭৫ তাসবিহ।'
-    },
-    method: {
-        arabic: '1. النية لصلاة التسبيح أربع ركعات\n2. قراءة التسبيح 15 مرة بعد الثناء\n3. قراءة التسبيح 10 مرات بعد القراءة\n4. قراءة التسبيح 10 مرات في الركوع\n5. قراءة التسبيح 10 مرات بعد الركوع\n6. قراءة التسبيح 10 مرات في كل سجدة\n7. قراءة التسبيح 10 مرات بين السجدتين',
-        english: '1. Make intention for 4 rakats of Tasbih prayer[28]\n2. Recite tasbih 15 times after opening supplication[36]\n3. Recite tasbih 10 times after Quran recitation[28]\n4. Recite tasbih 10 times in Ruku[36]\n5. Recite tasbih 10 times after Ruku[28]\n6. Recite tasbih 10 times in each Sajdah[36]\n7. Recite tasbih 10 times between two Sajdahs[28]',
-        hindi: '1. तसबीह की 4 रकात नमाज़ की नीयत करें\n2. सना के बाद 15 बार तस्बीह पढ़ें\n3. क़ुरआन पढ़ने के बाद 10 बार तस्बीह\n4. रुकू में 10 बार तस्बीह पढ़ें\n5. रुकू के बाद 10 बार तस्बीह\n6. हर सजदे में 10 बार तस्बीह\n7. दो सजदों के बीच 10 बार तस्बीह',
-        bengali: '1. তাসবিহ নামাজের ৪ রাকাতের নিয়ত করুন\n2. সানার পর ১৫ বার তাসবিহ পড়ুন\n3. কুরআন পড়ার পর ১০ বার তাসবিহ\n4. রুকুতে ১০ বার তাসবিহ পড়ুন\n5. রুকুর পর ১০ বার তাসবিহ\n6. প্রতি সিজদায় ১০ বার তাসবিহ\n7. দুই সিজদার মাঝে ১০ বার তাসবিহ'
-    },
-    duas: [
-        {
-            arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
-            transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
-            translation: {
-                english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest[28][36]',
-                hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
-                bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
-            }
-        }
-    ],
-    surahs: [
-        {
-            name: 'Any Surah after Al-Fatiha',
-            arabic: 'يُستحب قراءة أي سورة بعد الفاتحة في كل ركعة',
-            translation: {
-                english: 'It is recommended to recite any Surah after Al-Fatiha in each rakat[33]',
-                hindi: 'हर रकात में अल-फ़ातिहा के बाद कोई भी सूरह पढ़ना मुस्तहब है',
-                bengali: 'প্রতি রাকাতে আল-ফাতিহার পর যেকোনো সূরা পড়া মুস্তাহাব'
-            }
-        }
-    ],
-    tasbih: [
-        {
-            arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
-            transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
-            translation: {
-                english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest',
-                hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
-                bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
+        tasbih: {
+            title: {
+                arabic: 'صلاة التسبيح',
+                english: 'Salatul Tasbih',
+                hindi: 'तसबीह की नमाज़',
+                bengali: 'তাসবিহ নামাজ'
             },
-            count: '300 times total'
-        }
-    ],
-    benefits: {
-        arabic: ['مغفرة جميع الذنوب السابقة واللاحقة', 'الأجر العظيم', 'محو السيئات', 'رفع الدرجات'],
-        english: ['Forgiveness of all past and future sins[33][36]', 'Great reward[28]', 'Erasure of bad deeds', 'Elevation of ranks'],
-        hindi: ['पिछले और भविष्य के सभी गुनाहों की माफी', 'महान पुण्य', 'बुराइयों का मिटना', 'दर्जों की बुलंदी'],
-        bengali: ['অতীত ও ভবিষ্যতের সব গুনাহের ক্ষমা', 'মহান সওয়াব', 'মন্দ কাজ মিটে যাওয়া', 'মর্যাদা বৃদ্ধি']
-    }
-},
+            subtitle: {
+                arabic: 'صلاة التسبيح - أربع ركعات',
+                english: 'The Prayer of Glorification - 4 Rakat',
+                hindi: 'तस्बीह की नमाज़ - 4 रकात',
+                bengali: 'তাসবিহ নামাজ - ৪ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة التسبيح أربع ركعات يُقرأ فيها تسبيح معين 300 مرة. وهي صلاة عظيمة الأجر تُكفر الذنوب وتجلب البركات، 75 تسبيحة في كل ركعة.',
+                english: 'Salatul Tasbih is a 4-rakat prayer with specific glorifications recited 300 times. It is a prayer of great reward that forgives sins and brings blessings, with 75 glorifications in each rakat[28][33][36].',
+                hindi: 'सलातुल तसबीह 4 रकात की नमाज़ है जिसमें विशेष तस्बीह 300 बार पढ़ी जाती है। यह महान पुण्य की नमाज़ है जो गुनाहों को माफ करती है और बरकत लाती है, हर रकात में 75 तस्बीह।',
+                bengali: 'সালাতুল তাসবিহ ৪ রাকাতের নামাজ যাতে নির্দিষ্ট তাসবিহ ৩০০ বার পড়া হয়। এটি মহান সওয়াবের নামাজ যা গুনাহ মাফ করে ও বরকত আনে, প্রতি রাকাতে ৭৫ তাসবিহ।'
+            },
+            method: {
+                arabic: '1. النية لصلاة التسبيح أربع ركعات\n2. قراءة التسبيح 15 مرة بعد الثناء\n3. قراءة التسبيح 10 مرات بعد القراءة\n4. قراءة التسبيح 10 مرات في الركوع\n5. قراءة التسبيح 10 مرات بعد الركوع\n6. قراءة التسبيح 10 مرات في كل سجدة\n7. قراءة التسبيح 10 مرات بين السجدتين',
+                english: '1. Make intention for 4 rakats of Tasbih prayer[28]\n2. Recite tasbih 15 times after opening supplication[36]\n3. Recite tasbih 10 times after Quran recitation[28]\n4. Recite tasbih 10 times in Ruku[36]\n5. Recite tasbih 10 times after Ruku[28]\n6. Recite tasbih 10 times in each Sajdah[36]\n7. Recite tasbih 10 times between two Sajdahs[28]',
+                hindi: '1. तसबीह की 4 रकात नमाज़ की नीयत करें\n2. सना के बाद 15 बार तस्बीह पढ़ें\n3. क़ुरआन पढ़ने के बाद 10 बार तस्बीह\n4. रुकू में 10 बार तस्बीह पढ़ें\n5. रुकू के बाद 10 बार तस्बीह\n6. हर सजदे में 10 बार तस्बीह\n7. दो सजदों के बीच 10 बार तस्बीह',
+                bengali: '1. তাসবিহ নামাজের ৪ রাকাতের নিয়ত করুন\n2. সানার পর ১৫ বার তাসবিহ পড়ুন\n3. কুরআন পড়ার পর ১০ বার তাসবিহ\n4. রুকুতে ১০ বার তাসবিহ পড়ুন\n5. রুকুর পর ১০ বার তাসবিহ\n6. প্রতি সিজদায় ১০ বার তাসবিহ\n7. দুই সিজদার মাঝে ১০ বার তাসবিহ'
+            },
+            duas: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
+                    transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
+                    translation: {
+                        english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest[28][36]',
+                        hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
+                        bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Any Surah after Al-Fatiha',
+                    arabic: 'يُستحب قراءة أي سورة بعد الفاتحة في كل ركعة',
+                    translation: {
+                        english: 'It is recommended to recite any Surah after Al-Fatiha in each rakat[33]',
+                        hindi: 'हर रकात में अल-फ़ातिहा के बाद कोई भी सूरह पढ़ना मुस्तहब है',
+                        bengali: 'প্রতি রাকাতে আল-ফাতিহার পর যেকোনো সূরা পড়া মুস্তাহাব'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
+                    transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
+                    translation: {
+                        english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest',
+                        hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
+                        bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
+                    },
+                    count: '300 times total'
+                }
+            ],
+            benefits: {
+                arabic: ['مغفرة جميع الذنوب السابقة واللاحقة', 'الأجر العظيم', 'محو السيئات', 'رفع الدرجات'],
+                english: ['Forgiveness of all past and future sins[33][36]', 'Great reward[28]', 'Erasure of bad deeds', 'Elevation of ranks'],
+                hindi: ['पिछले और भविष्य के सभी गुनाहों की माफी', 'महान पुण्य', 'बुराइयों का मिटना', 'दर्जों की बुलंदी'],
+                bengali: ['অতীত ও ভবিষ্যতের সব গুনাহের ক্ষমা', 'মহান সওয়াব', 'মন্দ কাজ মিটে যাওয়া', 'মর্যাদা বৃদ্ধি']
+            }
+        },
 
-duha: {
-    title: {
-        arabic: 'صلاة الضحى',
-        english: 'Duha Prayer',
-        hindi: 'चाश्त की नमाज़',
-        bengali: 'চাশত নামাজ'
-    },
-    subtitle: {
-        arabic: 'صلاة الضحى - 2 إلى 8 ركعات',
-        english: 'The Forenoon Prayer - 2 to 8 Rakat',
-        hindi: 'दोपहर पूर्व की नमाज़ - 2 से 8 रकात',
-        bengali: 'পূর্বাহ্নের নামাজ - ২ থেকে ৮ রাকাত'
-    },
-    description: {
-        arabic: 'صلاة الضحى سنة مؤكدة تُصلى في الضحى بعد ارتفاع الشمس وقبل الزوال. تُصلى من 2 إلى 8 ركعات، وهي صلاة الأوابين التائبين إلى الله.',
-        english: 'Duha prayer is a confirmed Sunnah prayed in the forenoon after sunrise and before noon. It ranges from 2 to 8 rakats, and it is the prayer of the Awabeen (those who turn to Allah)[29][32].',
-        hindi: 'दुहा की नमाज़ एक सुन्नत-ए-मुअक्किदा है जो सूर्योदय के बाद और दोपहर से पहले पढ़ी जाती है। यह 2 से 8 रकात तक होती है, और यह अव्वाबीन (अल्लाह की तरफ़ रुजू करने वालों) की नमाज़ है।',
-        bengali: 'দুহার নামাজ একটি সুন্নাতে মুআক্কাদা যা সূর্যোদয়ের পর ও দুপুরের আগে পড়া হয়। এটি ২ থেকে ৮ রাকাত পর্যন্ত হয়, এবং এটি আওয়াবীনদের (আল্লাহর দিকে প্রত্যাবর্তনকারী) নামাজ।'
-    },
-    method: {
-        arabic: '1. النية لصلاة الضحى\n2. صلاة ركعتين ركعتين حتى 8 ركعات\n3. القراءة سراً في جميع الركعات\n4. الأفضل 4 ركعات أو 6 ركعات\n5. الدعاء بعد الصلاة\n6. الوقت من الإشراق حتى قبل الزوال',
-        english: '1. Make intention for Duha prayer[32]\n2. Pray 2 rakats at a time up to 8 total[29]\n3. Recite silently in all rakats\n4. Preferably 4 or 6 rakats[32]\n5. Make dua after prayer\n6. Time: from sunrise until before noon[29]',
-        hindi: '1. दुहा की नमाज़ की नीयत करें\n2. 2-2 रकात करके कुल 8 तक पढ़ें\n3. सभी रकातों में चुपचाप पढ़ें\n4. बेहतर यह है कि 4 या 6 रकात पढ़ें\n5. नमाज़ के बाद दुआ करें\n6. समय: सूर्योदय से दोपहर से पहले तक',
-        bengali: '1. দুহা নামাজের নিয়ত করুন\n2. ২-২ রাকাত করে মোট ৮ পর্যন্ত পড়ুন\n3. সব রাকাতে নিঃশব্দে পড়ুন\n4. উত্তম হল ৪ বা ৬ রাকাত পড়া\n5. নামাজের পর দোয়া করুন\n6. সময়: সূর্যোদয় থেকে দুপুরের আগে পর্যন্ত'
-    },
-    duas: [
-        {
-            arabic: 'اللَّهُمَّ إِنَّ الضُّحَى ضُحَاؤُكَ وَالْبَهَاءَ بَهَاؤُكَ وَالْجَمَالَ جَمَالُكَ وَالْقُوَّةَ قُوَّتُكَ وَالْقُدْرَةَ قُدْرَتُكَ',
-            transliteration: 'Allahumma inna\'d-duha duha\'uka wal-baha\'a baha\'uka wal-jamala jamaluka wal-quwwata quwwatuka wal-qudrata qudratuk',
-            translation: {
-                english: 'O Allah, indeed the forenoon is Your forenoon, the brightness is Your brightness, the beauty is Your beauty, the strength is Your strength, and the power is Your power',
-                hindi: 'हे अल्लाह! निःसंदेह चाश्त तेरा चाश्त है, रौनक़ तेरी रौनक़ है, जमाल तेरा जमाल है, ताकत तेरी ताकत है, और कुदरत तेरी कुदरत है',
-                bengali: 'হে আল্লাহ! নিশ্চয় পূর্বাহ্ন তোমার পূর্বাহ্ন, উজ্জ্বলতা তোমার উজ্জ্বলতা, সৌন্দর্য তোমার সৌন্দর্য, শক্তি তোমার শক্তি, আর ক্ষমতা তোমার ক্ষমতা'
-            }
-        }
-    ],
-    surahs: [
-        {
-            name: 'Ad-Duha',
-            arabic: 'وَالضُّحَىٰ * وَاللَّيْلِ إِذَا سَجَىٰ * مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ * وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ',
-            translation: {
-                english: 'By the morning brightness, And by the night when it covers with darkness, Your Lord has not taken leave of you, nor has He detested you. And the Hereafter is better for you than the first [life][29]',
-                hindi: 'चाश्त की कसम, और रात की कसम जब वह छा जाए, तुम्हारे रब ने तुम्हें नहीं छोड़ा है और न ही नाराज़ हुआ है। और आखिरत तुम्हारे लिए पहले से बेहतर है',
-                bengali: 'পূর্বাহ্নের শপথ, আর রাতের শপথ যখন তা স্থির হয়, তোমার প্রভু তোমাকে পরিত্যাগ করেননি এবং অসন্তুষ্টও হননি। আর আখেরাত তোমার জন্য পূর্বের চেয়ে উত্তম'
-            }
-        }
-    ],
-    tasbih: [
-        {
-            arabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',
-            transliteration: 'Subhan Allah wa bihamdih',
-            translation: {
-                english: 'Glory be to Allah and with His praise',
-                hindi: 'अल्लाह पाक है और उसकी तारीफ़ के साथ',
-                bengali: 'আল্লাহ পবিত্র ও তাঁর প্রশংসা সহকারে'
+        duha: {
+            title: {
+                arabic: 'صلاة الضحى',
+                english: 'Duha Prayer',
+                hindi: 'चाश्त की नमाज़',
+                bengali: 'চাশত নামাজ'
             },
-            count: '100 times'
-        }
-    ],
-    benefits: {
-        arabic: ['أجر حج وعمرة تامة', 'كفاف اليوم كله', 'صدقة عن كل مفصل', 'حماية من الفقر'],
-        english: ['Reward of complete Hajj and Umrah[29]', 'Sufficiency for the entire day[32]', 'Charity for every joint[29]', 'Protection from poverty'],
-        hindi: ['पूर्ण हज और उमरे का पुण्य', 'पूरे दिन की काफी', 'हर जोड़ के लिए सदका', 'गरीबी से सुरक्षा'],
-        bengali: ['পূর্ণ হজ ও উমরার সওয়াব', 'সারাদিনের জন্য যথেষ্ট', 'প্রতি জয়েন্টের জন্য সদকা', 'দারিদ্র্য থেকে সুরক্ষা']
-    }
-},
+            subtitle: {
+                arabic: 'صلاة الضحى - 2 إلى 8 ركعات',
+                english: 'The Forenoon Prayer - 2 to 8 Rakat',
+                hindi: 'दोपहर पूर्व की नमाज़ - 2 से 8 रकात',
+                bengali: 'পূর্বাহ্নের নামাজ - ২ থেকে ৮ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة الضحى سنة مؤكدة تُصلى في الضحى بعد ارتفاع الشمس وقبل الزوال. تُصلى من 2 إلى 8 ركعات، وهي صلاة الأوابين التائبين إلى الله.',
+                english: 'Duha prayer is a confirmed Sunnah prayed in the forenoon after sunrise and before noon. It ranges from 2 to 8 rakats, and it is the prayer of the Awabeen (those who turn to Allah)[29][32].',
+                hindi: 'दुहा की नमाज़ एक सुन्नत-ए-मुअक्किदा है जो सूर्योदय के बाद और दोपहर से पहले पढ़ी जाती है। यह 2 से 8 रकात तक होती है, और यह अव्वाबीन (अल्लाह की तरफ़ रुजू करने वालों) की नमाज़ है।',
+                bengali: 'দুহার নামাজ একটি সুন্নাতে মুআক্কাদা যা সূর্যোদয়ের পর ও দুপুরের আগে পড়া হয়। এটি ২ থেকে ৮ রাকাত পর্যন্ত হয়, এবং এটি আওয়াবীনদের (আল্লাহর দিকে প্রত্যাবর্তনকারী) নামাজ।'
+            },
+            method: {
+                arabic: '1. النية لصلاة الضحى\n2. صلاة ركعتين ركعتين حتى 8 ركعات\n3. القراءة سراً في جميع الركعات\n4. الأفضل 4 ركعات أو 6 ركعات\n5. الدعاء بعد الصلاة\n6. الوقت من الإشراق حتى قبل الزوال',
+                english: '1. Make intention for Duha prayer[32]\n2. Pray 2 rakats at a time up to 8 total[29]\n3. Recite silently in all rakats\n4. Preferably 4 or 6 rakats[32]\n5. Make dua after prayer\n6. Time: from sunrise until before noon[29]',
+                hindi: '1. दुहा की नमाज़ की नीयत करें\n2. 2-2 रकात करके कुल 8 तक पढ़ें\n3. सभी रकातों में चुपचाप पढ़ें\n4. बेहतर यह है कि 4 या 6 रकात पढ़ें\n5. नमाज़ के बाद दुआ करें\n6. समय: सूर्योदय से दोपहर से पहले तक',
+                bengali: '1. দুহা নামাজের নিয়ত করুন\n2. ২-২ রাকাত করে মোট ৮ পর্যন্ত পড়ুন\n3. সব রাকাতে নিঃশব্দে পড়ুন\n4. উত্তম হল ৪ বা ৬ রাকাত পড়া\n5. নামাজের পর দোয়া করুন\n6. সময়: সূর্যোদয় থেকে দুপুরের আগে পর্যন্ত'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ إِنَّ الضُّحَى ضُحَاؤُكَ وَالْبَهَاءَ بَهَاؤُكَ وَالْجَمَالَ جَمَالُكَ وَالْقُوَّةَ قُوَّتُكَ وَالْقُدْرَةَ قُدْرَتُكَ',
+                    transliteration: 'Allahumma inna\'d-duha duha\'uka wal-baha\'a baha\'uka wal-jamala jamaluka wal-quwwata quwwatuka wal-qudrata qudratuk',
+                    translation: {
+                        english: 'O Allah, indeed the forenoon is Your forenoon, the brightness is Your brightness, the beauty is Your beauty, the strength is Your strength, and the power is Your power',
+                        hindi: 'हे अल्लाह! निःसंदेह चाश्त तेरा चाश्त है, रौनक़ तेरी रौनक़ है, जमाल तेरा जमाल है, ताकत तेरी ताकत है, और कुदरत तेरी कुदरत है',
+                        bengali: 'হে আল্লাহ! নিশ্চয় পূর্বাহ্ন তোমার পূর্বাহ্ন, উজ্জ্বলতা তোমার উজ্জ্বলতা, সৌন্দর্য তোমার সৌন্দর্য, শক্তি তোমার শক্তি, আর ক্ষমতা তোমার ক্ষমতা'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Ad-Duha',
+                    arabic: 'وَالضُّحَىٰ * وَاللَّيْلِ إِذَا سَجَىٰ * مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ * وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ',
+                    translation: {
+                        english: 'By the morning brightness, And by the night when it covers with darkness, Your Lord has not taken leave of you, nor has He detested you. And the Hereafter is better for you than the first [life][29]',
+                        hindi: 'चाश्त की कसम, और रात की कसम जब वह छा जाए, तुम्हारे रब ने तुम्हें नहीं छोड़ा है और न ही नाराज़ हुआ है। और आखिरत तुम्हारे लिए पहले से बेहतर है',
+                        bengali: 'পূর্বাহ্নের শপথ, আর রাতের শপথ যখন তা স্থির হয়, তোমার প্রভু তোমাকে পরিত্যাগ করেননি এবং অসন্তুষ্টও হননি। আর আখেরাত তোমার জন্য পূর্বের চেয়ে উত্তম'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',
+                    transliteration: 'Subhan Allah wa bihamdih',
+                    translation: {
+                        english: 'Glory be to Allah and with His praise',
+                        hindi: 'अल्लाह पाक है और उसकी तारीफ़ के साथ',
+                        bengali: 'আল্লাহ পবিত্র ও তাঁর প্রশংসা সহকারে'
+                    },
+                    count: '100 times'
+                }
+            ],
+            benefits: {
+                arabic: ['أجر حج وعمرة تامة', 'كفاف اليوم كله', 'صدقة عن كل مفصل', 'حماية من الفقر'],
+                english: ['Reward of complete Hajj and Umrah[29]', 'Sufficiency for the entire day[32]', 'Charity for every joint[29]', 'Protection from poverty'],
+                hindi: ['पूर्ण हज और उमरे का पुण्य', 'पूरे दिन की काफी', 'हर जोड़ के लिए सदका', 'गरीबी से सुरक्षा'],
+                bengali: ['পূর্ণ হজ ও উমরার সওয়াব', 'সারাদিনের জন্য যথেষ্ট', 'প্রতি জয়েন্টের জন্য সদকা', 'দারিদ্র্য থেকে সুরক্ষা']
+            }
+        },
 
-awabeen: {
-    title: {
-        arabic: 'صلاة الأوابين',
-        english: 'Awabeen Prayer',
-        hindi: 'अव्वाबीन की नमाज़',
-        bengali: 'আওয়াবীন নামাজ'
-    },
-    subtitle: {
-        arabic: 'صلاة الأوابين - 6 ركعات',
-        english: 'Prayer of the Penitent - 6 Rakat',
-        hindi: 'तौबा करने वालों की नमाज़ - 6 रकात',
-        bengali: 'অনুতাপকারীদের নামাজ - ৬ রাকাত'
-    },
-    description: {
-        arabic: 'صلاة الأوابين هي النوافل التي تُصلى بين المغرب والعشاء، وقيل هي صلاة الضحى. الأوابون هم التائبون الراجعون إلى الله تعالى.',
-        english: 'Awabeen prayer refers to voluntary prayers performed between Maghrib and Isha, though some scholars say it refers to Duha prayer. Awabeen means those who repent and return to Allah[26][35].',
-        hindi: 'अव्वाबीन की नमाज़ मगरिब और इशा के बीच पढ़ी जाने वाली नफ़्ल नमाज़ें हैं, हालांकि कुछ उलेमा कहते हैं कि यह दुहा की नमाज़ है। अव्वाबीन का मतलब है तौबा करने वाले और अल्लाह की तरफ़ लौटने वाले।',
-        bengali: 'আওয়াবীন নামাজ মাগরিব ও এশার মধ্যে পড়া নফল নামাজ, যদিও কিছু আলেম বলেন এটি দুহার নামাজ। আওয়াবীন মানে তওবাকারী ও আল্লাহর দিকে প্রত্যাবর্তনকারী।'
-    },
-    method: {
-        arabic: '1. النية لصلاة الأوابين بين المغرب والعشاء\n2. صلاة 6 ركعات (2+2+2)\n3. القراءة سراً في جميع الركعات\n4. يمكن زيادتها إلى 20 ركعة\n5. الدعاء والاستغفار بعد الصلاة\n6. الوقت من بعد سنة المغرب إلى العشاء',
-        english: '1. Make intention for Awabeen prayer between Maghrib and Isha[26]\n2. Pray 6 rakats (2+2+2)\n3. Recite silently in all rakats\n4. Can be increased up to 20 rakats[26]\n5. Make dua and seek forgiveness after prayer[35]\n6. Time: after Maghrib Sunnah until Isha',
-        hindi: '1. मगरिब और इशा के बीच अव्वाबीन की नीयत करें\n2. 6 रकात (2+2+2) पढ़ें\n3. सभी रकातों में चुपचाप पढ़ें\n4. 20 रकात तक बढ़ाया जा सकता है\n5. नमाज़ के बाद दुआ और इस्तिग़फ़ार करें\n6. समय: मगरिब की सुन्नत के बाद से इशा तक',
-        bengali: '1. মাগরিব ও এশার মধ্যে আওয়াবীনের নিয়ত করুন\n2. ৬ রাকাত (২+২+২) পড়ুন\n3. সব রাকাতে নিঃশব্দে পড়ুন\n4. ২০ রাকাত পর্যন্ত বাড়ানো যায়\n5. নামাজের পর দোয়া ও ইস্তেগফার করুন\n6. সময়: মাগরিবের সুন্নাতের পর থেকে এশা পর্যন্ত'
-    },
-    duas: [
-        {
-            arabic: 'اللَّهُمَّ اغْفِرْ لِي ذَنْبِي وَوَسِّعْ لِي فِي دَارِي وَبَارِكْ لِي فِي رِزْقِي',
-            transliteration: 'Allahumma ghfir li dhanbi wa wassi\' li fi dari wa barik li fi rizqi',
-            translation: {
-                english: 'O Allah, forgive my sins, expand my home for me, and bless my sustenance',
-                hindi: 'हे अल्लाह! मेरे गुनाहों को माफ कर दे, मेरे घर में कुशादगी दे और मेरे रिज़्क में बरकत दे',
-                bengali: 'হে আল্লাহ! আমার গুনাহ মাফ কর, আমার ঘরে প্রশস্ততা দাও এবং আমার রিজিকে বরকত দাও'
-            }
-        }
-    ],
-    surahs: [
-        {
-            name: 'Al-Fatiha and short Surahs',
-            arabic: 'يُستحب قراءة الفاتحة والسور القصيرة',
-            translation: {
-                english: 'It is recommended to recite Al-Fatiha and short Surahs[26]',
-                hindi: 'अल-फ़ातिहा और छोटी सूरतें पढ़ना मुस्तहब है',
-                bengali: 'আল-ফাতিহা ও ছোট সূরাগুলো পড়া মুস্তাহাব'
-            }
-        }
-    ],
-    tasbih: [
-        {
-            arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
-            transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
-            translation: {
-                english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest',
-                hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
-                bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
+        awabeen: {
+            title: {
+                arabic: 'صلاة الأوابين',
+                english: 'Awabeen Prayer',
+                hindi: 'अव्वाबीन की नमाज़',
+                bengali: 'আওয়াবীন নামাজ'
             },
-            count: 'After prayer'
-        }
-    ],
-    benefits: {
-        arabic: ['التوبة والرجوع إلى الله', 'تكفير السيئات', 'رفع الدرجات', 'البركة في المساء'],
-        english: ['Repentance and return to Allah[35]', 'Expiation of sins', 'Elevation of ranks', 'Blessings in the evening'],
-        hindi: ['तौबा और अल्लाह की तरफ़ रुजू', 'गुनाहों का कफ़्फ़ारा', 'दर्जों की बुलंदी', 'शाम में बरकत'],
-        bengali: ['তওবা ও আল্লাহর দিকে প্রত্যাবর্তন', 'গুনাহের কাফফারা', 'মর্যাদা বৃদ্ধি', 'সন্ধ্যায় বরকত']
-    }
-},
+            subtitle: {
+                arabic: 'صلاة الأوابين - 6 ركعات',
+                english: 'Prayer of the Penitent - 6 Rakat',
+                hindi: 'तौबा करने वालों की नमाज़ - 6 रकात',
+                bengali: 'অনুতাপকারীদের নামাজ - ৬ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة الأوابين هي النوافل التي تُصلى بين المغرب والعشاء، وقيل هي صلاة الضحى. الأوابون هم التائبون الراجعون إلى الله تعالى.',
+                english: 'Awabeen prayer refers to voluntary prayers performed between Maghrib and Isha, though some scholars say it refers to Duha prayer. Awabeen means those who repent and return to Allah[26][35].',
+                hindi: 'अव्वाबीन की नमाज़ मगरिब और इशा के बीच पढ़ी जाने वाली नफ़्ल नमाज़ें हैं, हालांकि कुछ उलेमा कहते हैं कि यह दुहा की नमाज़ है। अव्वाबीन का मतलब है तौबा करने वाले और अल्लाह की तरफ़ लौटने वाले।',
+                bengali: 'আওয়াবীন নামাজ মাগরিব ও এশার মধ্যে পড়া নফল নামাজ, যদিও কিছু আলেম বলেন এটি দুহার নামাজ। আওয়াবীন মানে তওবাকারী ও আল্লাহর দিকে প্রত্যাবর্তনকারী।'
+            },
+            method: {
+                arabic: '1. النية لصلاة الأوابين بين المغرب والعشاء\n2. صلاة 6 ركعات (2+2+2)\n3. القراءة سراً في جميع الركعات\n4. يمكن زيادتها إلى 20 ركعة\n5. الدعاء والاستغفار بعد الصلاة\n6. الوقت من بعد سنة المغرب إلى العشاء',
+                english: '1. Make intention for Awabeen prayer between Maghrib and Isha[26]\n2. Pray 6 rakats (2+2+2)\n3. Recite silently in all rakats\n4. Can be increased up to 20 rakats[26]\n5. Make dua and seek forgiveness after prayer[35]\n6. Time: after Maghrib Sunnah until Isha',
+                hindi: '1. मगरिब और इशा के बीच अव्वाबीन की नीयत करें\n2. 6 रकात (2+2+2) पढ़ें\n3. सभी रकातों में चुपचाप पढ़ें\n4. 20 रकात तक बढ़ाया जा सकता है\n5. नमाज़ के बाद दुआ और इस्तिग़फ़ार करें\n6. समय: मगरिब की सुन्नत के बाद से इशा तक',
+                bengali: '1. মাগরিব ও এশার মধ্যে আওয়াবীনের নিয়ত করুন\n2. ৬ রাকাত (২+২+২) পড়ুন\n3. সব রাকাতে নিঃশব্দে পড়ুন\n4. ২০ রাকাত পর্যন্ত বাড়ানো যায়\n5. নামাজের পর দোয়া ও ইস্তেগফার করুন\n6. সময়: মাগরিবের সুন্নাতের পর থেকে এশা পর্যন্ত'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ اغْفِرْ لِي ذَنْبِي وَوَسِّعْ لِي فِي دَارِي وَبَارِكْ لِي فِي رِزْقِي',
+                    transliteration: 'Allahumma ghfir li dhanbi wa wassi\' li fi dari wa barik li fi rizqi',
+                    translation: {
+                        english: 'O Allah, forgive my sins, expand my home for me, and bless my sustenance',
+                        hindi: 'हे अल्लाह! मेरे गुनाहों को माफ कर दे, मेरे घर में कुशादगी दे और मेरे रिज़्क में बरकत दे',
+                        bengali: 'হে আল্লাহ! আমার গুনাহ মাফ কর, আমার ঘরে প্রশস্ততা দাও এবং আমার রিজিকে বরকত দাও'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Fatiha and short Surahs',
+                    arabic: 'يُستحب قراءة الفاتحة والسور القصيرة',
+                    translation: {
+                        english: 'It is recommended to recite Al-Fatiha and short Surahs[26]',
+                        hindi: 'अल-फ़ातिहा और छोटी सूरतें पढ़ना मुस्तहब है',
+                        bengali: 'আল-ফাতিহা ও ছোট সূরাগুলো পড়া মুস্তাহাব'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
+                    transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
+                    translation: {
+                        english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest',
+                        hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
+                        bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
+                    },
+                    count: 'After prayer'
+                }
+            ],
+            benefits: {
+                arabic: ['التوبة والرجوع إلى الله', 'تكفير السيئات', 'رفع الدرجات', 'البركة في المساء'],
+                english: ['Repentance and return to Allah[35]', 'Expiation of sins', 'Elevation of ranks', 'Blessings in the evening'],
+                hindi: ['तौबा और अल्लाह की तरफ़ रुजू', 'गुनाहों का कफ़्फ़ारा', 'दर्जों की बुलंदी', 'शाम में बरकत'],
+                bengali: ['তওবা ও আল্লাহর দিকে প্রত্যাবর্তন', 'গুনাহের কাফফারা', 'মর্যাদা বৃদ্ধি', 'সন্ধ্যায় বরকত']
+            }
+        },
 
-ishraq: {
-    title: {
-        arabic: 'صلاة الإشراق',
-        english: 'Ishraq Prayer',
-        hindi: 'इश्राक़ की नमाज़',
-        bengali: 'ইশরাক নামাজ'
-    },
-    subtitle: {
-        arabic: 'صلاة الإشراق - ركعتان إلى 4',
-        english: 'The Sunrise Prayer - 2 to 4 Rakat',
-        hindi: 'सूर्योदय की नमाज़ - 2 से 4 रकात',
-        bengali: 'সূর্যোদয় নামাজ - ২ থেকে ৪ রাকাত'
-    },
-    description: {
-        arabic: 'صلاة الإشراق نافلة تُصلى بعد شروق الشمس بـ 12-15 دقيقة. لها أجر عظيم يعادل حج وعمرة تامة تامة. هي من أفضل النوافل.',
-        english: 'Ishraq prayer is a voluntary prayer performed 12-15 minutes after sunrise. It has great reward equivalent to a complete Hajj and Umrah. It is among the best voluntary prayers[27].',
-        hindi: 'इश्राक़ की नमाज़ एक नफ़्ल नमाज़ है जो सूर्योदय के 12-15 मिनट बाद पढ़ी जाती है। इसका महान पुण्य है जो पूरे हज और उमरे के बराबर है। यह सबसे बेहतरीन नफ़्ल नमाज़ों में से है।',
-        bengali: 'ইশরাক নামাজ একটি নফল নামাজ যা সূর্যোদয়ের ১২-১৫ মিনিট পর পড়া হয়। এর মহান সওয়াব পূর্ণ হজ ও উমরার সমান। এটি সর্বোত্তম নফল নামাজগুলোর অন্যতম।'
-    },
-    method: {
-        arabic: '1. الجلوس في المصلى بعد صلاة الفجر\n2. الذكر والتسبيح حتى الشروق\n3. الانتظار 12-15 دقيقة بعد الشروق\n4. النية لصلاة الإشراق\n5. صلاة ركعتين أو 4 ركعات\n6. الدعاء بعد الصلاة',
-        english: '1. Remain seated in prayer place after Fajr prayer[27]\n2. Do dhikr and tasbih until sunrise\n3. Wait 12-15 minutes after sunrise[27]\n4. Make intention for Ishraq prayer\n5. Pray 2 or 4 rakats[27]\n6. Make dua after prayer',
-        hindi: '1. फज्र के बाद नमाज़ की जगह बैठे रहें\n2. सूर्योदय तक ज़िक्र और तस्बीह करें\n3. सूर्योदय के 12-15 मिनट बाद प्रतीक्षा करें\n4. इश्राक़ की नमाज़ की नीयत करें\n5. 2 या 4 रकात पढ़ें\n6. नमाज़ के बाद दुआ करें',
-        bengali: '1. ফজরের পর নামাজের জায়গায় বসে থাকুন\n2. সূর্যোদয় পর্যন্ত জিকির ও তাসবিহ করুন\n3. সূর্যোদয়ের ১২-১৫ মিনিট পর অপেক্ষা করুন\n4. ইশরাক নামাজের নিয়ত করুন\n5. ২ বা ৪ রাকাত পড়ুন\n6. নামাজের পর দোয়া করুন'
-    },
-    duas: [
-        {
-            arabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
-            transliteration: 'Allahumma a\'inni ala dhikrika wa shukrika wa husni ibadatik',
-            translation: {
-                english: 'O Allah, help me to remember You, thank You, and worship You in the best manner',
-                hindi: 'हे अल्लाह! मुझे अपना ज़िक्र, शुक्र और बेहतरीन इबादत करने में मदद कर',
-                bengali: 'হে আল্লাহ! আমাকে তোমার স্মরণ, কৃতজ্ঞতা ও উত্তম ইবাদতে সাহায্য কর'
-            }
-        }
-    ],
-    surahs: [
-        {
-            name: 'Al-Fatiha and Ash-Shams',
-            arabic: 'الفاتحة وسورة الشمس مستحبة',
-            translation: {
-                english: 'Al-Fatiha and Surah Ash-Shams are recommended[27]',
-                hindi: 'अल-फ़ातिहा और सूरह अश-शम्स मुस्तहब है',
-                bengali: 'আল-ফাতিহা ও সূরা আশ-শামস মুস্তাহাব'
-            }
-        }
-    ],
-    tasbih: [
-        {
-            arabic: 'لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ',
-            transliteration: 'La ilaha illa Allah wahdahu la sharika lahu lahul mulku wa lahul hamdu wa huwa ala kulli shayin qadir',
-            translation: {
-                english: 'There is no god but Allah, alone without partner. His is the dominion and His is the praise, and He has power over all things',
-                hindi: 'अल्लाह के सिवा कोई माबूद नहीं, वह अकेला है, उसका कोई साझीदार नहीं। उसी का राज्य है और उसी के लिए प्रशंसा है, और वह हर चीज़ पर सक्षम है',
-                bengali: 'আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একক, তার কোনো শরীক নেই। রাজত্व তারই এবং প্রশংসা তারই, আর তিনি সবকিছুর ওপর ক্ষমতাবান'
+        ishraq: {
+            title: {
+                arabic: 'صلاة الإشراق',
+                english: 'Ishraq Prayer',
+                hindi: 'इश्राक़ की नमाज़',
+                bengali: 'ইশরাক নামাজ'
             },
-            count: '100 times'
+            subtitle: {
+                arabic: 'صلاة الإشراق - ركعتان إلى 4',
+                english: 'The Sunrise Prayer - 2 to 4 Rakat',
+                hindi: 'सूर्योदय की नमाज़ - 2 से 4 रकात',
+                bengali: 'সূর্যোদয় নামাজ - ২ থেকে ৪ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة الإشراق نافلة تُصلى بعد شروق الشمس بـ 12-15 دقيقة. لها أجر عظيم يعادل حج وعمرة تامة تامة. هي من أفضل النوافل.',
+                english: 'Ishraq prayer is a voluntary prayer performed 12-15 minutes after sunrise. It has great reward equivalent to a complete Hajj and Umrah. It is among the best voluntary prayers[27].',
+                hindi: 'इश्राक़ की नमाज़ एक नफ़्ल नमाज़ है जो सूर्योदय के 12-15 मिनट बाद पढ़ी जाती है। इसका महान पुण्य है जो पूरे हज और उमरे के बराबर है। यह सबसे बेहतरीन नफ़्ल नमाज़ों में से है।',
+                bengali: 'ইশরাক নামাজ একটি নফল নামাজ যা সূর্যোদয়ের ১২-১৫ মিনিট পর পড়া হয়। এর মহান সওয়াব পূর্ণ হজ ও উমরার সমান। এটি সর্বোত্তম নফল নামাজগুলোর অন্যতম।'
+            },
+            method: {
+                arabic: '1. الجلوس في المصلى بعد صلاة الفجر\n2. الذكر والتسبيح حتى الشروق\n3. الانتظار 12-15 دقيقة بعد الشروق\n4. النية لصلاة الإشراق\n5. صلاة ركعتين أو 4 ركعات\n6. الدعاء بعد الصلاة',
+                english: '1. Remain seated in prayer place after Fajr prayer[27]\n2. Do dhikr and tasbih until sunrise\n3. Wait 12-15 minutes after sunrise[27]\n4. Make intention for Ishraq prayer\n5. Pray 2 or 4 rakats[27]\n6. Make dua after prayer',
+                hindi: '1. फज्र के बाद नमाज़ की जगह बैठे रहें\n2. सूर्योदय तक ज़िक्र और तस्बीह करें\n3. सूर्योदय के 12-15 मिनट बाद प्रतीक्षा करें\n4. इश्राक़ की नमाज़ की नीयत करें\n5. 2 या 4 रकात पढ़ें\n6. नमाज़ के बाद दुआ करें',
+                bengali: '1. ফজরের পর নামাজের জায়গায় বসে থাকুন\n2. সূর্যোদয় পর্যন্ত জিকির ও তাসবিহ করুন\n3. সূর্যোদয়ের ১২-১৫ মিনিট পর অপেক্ষা করুন\n4. ইশরাক নামাজের নিয়ত করুন\n5. ২ বা ৪ রাকাত পড়ুন\n6. নামাজের পর দোয়া করুন'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
+                    transliteration: 'Allahumma a\'inni ala dhikrika wa shukrika wa husni ibadatik',
+                    translation: {
+                        english: 'O Allah, help me to remember You, thank You, and worship You in the best manner',
+                        hindi: 'हे अल्लाह! मुझे अपना ज़िक्र, शुक्र और बेहतरीन इबादत करने में मदद कर',
+                        bengali: 'হে আল্লাহ! আমাকে তোমার স্মরণ, কৃতজ্ঞতা ও উত্তম ইবাদতে সাহায্য কর'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Fatiha and Ash-Shams',
+                    arabic: 'الفاتحة وسورة الشمس مستحبة',
+                    translation: {
+                        english: 'Al-Fatiha and Surah Ash-Shams are recommended[27]',
+                        hindi: 'अल-फ़ातिहा और सूरह अश-शम्स मुस्तहब है',
+                        bengali: 'আল-ফাতিহা ও সূরা আশ-শামস মুস্তাহাব'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ',
+                    transliteration: 'La ilaha illa Allah wahdahu la sharika lahu lahul mulku wa lahul hamdu wa huwa ala kulli shayin qadir',
+                    translation: {
+                        english: 'There is no god but Allah, alone without partner. His is the dominion and His is the praise, and He has power over all things',
+                        hindi: 'अल्लाह के सिवा कोई माबूद नहीं, वह अकेला है, उसका कोई साझीदार नहीं। उसी का राज्य है और उसी के लिए प्रशंसा है, और वह हर चीज़ पर सक्षम है',
+                        bengali: 'আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একক, তার কোনো শরীক নেই। রাজত্व তারই এবং প্রশংসা তারই, আর তিনি সবকিছুর ওপর ক্ষমতাবান'
+                    },
+                    count: '100 times'
+                }
+            ],
+            benefits: {
+                arabic: ['أجر حج وعمرة تامة تامة', 'مغفرة الذنوب الصغيرة', 'غنيمة عظيمة', 'بركة في اليوم'],
+                english: ['Reward of complete Hajj and Umrah[27]', 'Forgiveness of minor sins[27]', 'Great spiritual gain[27]', 'Blessings throughout the day'],
+                hindi: ['पूर्ण हज और उमरे का पुण्य', 'छोटे गुनाहों की माफी', 'महान आध्यात्मिक लाभ', 'पूरे दिन बरकत'],
+                bengali: ['পূর্ণ হজ ও উমরার সওয়াব', 'ছোট গুনাহের ক্ষমা', 'মহান আধ্যাত্মিক লাভ', 'সারাদিন বরকত']
+            }
         }
-    ],
-    benefits: {
-        arabic: ['أجر حج وعمرة تامة تامة', 'مغفرة الذنوب الصغيرة', 'غنيمة عظيمة', 'بركة في اليوم'],
-        english: ['Reward of complete Hajj and Umrah[27]', 'Forgiveness of minor sins[27]', 'Great spiritual gain[27]', 'Blessings throughout the day'],
-        hindi: ['पूर्ण हज और उमरे का पुण्य', 'छोटे गुनाहों की माफी', 'महान आध्यात्मिक लाभ', 'पूरे दिन बरकत'],
-        bengali: ['পূর্ণ হজ ও উমরার সওয়াব', 'ছোট গুনাহের ক্ষমা', 'মহান আধ্যাত্মিক লাভ', 'সারাদিন বরকত']
-    }
-}
 
 
         // Add more prayers following the same pattern...
@@ -5504,3 +5504,1924 @@ ishraq: {
         }
     }
 });
+
+
+// Daily Reflection System
+document.addEventListener('DOMContentLoaded', function () {
+    // Reflection elements
+    const reflectionSection = document.getElementById('reflectionSection');
+    const reflectionDetailSection = document.getElementById('reflectionDetailSection');
+    const homeSection = document.getElementById('homeSection');
+    const backToHomeFromReflectionBtn = document.getElementById('backToHomeFromReflection');
+    const backToReflectionBtn = document.getElementById('backToReflection');
+    const reflectionCards = document.querySelectorAll('.compact-reflection-card');
+    const langBtns = document.querySelectorAll('.lang-btn');
+
+    let currentLanguage = 'arabic';
+
+    // Find and update mood card for reflection
+    const reflectionCard = document.querySelector('[data-category="mood"][data-type="reflection"]');
+    if (reflectionCard) {
+        reflectionCard.addEventListener('click', function () {
+            showReflectionSection();
+        });
+    }
+
+    // Navigation buttons
+    if (backToHomeFromReflectionBtn) {
+        backToHomeFromReflectionBtn.addEventListener('click', function () {
+            hideReflectionSection();
+        });
+    }
+
+    if (backToReflectionBtn) {
+        backToReflectionBtn.addEventListener('click', function () {
+            hideReflectionDetail();
+        });
+    }
+
+    // Reflection card clicks
+    reflectionCards.forEach(card => {
+        card.addEventListener('click', function () {
+            const reflection = this.getAttribute('data-reflection');
+            showReflectionDetail(reflection);
+        });
+    });
+
+    // Language button clicks
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const lang = this.getAttribute('data-lang');
+            switchReflectionLanguage(lang);
+        });
+    });
+
+    // Show reflection section
+    function showReflectionSection() {
+        homeSection.classList.remove('active');
+        reflectionSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Hide reflection section
+    function hideReflectionSection() {
+        reflectionSection.classList.remove('active');
+        homeSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show reflection detail
+    function showReflectionDetail(reflectionName) {
+        const reflectionData = reflectionDataTemplate[reflectionName] || reflectionDataTemplate.default;
+        populateReflectionDetail(reflectionData);
+
+        reflectionSection.classList.remove('active');
+        reflectionDetailSection.classList.add('active');
+
+        // Update today's date
+        const today = new Date();
+        document.getElementById('todayDate').textContent = `Today's Reflection - ${today.toLocaleDateString()}`;
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Hide reflection detail
+    function hideReflectionDetail() {
+        reflectionDetailSection.classList.remove('active');
+        reflectionSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Switch language
+    function switchReflectionLanguage(lang) {
+        currentLanguage = lang;
+
+        // Update active button
+        langBtns.forEach(btn => btn.classList.remove('active'));
+        const activeBtn = document.querySelector(`[data-lang="${lang}"]`);
+        if (activeBtn) activeBtn.classList.add('active');
+
+        // Update content based on current reflection
+        const currentReflection = document.getElementById('reflectionTitle')?.getAttribute('data-reflection');
+        if (currentReflection && reflectionDataTemplate[currentReflection]) {
+            updateReflectionLanguage(reflectionDataTemplate[currentReflection], lang);
+        }
+    }
+
+    // Complete Daily Reflection Data Template
+    const reflectionDataTemplate = {
+        'waking-up': {
+            title: {
+                arabic: 'آداب الاستيقاظ',
+                english: 'Waking Up Etiquette',
+                hindi: 'जागने के शिष्टाचार',
+                bengali: 'জাগ্রত হওয়ার শিষ্টাচার'
+            },
+            subtitle: {
+                arabic: 'السنن المستحبة عند الاستيقاظ من النوم',
+                english: 'Recommended practices when waking up',
+                hindi: 'नींद से जागने पर अनुशंसित कार्य',
+                bengali: 'ঘুম থেকে জাগার পর প্রস্তাবিত কাজ'
+            },
+            verse: {
+                arabic: 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ',
+                transliteration: 'Alhamdulillahil-ladhi ahyana ba\'da ma amatana wa ilayhin-nushur',
+                translation: {
+                    english: 'All praise is for Allah who gave us life after having taken it from us and unto Him is the resurrection',
+                    hindi: 'सारी प्रशंसा अल्लाह के लिए है जिसने हमें मारने के बाद जिंदा किया और उसी की तरफ वापस जाना है',
+                    bengali: 'সমস্ত প্রশংসা আল্লাহর যিনি আমাদের মৃত্যুর পর জীবিত করেছেন এবং তাঁরই কাছে প্রত্যাবর্তন'
+                },
+                reference: 'Sahih Bukhari, Book 80, Hadith 71'
+            },
+            explanation: {
+                arabic: 'هذا الدعاء يُقرأ عند الاستيقاظ من النوم، حيث يشبه النوم بالموت والاستيقاظ بالحياة. إنه تذكير بقدرة الله على الإحياء والإماتة.',
+                english: 'This dua is recited upon waking from sleep, comparing sleep to death and waking to life. It\'s a reminder of Allah\'s power over life and death.',
+                hindi: 'यह दुआ नींद से जागने पर पढ़ी जाती है, जो नींद की तुलना मृत्यु से और जागने की तुलना जीवन से करती है। यह अल्लाह की जीवन-मृत्यु पर शक्ति की याद दिलाती है।',
+                bengali: 'এই দোয়াটি ঘুম থেকে জাগার সময় পড়া হয়, যা ঘুমকে মৃত্যুর সাথে এবং জাগ্রত হওয়াকে জীবনের সাথে তুলনা করে। এটি জীবন-মৃত্যুর ওপর আল্লাহর ক্ষমতার স্মরণ।'
+            },
+            lesson: {
+                arabic: 'كل يوم جديد هو نعمة من الله تستحق الشكر والحمد',
+                english: 'Every new day is a blessing from Allah that deserves gratitude and praise',
+                hindi: 'हर नया दिन अल्लाह का एक नेमत है जो कृतज्ञता और प्रशंसा के योग्य है',
+                bengali: 'প্রতিটি নতুন দিন আল্লাহর একটি নিয়ামত যা কৃতজ্ঞতা ও প্রশংসার যোগ্য'
+            },
+            action: {
+                arabic: 'اقرأ دعاء الاستيقاظ فور فتح عينيك واشكر الله على نعمة الحياة',
+                english: 'Recite the waking up dua as soon as you open your eyes and thank Allah for the gift of life',
+                hindi: 'आंखें खोलते ही जागने की दुआ पढ़ें और जीवन के तोहफे के लिए अल्लाह का शुक्र अदा करें',
+                bengali: 'চোখ খোলার সাথে সাথে জাগ্রত হওয়ার দোয়া পড়ুন এবং জীবনের উপহারের জন্য আল্লাহর শুকরিয়া আদায় করুন'
+            },
+            guidelines: [
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'قراءة دعاء الاستيقاظ',
+                        english: 'Recite waking up dua',
+                        hindi: 'जागने की दुआ पढ़ना',
+                        bengali: 'জাগ্রত হওয়ার দোয়া পড়া'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'تذكر الله والحمد',
+                        english: 'Remember Allah and give thanks',
+                        hindi: 'अল्लाह को याद करना और शुक्र अदा करना',
+                        bengali: 'আল্লাহকে স্মরণ ও কৃতজ্ঞতা প্রকাশ'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'النهوض مباشرة دون ذكر الله',
+                        english: 'Getting up immediately without remembering Allah',
+                        hindi: 'अल्लाह को याद किए बिना तुरंत उठना',
+                        bengali: 'আল্লাহকে স্মরণ না করে সাথে সাথে উঠে পড়া'
+                    }
+                }
+            ],
+            calligraphy: {
+                arabic: 'الْحَمْدُ لِلَّهِ',
+                meaning: {
+                    english: 'All praise is for Allah',
+                    hindi: 'सारी प्रशंसा अल्लाह के लिए है',
+                    bengali: 'সমস্ত প্রশংসা আল্লাহর জন্য'
+                }
+            }
+        },
+
+        'bathroom-etiquette': {
+            title: {
+                arabic: 'آداب دخول الخلاء',
+                english: 'Bathroom Etiquette',
+                hindi: 'शौचालय के शिष्टाचार',
+                bengali: 'বাথরুমের শিষ্টাচার'
+            },
+            subtitle: {
+                arabic: 'السنن والآداب عند دخول الخلاء',
+                english: 'Sunnah and etiquette when entering bathroom',
+                hindi: 'शौचालय में प्रवेश के समय सुन्नत और शिष्टाचार',
+                bengali: 'বাথরুমে প্রবেশের সময় সুন্নাত ও শিষ্টাচার'
+            },
+            verse: {
+                arabic: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ',
+                transliteration: 'Allahumma inni a\'udhu bika minal-khubuthi wal-khaba\'ith',
+                translation: {
+                    english: 'O Allah, I seek refuge in You from male and female evil spirits',
+                    hindi: 'हे अल्लाह! मैं नर और मादा शैतानों से तुझसे पनाह मांगता हूं',
+                    bengali: 'হে আল্লাহ! আমি পুরুষ ও নারী শয়তান থেকে তোমার আশ্রয় প্রার্থনা করি'
+                },
+                reference: 'Sahih Bukhari, Book 4, Hadith 144'
+            },
+            explanation: {
+                arabic: 'هذا الدعاء يُقال قبل دخول الخلاء للحماية من الشياطين والنجاسات. الخبث والخبائث تعني الشياطين من الذكور والإناث.',
+                english: 'This dua is said before entering the bathroom for protection from devils and impurities. Khubuth and Khaba\'ith refer to male and female devils.',
+                hindi: 'यह दुआ शौचालय में प्रवेश से पहले शैतानों और गंदगी से सुरक्षा के लिए कही जाती है। खुबुस और खबाइस का मतलब नर और मादा शैतान है।',
+                bengali: 'এই দোয়া বাথরুমে প্রবেশের আগে শয়তান ও অপবিত্রতা থেকে সুরক্ষার জন্য বলা হয়। খুবুস ও খাবাইস মানে পুরুষ ও নারী শয়তান।'
+            },
+            lesson: {
+                arabic: 'الطهارة والنظافة من الإيمان في جميع جوانب الحياة',
+                english: 'Cleanliness and purity are part of faith in all aspects of life',
+                hindi: 'सफाई और पवित्रता जीवन के सभी पहलुओं में ईमान का हिस्सा है',
+                bengali: 'পরিচ্ছন্নতা ও পবিত্রতা জীবনের সব দিকে ঈমানের অংশ'
+            },
+            action: {
+                arabic: 'اقرأ دعاء دخول الخلاء واحرص على النظافة التامة',
+                english: 'Recite bathroom entry dua and maintain complete cleanliness',
+                hindi: 'शौचालय प्रवेश की दुआ पढ़ें और पूर्ण सफाई बनाए रखें',
+                bengali: 'বাথরুম প্রবেশের দোয়া পড়ুন ও সম্পূর্ণ পরিচ্ছন্নতা বজায় রাখুন'
+            },
+            guidelines: [
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'دخول الخلاء بالقدم اليسرى',
+                        english: 'Enter bathroom with left foot',
+                        hindi: 'बाएं पैर से शौचालय में प्रवेश',
+                        bengali: 'বাম পা দিয়ে বাথরুমে প্রবেশ'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'الاستنجاء باليد اليسرى',
+                        english: 'Clean with left hand',
+                        hindi: 'बाएं हाथ से सफाई',
+                        bengali: 'বাম হাত দিয়ে পরিষ্কার'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'التوجه نحو القبلة أو استدبارها',
+                        english: 'Facing or turning back to Qibla',
+                        hindi: 'क़िबले की तरफ मुंह या पीठ करना',
+                        bengali: 'কিবলার দিকে মুখ বা পিঠ করা'
+                    }
+                }
+            ],
+            calligraphy: {
+                arabic: 'الطَّهُورُ شَطْرُ الْإِيمَانِ',
+                meaning: {
+                    english: 'Purity is half of faith',
+                    hindi: 'पवित्रता ईमान का आधा हिस्सा है',
+                    bengali: 'পবিত্রতা ঈমানের অর্ধেক'
+                }
+            }
+        },
+
+        'wudu-method': {
+            title: {
+                arabic: 'طريقة الوضوء',
+                english: 'Method of Wudu',
+                hindi: 'वुज़ू की विधि',
+                bengali: 'ওযুর পদ্ধতি'
+            },
+            subtitle: {
+                arabic: 'كيفية الوضوء الصحيح حسب السنة النبوية',
+                english: 'Correct method of Wudu according to Prophetic Sunnah',
+                hindi: 'नबवी सुन्नत के अनुसार वुज़ू की सही विधि',
+                bengali: 'নবী সুন্নাহ অনুযায়ী সঠিক ওযুর পদ্ধতি'
+            },
+            verse: {
+                arabic: 'يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ إِلَى الصَّلَاةِ فَاغْسِلُوا وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى الْمَرَافِقِ',
+                transliteration: 'Ya ayyuhal-ladhina amanu idha qumtum ilas-salati faghsilu wujuhakum wa aydiyakum ilal-marafiq',
+                translation: {
+                    english: 'O you who believe! When you stand up for prayer, wash your faces and your hands up to the elbows',
+                    hindi: 'हे ईमान वालों! जब तुम नमाज के लिए खड़े हो तो अपने चेहरे धोओ और अपने हाथ कोहनियों तक',
+                    bengali: 'হে বিশ্বাসীগণ! যখন তোমরা নামাজের জন্য দাঁড়াও তো তোমাদের মুখ ধুয়ে নাও ও তোমাদের হাত কনুই পর্যন্ত'
+                },
+                reference: 'Quran 5:6'
+            },
+            explanation: {
+                arabic: 'الوضوء فريضة إلهية وشرط لصحة الصلاة. يطهر الجسد والروح ويهيئ المسلم للوقوف أمام الله تعالى.',
+                english: 'Wudu is a divine obligation and a condition for valid prayer. It purifies both body and soul and prepares the Muslim to stand before Allah.',
+                hindi: 'वुज़ू एक दैवीय आज्ञा है और नमाज़ की सहीह शर्त है। यह शरीर और आत्मा को पवित्र करता है और मुस्लिम को अल्लाह के सामने खड़े होने की तैयारी कराता है।',
+                bengali: 'ওযু একটি ঐশী বাধ্যবাধকতা এবং সহীহ নামাজের শর্ত। এটি দেহ ও আত্মাকে পবিত্র করে এবং মুসলিমকে আল্লাহর সামনে দাঁড়ানোর জন্য প্রস্তুত করে।'
+            },
+            lesson: {
+                arabic: 'الطهارة الظاهرة والباطنة مطلوبة للتقرب إلى الله',
+                english: 'Both outward and inward purity are required to draw near to Allah',
+                hindi: 'अल्लाह के नज़दीक आने के लिए बाहरी और भीतरी दोनों पवित्रता आवश्यक है',
+                bengali: 'আল্লাহর নিকটবর্তী হওয়ার জন্য বাহ্যিক ও অভ্যন্তরীণ উভয় পবিত্রতা প্রয়োজন'
+            },
+            action: {
+                arabic: 'تعلم أركان الوضوء وطبقها بدقة في كل وضوء',
+                english: 'Learn the pillars of Wudu and apply them carefully in every ablution',
+                hindi: 'वुज़ू के अर्कान सीखें और हर वुज़ू में सावधानी से लागू करें',
+                bengali: 'ওযুর রুকনগুলো শিখুন এবং প্রতিটি ওযুতে সাবধানে প্রয়োগ করুন'
+            },
+            guidelines: [
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'البدء بالبسملة والنية',
+                        english: 'Start with Bismillah and intention',
+                        hindi: 'बिस्मिल्लाह और नीयत से शुरुआत',
+                        bengali: 'বিসমিল্লাহ ও নিয়ত দিয়ে শুরু'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'غسل كل عضو ثلاث مرات',
+                        english: 'Wash each part three times',
+                        hindi: 'हर अंग को तीन बार धोना',
+                        bengali: 'প্রতিটি অঙ্গ তিনবার ধোয়া'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'الإسراف في الماء',
+                        english: 'Wasting water excessively',
+                        hindi: 'पानी की अधिक बर्बादी',
+                        bengali: 'অতিরিক্ত পানি অপচয়'
+                    }
+                }
+            ],
+            calligraphy: {
+                arabic: 'وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ',
+                meaning: {
+                    english: 'And We made from water every living thing',
+                    hindi: 'और हमने पानी से हर जीवित चीज़ बनाई',
+                    bengali: 'এবং আমি পানি থেকে সব জীবন্ত বস্তু সৃষ্টি করেছি'
+                }
+            }
+        },
+
+        // Add this to your existing reflectionDataTemplate object:
+
+        'ghusl-method': {
+            title: {
+                arabic: 'طريقة الغسل',
+                english: 'Method of Ghusl',
+                hindi: 'गुस्ल की विधि',
+                bengali: 'গোসলের পদ্ধতি'
+            },
+            subtitle: {
+                arabic: 'كيفية الاغتسال الصحيح حسب السنة النبوية',
+                english: 'Correct method of ritual purification according to Prophetic Sunnah',
+                hindi: 'नबवी सुन्नत के अनुसार शुद्धिकरण की सही विधि',
+                bengali: 'নবী সুন্নাহ অনুযায়ী সঠিক পবিত্রতার পদ্ধতি'
+            },
+            verse: {
+                arabic: 'وَإِن كُنتُمْ جُنُبًا فَاطَّهَّرُوا',
+                transliteration: 'Wa in kuntum junuban fattaharu',
+                translation: {
+                    english: 'And if you are in a state of major ritual impurity, then purify yourselves',
+                    hindi: 'और यदि तुम जुनुब (अपवित्र) हो तो पाक हो जाओ',
+                    bengali: 'আর যদি তোমরা অপবিত্র হও তাহলে পবিত্র হয়ে নাও'
+                },
+                reference: 'Quran 5:6'
+            },
+            explanation: {
+                arabic: 'الغسل فريضة شرعية لإزالة الجنابة والحدث الأكبر. يشمل غسل الجسد كله بالماء الطاهر مع النية، وله أركان وآداب محددة في السنة النبوية.',
+                english: 'Ghusl is a religious obligation to remove major ritual impurity (janabah). It involves washing the entire body with pure water along with intention, and has specific pillars and etiquettes defined in the Prophetic Sunnah[28].',
+                hindi: 'गुस्ल एक शरई फ़र्ज़ है जो जनाबत और बड़ी नापाकी को दूर करने के लिए है। इसमें नीयत के साथ पूरे शरीर को पाक पानी से धोना शामिल है, और इसके निर्धारित रुकन और आदाब हैं।',
+                bengali: 'গোসল একটি শরিয়তি ফরজ যা জানাবাত ও বড় অপবিত্রতা দূর করার জন্য। এতে নিয়তের সাথে সম্পূর্ণ শরীর পবিত্র পানি দিয়ে ধোয়া অন্তর্ভুক্ত, এবং এর নির্দিষ্ট রুকন ও আদব রয়েছে।'
+            },
+            lesson: {
+                arabic: 'الطهارة الكاملة ضرورية للعبادة والتقرب إلى الله تعالى',
+                english: 'Complete purification is essential for worship and drawing near to Allah',
+                hindi: 'पूर्ण शुद्धता इबादत और अल्लाह से निकटता के लिए आवश्यक है',
+                bengali: 'সম্পূর্ণ পবিত্রতা ইবাদত ও আল্লাহর নৈকট্য লাভের জন্য অপরিহার্য'
+            },
+            action: {
+                arabic: 'تعلم خطوات الغسل الثلاث وطبقها بعناية عند الحاجة',
+                english: 'Learn the three steps of Ghusl and apply them carefully when needed',
+                hindi: 'गुस्ल के तीन चरणों को सीखें और ज़रूरत के समय सावधानी से लागू करें',
+                bengali: 'গোসলের তিন ধাপ শিখুন এবং প্রয়োজনের সময় যত্নের সাথে প্রয়োগ করুন'
+            },
+            guidelines: [
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'البدء بالبسملة والنية',
+                        english: 'Start with Bismillah and clear intention',
+                        hindi: 'बिस्मिल्लाह और साफ नीयत से शुरुआत',
+                        bengali: 'বিসমিল্লাহ ও স্পষ্ট নিয়ত দিয়ে শুরু'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'غسل الفرج أولاً ثم الوضوء',
+                        english: 'First wash private parts, then perform Wudu',
+                        hindi: 'पहले गुप्तांगों को धोना फिर वुज़ू',
+                        bengali: 'প্রথমে গোপনাঙ্গ ধোয়া তারপর ওযু'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'صب الماء على الرأس ثلاث مرات',
+                        english: 'Pour water over head three times',
+                        hindi: 'सिर पर तीन बार पानी डालना',
+                        bengali: 'মাথায় তিনবার পানি ঢালা'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'غسل الجانب الأيمن ثم الأيسر',
+                        english: 'Wash right side of body then left side',
+                        hindi: 'शरीर के दाहिने हिस्से को फिर बाएं हिस्से को धोना',
+                        bengali: 'শরীরের ডান দিক তারপর বাম দিক ধোয়া'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'التأكد من وصول الماء لجميع الشعر والجلد',
+                        english: 'Ensure water reaches all hair and skin',
+                        hindi: 'सुनिश्चित करना कि पानी सभी बालों और त्वचा तक पहुंचे',
+                        bengali: 'নিশ্চিত করা যে পানি সব চুল ও চামড়ায় পৌঁছেছে'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'ترك جزء من الجسم بدون غسل',
+                        english: 'Leaving any part of body unwashed',
+                        hindi: 'शरीर के किसी हिस्से को बिना धोए छोड़ना',
+                        bengali: 'শরীরের কোনো অংশ না ধুয়ে রেখে দেওয়া'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'الإسراف المفرط في الماء',
+                        english: 'Excessive wastage of water',
+                        hindi: 'पानी की अत्यधिक बर्বादी',
+                        bengali: 'অতিরিক্ত পানি অপচয়'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'الاغتسال أمام الآخرين بدون ضرورة',
+                        english: 'Bathing in front of others without necessity',
+                        hindi: 'बिना ज़रूरत दूसरों के सामने नहाना',
+                        bengali: 'প্রয়োজন ছাড়া অন্যদের সামনে গোসল'
+                    }
+                }
+            ],
+            calligraphy: {
+                arabic: 'إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ وَيُحِبُّ الْمُتَطَهِّرِينَ',
+                meaning: {
+                    english: 'Indeed, Allah loves those who are constantly repentant and loves those who purify themselves',
+                    hindi: 'निःसंदेह अल्लाह तौबा करने वालों से और पाक रहने वालों से प्रेम करता है',
+                    bengali: 'নিশ্চয় আল্লাহ তওবাকারী ও পবিত্র থাকা লোকদের ভালোবাসেন'
+                }
+            },
+            detailedSteps: {
+                arabic: [
+                    'الخطوة الأولى: غسل الفرج وإزالة النجاسة',
+                    'الخطوة الثانية: الوضوء الكامل كما في الصلاة',
+                    'الخطوة الثالثة: صب الماء على الرأس ثلاث مرات مع التدليك',
+                    'الخطوة الرابعة: غسل الجانب الأيمن من الجسم',
+                    'الخطوة الخامسة: غسل الجانب الأيسر من الجسم',
+                    'الخطوة السادسة: غسل القدمين إن لم تُغسلا في الوضوء'
+                ],
+                english: [
+                    'Step 1: Wash private parts and remove impurity',
+                    'Step 2: Perform complete Wudu as for prayer',
+                    'Step 3: Pour water over head three times with massage',
+                    'Step 4: Wash the right side of the body',
+                    'Step 5: Wash the left side of the body',
+                    'Step 6: Wash feet if not washed during Wudu'
+                ],
+                hindi: [
+                    'चरण 1: गुप्तांगों को धोना और गंदगी हटाना',
+                    'चरण 2: नमाज़ की तरह पूरा वुज़ू करना',
+                    'चरण 3: सिर पर तीन बार पानी डालना और मालिश करना',
+                    'चरण 4: शरीर के दाहिने हिस्से को धोना',
+                    'चरण 5: शरीर के बाएं हिस्से को धोना',
+                    'चरण 6: यदि वुज़ू में न धोए हों तो पैर धोना'
+                ],
+                bengali: [
+                    'ধাপ ১: গোপনাঙ্গ ধোয়া ও অপবিত্রতা দূর করা',
+                    'ধাপ ২: নামাজের মতো সম্পূর্ণ ওযু করা',
+                    'ধাপ ৩: মাথায় তিনবার পানি ঢেলে ম্যাসাজ করা',
+                    'ধাপ ৪: শরীরের ডান দিক ধোয়া',
+                    'ধাপ ৫: শরীরের বাম দিক ধোয়া',
+                    'ধাপ ৬: ওযুতে না ধুলে পা ধোয়া'
+                ]
+            }
+        },
+
+        // Add these 4 activities to your existing reflectionDataTemplate object:
+
+        'eating-etiquette': {
+            title: {
+                arabic: 'آداب الطعام',
+                english: 'Eating Etiquette',
+                hindi: 'खाने के शिष्टाचार',
+                bengali: 'খাওয়ার শিষ্টাচার'
+            },
+            subtitle: {
+                arabic: 'السنن والآداب الإسلامية في تناول الطعام',
+                english: 'Islamic Sunnah and etiquette in eating food',
+                hindi: 'खाना खाने में इस्लामी सुन्नत और शिष्टाचार',
+                bengali: 'খাদ্য গ্রহণে ইসলামী সুন্নাত ও শিষ্টাচার'
+            },
+            verse: {
+                arabic: 'قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: يَا غُلَامُ سَمِّ اللَّهَ وَكُلْ بِيَمِينِكَ وَكُلْ مِمَّا يَلِيكَ',
+                transliteration: 'Ya ghulam, sammi Allah, wa kul bi yaminik, wa kul mimma yalik',
+                translation: {
+                    english: 'O young man, mention Allah\'s name, eat with your right hand, and eat from what is near to you',
+                    hindi: 'हे युवा! अल्लाह का नाम ले, अपने दाहिने हाथ से खा, और अपने पास से खा',
+                    bengali: 'হে যুবক! আল্লাহর নাম নাও, তোমার ডান হাত দিয়ে খাও এবং তোমার কাছ থেকে খাও'
+                },
+                reference: 'Sahih Bukhari, Book 70, Hadith 5376'
+            },
+            explanation: {
+                arabic: 'هذا الحديث يعلمنا الآداب الثلاثة الأساسية للطعام: التسمية قبل الأكل، واستعمال اليد اليمنى، والأكل من الجهة القريبة. هذه الآداب تجلب البركة وتعلم النظام والأدب.',
+                english: 'This hadith teaches us three fundamental eating etiquettes: saying Bismillah before eating, using the right hand, and eating from your side of the plate. These manners bring blessings and teach order and discipline.',
+                hindi: 'यह हदीस हमें खाने के तीन बुनियादी शिष्टाचार सिखाती है: खाने से पहले बिस्मिल्लाह कहना, दाहिने हाथ का इस्तेमाल, और अपनी तरफ से खाना। ये शिष्टाचार बरकत लाते हैं और व्यवस्था व अनुशासन सिखाते हैं।',
+                bengali: 'এই হাদিস আমাদের খাওয়ার তিনটি মৌলিক শিষ্টাচার শেখায়: খাওয়ার আগে বিসমিল্লাহ বলা, ডান হাত ব্যবহার করা, এবং নিজের দিক থেকে খাওয়া। এই শিষ্টাচার বরকত আনে এবং শৃঙ্খলা ও সভ্যতা শেখায়।'
+            },
+            lesson: {
+                arabic: 'الطعام نعمة من الله تستحق الشكر والأدب في تناولها',
+                english: 'Food is a blessing from Allah that deserves gratitude and proper etiquette',
+                hindi: 'खाना अल्लाह की नेमत है जो कृतज्ञता और उचित शिष्टाचार की हकदार है',
+                bengali: 'খাদ্য আল্লাহর নিয়ামত যা কৃতজ্ঞতা ও যথাযথ শিষ্টাচারের যোগ্য'
+            },
+            action: {
+                arabic: 'اليوم اذكر الله قبل وبعد كل وجبة وكل باليد اليمنى',
+                english: 'Today remember Allah before and after every meal and eat with your right hand',
+                hindi: 'आज हर खाने से पहले और बाद में अल्लाह को याद करें और दाहिने हाथ से खाएं',
+                bengali: 'আজ প্রতিটি খাবারের আগে ও পরে আল্লাহকে স্মরণ করুন এবং ডান হাত দিয়ে খান'
+            },
+            guidelines: [
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'البدء بـ بسم الله والانتهاء بالحمد لله',
+                        english: 'Start with Bismillah and end with Alhamdulillah',
+                        hindi: 'बिस्मिल्लाह से शुरुआत और अल्हम्दुलिल्लाह से समाप्ति',
+                        bengali: 'বিসমিল্লাহ দিয়ে শুরু ও আলহামদুলিল্লাহ দিয়ে শেষ'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'الأكل باليد اليمنى والشرب جالساً',
+                        english: 'Eat with right hand and drink while sitting',
+                        hindi: 'दाहिने हाथ से खाना और बैठकर पीना',
+                        bengali: 'ডান হাত দিয়ে খাওয়া ও বসে পান করা'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'الاعتدال في الأكل وعدم الإسراف',
+                        english: 'Eat in moderation without excess',
+                        hindi: 'संयम से खाना और अधिकता न करना',
+                        bengali: 'পরিমিত খাওয়া ও অপচয় না করা'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'الأكل باليد اليسرى',
+                        english: 'Eating with left hand',
+                        hindi: 'बाएं हाथ से खाना',
+                        bengali: 'বাম হাত দিয়ে খাওয়া'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'الإسراف والتبذير في الطعام',
+                        english: 'Wasting and squandering food',
+                        hindi: 'खाना बर्बाद करना और फिजूलखर्ची',
+                        bengali: 'খাদ্য অপচয় ও অমিতব্যয়'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'الأكل في أواني الذهب والفضة',
+                        english: 'Eating in gold and silver utensils',
+                        hindi: 'सोने और चांदी के बर्तन में खाना',
+                        bengali: 'স্বর্ণ ও রৌপ্যের পাত্রে খাওয়া'
+                    }
+                }
+            ],
+            calligraphy: {
+                arabic: 'وَكُلُوا وَاشْرَبُوا وَلَا تُسْرِفُوا',
+                meaning: {
+                    english: 'And eat and drink, but do not be excessive',
+                    hindi: 'और खाओ और पियो, लेकिन अधिकता न करो',
+                    bengali: 'এবং খাও ও পান কর, কিন্তু অপচয় কর না'
+                }
+            }
+        },
+
+        'drinking-etiquette': {
+            title: {
+                arabic: 'آداب الشراب',
+                english: 'Drinking Etiquette',
+                hindi: 'पीने के शिष्टाचार',
+                bengali: 'পান করার শিষ্টাচার'
+            },
+            subtitle: {
+                arabic: 'السنن والآداب الإسلامية في شرب الماء والسوائل',
+                english: 'Islamic Sunnah and etiquette in drinking water and beverages',
+                hindi: 'पानी और पेय पदार्थों के सेवन में इस्लामी सुन्नत और शिष्टाचार',
+                bengali: 'পানি ও পানীয় গ্রহণে ইসলামী সুন্নাত ও শিষ্টাচার'
+            },
+            verse: {
+                arabic: 'قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: اشْرَبُوا عَلَى ثَلَاثَةِ أَنْفَاسٍ وَسَمُّوا اللَّهَ وَاحْمَدُوا اللَّهَ',
+                transliteration: 'Ishrabu ala thalathati anfasin wa sammu Allah wa ahmadu Allah',
+                translation: {
+                    english: 'Drink in three breaths, mention Allah\'s name and praise Allah',
+                    hindi: 'तीन सांस में पियो, अल्लाह का नाम लो और अल्लाह की प्रशंसा करो',
+                    bengali: 'তিন নিঃশ্বাসে পান কর, আল্লাহর নাম নাও এবং আল্লাহর প্রশংসা কর'
+                },
+                reference: 'Sunan At-Tirmidhi, Book 25, Hadith 1884'
+            },
+            explanation: {
+                arabic: 'هذا الحديث يعلمنا الطريقة الصحية والمباركة لشرب الماء: الشرب على ثلاث دفعات مع التنفس خارج الإناء، والتسمية قبل الشرب، والحمد بعده. هذا أفضل للصحة والبركة.',
+                english: 'This hadith teaches us the healthy and blessed way to drink water: drinking in three intervals with breathing outside the vessel, saying Bismillah before, and Alhamdulillah after. This is best for health and blessings.',
+                hindi: 'यह हदीस हमें पानी पीने का स्वस्थ और बरकत वाला तरीका सिखाती है: तीन बार में पीना और बर्तन के बाहर सांस लेना, पहले बिस्मिल्लाह और बाद में अल्हम्दुलिल्लाह कहना। यह सेहत और बरकत के लिए बेहतर है।',
+                bengali: 'এই হাদিস আমাদের পানি পানের স্বাস্থ্যকর ও বরকতময় পদ্ধতি শেখায়: তিনবারে পান করা এবং পাত্রের বাইরে নিঃশ্বাস নেওয়া, আগে বিসমিল্লাহ ও পরে আলহামদুলিল্লাহ বলা। এটি স্বাস্থ্য ও বরকতের জন্য উত্তম।'
+            },
+            lesson: {
+                arabic: 'الماء أساس الحياة ويجب شربه بأدب وشكر',
+                english: 'Water is the foundation of life and should be drunk with etiquette and gratitude',
+                hindi: 'पानी जीवन का आधार है और इसे शिष्टाचार और कृतज्ञता के साथ पीना चाहिए',
+                bengali: 'পানি জীবনের ভিত্তি এবং এটি শিষ্টাচার ও কৃতজ্ঞতার সাথে পান করা উচিত'
+            },
+            action: {
+                arabic: 'اليوم اشرب الماء على ثلاث مرات واذكر الله قبل وبعد الشرب',
+                english: 'Today drink water in three sips and remember Allah before and after drinking',
+                hindi: 'आज पानी तीन घूंट में पिएं और पीने से पहले और बाद में अल्लाह को याद करें',
+                bengali: 'আজ তিন চুমুকে পানি পান করুন এবং পানের আগে ও পরে আল্লাহকে স্মরণ করুন'
+            },
+            guidelines: [
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'الشرب باليد اليمنى وجالساً',
+                        english: 'Drink with right hand while sitting',
+                        hindi: 'दाहिने हाथ से और बैठकर पीना',
+                        bengali: 'ডান হাত দিয়ে ও বসে পান করা'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'الشرب على ثلاث دفعات مع التنفس خارج الإناء',
+                        english: 'Drink in three sips with breathing outside the container',
+                        hindi: 'तीन घूंट में पीना और बर्तन के बाहर सांस लेना',
+                        bengali: 'তিন চুমুকে পান করা ও পাত্রের বাইরে নিঃশ্বাস নেওয়া'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'بدء الشرب بالبسملة والانتهاء بالحمد',
+                        english: 'Start drinking with Bismillah and end with Alhamdulillah',
+                        hindi: 'बिस्मिल्लाह से शुरुआत और अल्हम्दुलिल्लाह से समाप्ति',
+                        bengali: 'বিসমিল্লাহ দিয়ে শুরু ও আলহামদুলিল্লাহ দিয়ে শেষ'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'الشرب واقفاً بدون ضرورة',
+                        english: 'Drinking while standing without necessity',
+                        hindi: 'बिना जरूरत खड़े होकर पीना',
+                        bengali: 'প্রয়োজন ছাড়া দাঁড়িয়ে পান করা'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'النفخ في الإناء أو التنفس فيه',
+                        english: 'Blowing into the container or breathing into it',
+                        hindi: 'बर्तन में फूंक मारना या उसमें सांस लेना',
+                        bengali: 'পাত্রে ফুঁ দেওয়া বা তাতে নিঃশ্বাস নেওয়া'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'شرب المسكرات والمواد الضارة',
+                        english: 'Drinking intoxicants and harmful substances',
+                        hindi: 'नशीले पदार्थ और हानिकारक चीजें पीना',
+                        bengali: 'মাদক ও ক্ষতিকর পদার্থ পান করা'
+                    }
+                }
+            ],
+            calligraphy: {
+                arabic: 'وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ',
+                meaning: {
+                    english: 'And We made from water every living thing',
+                    hindi: 'और हमने पानी से हर जीवित चीज़ बनाई',
+                    bengali: 'এবং আমি পানি থেকে সব জীবন্ত বস্তু সৃষ্টি করেছি'
+                }
+            }
+        },
+
+        // Replace both male and female dressing sections with this single combined section:
+
+        'dressing-etiquette': {
+            title: {
+                arabic: 'آداب اللباس',
+                english: 'Dressing Etiquette',
+                hindi: 'पहनावे के शिष्टाचार',
+                bengali: 'পোশাকের শিষ্টাচার'
+            },
+            subtitle: {
+                arabic: 'الآداب والأحكام الإسلامية في اللباس للرجال والنساء',
+                english: 'Islamic etiquette and rules for clothing - Men & Women',
+                hindi: 'पुरुष और महिलाओं के कपड़ों में इस्लामी शिष्टاचार और नियम',
+                bengali: 'পুরুষ ও নারীদের পোশাকে ইসলামী শিষ্টাচার ও বিধান'
+            },
+            verse: {
+                arabic: 'قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: مَنْ لَبِسَ ثَوْبًا فَقَالَ الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ',
+                transliteration: 'Man labisa thawban faqala alhamdulillahi allathi kasani hadha wa razaqanihi min ghayri hawlin minni wa la quwwah, ghufira lahu ma taqaddama min dhanbih',
+                translation: {
+                    english: 'Whoever wears a garment and says: All praise is for Allah who clothed me with this and provided it for me without any effort or power from me - his previous sins will be forgiven',
+                    hindi: 'जो व्यक्ति कपड़ा पहनकर यह कहे: सारी प्रशंसा अल्लाह के लिए है जिसने मुझे यह पहनाया और मेरी कोशिश और ताकत के बिना यह दिया - उसके पिछले गुनाह माफ हो जाएंगे',
+                    bengali: 'যে ব্যক্তি কাপড় পরে এই দোয়া পড়ে: সমস্ত প্রশংসা আল্লাহর যিনি আমাকে এটি পরিয়েছেন ও আমার চেষ্টা ও শক্তি ছাড়াই দান করেছেন - তার পূর্বের গুনাহ মাফ হবে'
+                },
+                reference: 'Sunan Abu Dawud, Book 32, Hadith 4023'
+            },
+            explanation: {
+                arabic: 'الإسلام يحدد آداب اللباس لكلا الجنسين. للرجال: ستر العورة من السرة إلى الركبة، تجنب الحرير والذهب. للنساء: الحجاب والستر الكامل، تجنب الضيق والشفاف، عدم التشبه بالرجال.',
+                english: 'Islam defines dress codes for both genders. For Men: Cover awrah (navel to knee), avoid silk and gold. For Women: Observe hijab and complete modesty, avoid tight/transparent clothes, don\'t imitate men.',
+                hindi: 'इस्लाम दोनों लिंगों के लिए पोशाक के नियम निर्धारित करता है। पुरुषों के लिए: सतर (नाभि से घुटने तक) ढकना, रेशम और सोना से बचना। महिलाओं के लिए: हिजाब और पूर्ण शालीनता, तंग/पारदर्शी कपड़ों से बचना, पुरुषों की नकल न करना।',
+                bengali: 'ইসলাম উভয় লিঙ্গের জন্য পোশাকের নিয়ম নির্ধারণ করে। পুরুষদের জন্য: সতর (নাভি থেকে হাঁটু) ঢাকা, রেশম ও স্বর্ণ এড়ানো। নারীদের জন্য: হিজাব ও সম্পূর্ণ শালীনতা, আঁটসাঁট/স্বচ্ছ কাপড় এড়ানো, পুরুষদের অনুকরণ না করা।'
+            },
+            lesson: {
+                arabic: 'اللباس المحتشم يعكس التقوى ويحفظ كرامة المؤمن',
+                english: 'Modest clothing reflects piety and preserves the dignity of believers',
+                hindi: 'शालीन पोशाक तक़वा को दर्शाती है और विश्वासियों की गरिमा को बनाए रखती है',
+                bengali: 'শালীন পোশাক তাকওয়া প্রতিফলিত করে এবং বিশ্বাসীদের মর্যাদা রক্ষা করে'
+            },
+            action: {
+                arabic: 'اليوم اقرأ دعاء اللباس واتبع آداب الإسلام في اختيار الملابس',
+                english: 'Today recite the clothing dua and follow Islamic etiquette in choosing clothes',
+                hindi: 'आज कपड़े की दुआ पढ़ें और कपड़े चुनने में इस्लामी शिष्टाचार का पालन करें',
+                bengali: 'আজ পোশাকের দোয়া পড়ুন এবং কাপড় বাছাইয়ে ইসলামী শিষ্টাচার অনুসরণ করুন'
+            },
+            guidelines: [
+                // Common Guidelines for Both
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'قراءة دعاء اللباس عند الارتداء - (للجميع)',
+                        english: 'Recite clothing dua when dressing - (Both)',
+                        hindi: 'कपड़े पहनते समय दुआ पढ़ना - (दोनों के लिए)',
+                        bengali: 'কাপড় পরার সময় দোয়া পড়া - (উভয়ের জন্য)'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'لبس الثوب النظيف والطيب - (للجميع)',
+                        english: 'Wear clean and pleasant clothes - (Both)',
+                        hindi: 'साफ और अच्छे कपড़े पहनना - (दोनों के लिए)',
+                        bengali: 'পরিচ্ছন্ন ও ভাল কাপড় পরা - (উভয়ের জন্য)'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'البدء باليمين في اللبس - (للجميع)',
+                        english: 'Start dressing from the right side - (Both)',
+                        hindi: 'कपड़े पहনने में दाहिने से शुरुआत - (दোনों के लিए)',
+                        bengali: 'পোশাক পরায় ডান দিক থেকে শুরু - (উভয়ের জন্য)'
+                    }
+                },
+                // Male-specific Guidelines
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'ستر العورة من السرة إلى الركبة - (للرجال)',
+                        english: 'Cover awrah from navel to knee - (Male)',
+                        hindi: 'नाभि से घुटने तक सतर का ढकना - (पुरुष)',
+                        bengali: 'নাভি থেকে হাঁটু পর্যন্ত সতর ঢাকা - (পুরুষ)'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'لبس الثوب الأبيض المستحب - (للرجال)',
+                        english: 'Wear recommended white clothes - (Male)',
+                        hindi: 'मुस্তহব सफेद कपড़े पहनना - (পুরুষ)',
+                        bengali: 'মুস্তাহাব সাদা কাপড় পরা - (পুরুষ)'
+                    }
+                },
+                // Female-specific Guidelines  
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'تغطية الجسم كله عدا الوجه والكفين - (للنساء)',
+                        english: 'Cover entire body except face and hands - (Female)',
+                        hindi: 'चেহरे और हাथों को छোड़कর पूरे शরीर को ढকना - (महिला)',
+                        bengali: 'মুখ ও হাত ছাড়া সমস্ত শরীর ঢাকা - (নারী)'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'لبس الحجاب الفضفاض غير الشفاف - (للنساء)',
+                        english: 'Wear loose, non-transparent hijab - (Female)',
+                        hindi: 'ঢীলা, पारदর्शী न होने वाला हिজাব - (महিला)',
+                        bengali: 'ঢিলা, অস্বচ্ছ হিজাব পরা - (নারী)'
+                    }
+                },
+                // Haram for Males
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'لبس الحرير الخالص والذهب - (للرجال)',
+                        english: 'Wearing pure silk and gold - (Male)',
+                        hindi: 'शुद्ध रেশम और सोना पহনना - (পুরুষ)',
+                        bengali: 'খাঁটি রেশম ও স্বর্ণ পরা - (পুরুষ)'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'التشبه بالنساء في اللباس - (للرجال)',
+                        english: 'Imitating women in clothing - (Male)',
+                        hindi: 'কপড़ों में महिলाओं की नकल - (পুরুষ)',
+                        bengali: 'পোশাকে নারীদের অনুকরণ - (পুরুষ)'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'إسبال الثوب تحت الكعبين للكبر - (للرجال)',
+                        english: 'Dragging clothes below ankles out of pride - (Male)',
+                        hindi: 'अহंকार से कপड़ों को টখনों के नीচे लটকाना - (পুরুষ)',
+                        bengali: 'অহংকারবশত কাপড় গোড়ালির নিচে ঝুলানো - (পুরুষ)'
+                    }
+                },
+                // Haram for Females
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'إظهار الزينة أمام الرجال الأجانب - (للنساء)',
+                        english: 'Displaying adornment before non-mahram men - (Female)',
+                        hindi: 'गैর-महরम পুরুষों के সামনে जीনত दिखाना - (महिला)',
+                        bengali: 'গায়ের মাহরাম পুরুষদের সামনে সৌন্দর্য প্রদর্শন - (নারী)'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'لبس الضيق والشفاف والقصير - (للنساء)',
+                        english: 'Wearing tight, transparent, or short clothes - (Female)',
+                        hindi: 'तंग, পারদর্শী या छোटे কপড़े - (महिला)',
+                        bengali: 'আঁটসাঁট, স্বচ্ছ বা ছোট কাপড় - (নারী)'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'التشبه بالرجال أو الكافرات - (للنساء)',
+                        english: 'Imitating men or non-believing women - (Female)',
+                        hindi: 'পুরুষों या काफिर महिলाओं की नকল - (महिला)',
+                        bengali: 'পুরুষ বা কাফের নারীদের অনুকরণ - (নারী)'
+                    }
+                }
+            ],
+            calligraphy: {
+                arabic: 'وَلِبَاسُ التَّقْوَىٰ ذَٰلِكَ خَيْرٌ',
+                meaning: {
+                    english: 'And the clothing of righteousness - that is best',
+                    hindi: 'और तक़वा का लिबास - वह सबसे बेहतर है',
+                    bengali: 'আর তাকওয়ার পোশাক - সেটাই সর্বোত্তম'
+                }
+            }
+        },
+
+
+        'traveling-etiquette': {
+            title: {
+                arabic: 'آداب السفر',
+                english: 'Traveling Etiquette',
+                hindi: 'यात्रा के शिष्टाचार',
+                bengali: 'ভ্রমণের শিষ্টাচার'
+            },
+            subtitle: {
+                arabic: 'السنن والآداب الإسلامية في السفر والرحلات',
+                english: 'Islamic Sunnah and etiquette in traveling and journeys',
+                hindi: 'यात्रा और सफर में इस्लामी सुन्नत और शिष्टाचार',
+                bengali: 'ভ্রমণ ও সফরে ইসলামী সুন্নাত ও শিষ্টাচার'
+            },
+            verse: {
+                arabic: 'وَإِذَا ضَرَبْتُمْ فِي الْأَرْضِ فَلَيْسَ عَلَيْكُمْ جُنَاحٌ أَن تَقْصُرُوا مِنَ الصَّلَاةِ إِنْ خِفْتُمْ أَن يَفْتِنَكُمُ الَّذِينَ كَفَرُوا',
+                transliteration: 'Wa idha darabtum fil-ardi fa laysa \'alaykum junahun an taqsuru minas-salati in khiftum an yaftin-nakumulladhina kafaru',
+                translation: {
+                    english: 'And when you travel throughout the land, there is no blame upon you for shortening the prayer if you fear that those who disbelieve may disrupt you',
+                    hindi: 'और जब तुम धरती में सफर करो तो तुम पर कोई गुनाह नहीं कि तुम नमाज़ कम करो अगर तुम्हें डर हो कि काफिर तुम्हें परेशान करेंगे',
+                    bengali: 'আর যখন তোমরা পৃথিবীতে ভ্রমণ কর তখন নামাজ সংক্ষিপ্ত করলে তোমাদের কোনো পাপ নেই যদি তোমরা ভয় কর যে কাফেররা তোমাদের বিপদে ফেলবে'
+                },
+                reference: 'Quran 4:101'
+            },
+            explanation: {
+                arabic: 'السفر في الإسلام له آداب وأحكام خاصة. يُستحب الدعاء قبل السفر، واختيار الرفقة الصالحة، وقصر الصلاة في السفر الطويل، والالتزام بالأخلاق الإسلامية.',
+                english: 'Traveling in Islam has special etiquettes and rulings. It\'s recommended to make dua before travel, choose righteous companions, shorten prayers during long journeys, and maintain Islamic morals.',
+                hindi: 'इस्लाम में यात्रा के विशेष शिष्टाचार और नियम हैं। यात्रा से पहले दुआ करना, अच्छे साथियों का चुनाव, लंबी यात्रा में नमाज़ कम करना, और इस्लामी अखलाक का पालन मुस्तहब है।',
+                bengali: 'ইসলামে ভ্রমণের বিশেষ শিষ্টাচার ও বিধান রয়েছে। ভ্রমণের আগে দোয়া করা, ভাল সঙ্গী নির্বাচন, দীর্ঘ সফরে নামাজ কসর করা এবং ইসলামী নৈতিকতা বজায় রাখা মুস্তাহাব।'
+            },
+            lesson: {
+                arabic: 'السفر عبادة وفرصة لتذكر نعم الله والدعوة إليه',
+                english: 'Travel is worship and an opportunity to remember Allah\'s blessings and invite others to Him',
+                hindi: 'यात्रा एक इबादत है और अल्लाह की नेमतों को याद करने और दावत देने का अवसर है',
+                bengali: 'ভ্রমণ একটি ইবাদত এবং আল্লাহর নিয়ামত স্মরণ ও দাওয়াতের সুযোগ'
+            },
+            action: {
+                arabic: 'اليوم ادع بدعاء السفر قبل أي رحلة واذكر الله في الطريق',
+                english: 'Today recite travel dua before any journey and remember Allah on the way',
+                hindi: 'आज किसी भी यात्रा से पहले सफर की दुआ पढ़ें और रास्ते में अल्लाह को याद करें',
+                bengali: 'আজ যেকোনো সফরের আগে ভ্রমণের দোয়া পড়ুন এবং পথে আল্লাহকে স্মরণ করুন'
+            },
+            guidelines: [
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'قراءة دعاء السفر قبل الخروج',
+                        english: 'Recite travel dua before departure',
+                        hindi: 'निकलने से पहले सफर की दुआ पढ़ना',
+                        bengali: 'রওনা হওয়ার আগে সফরের দোয়া পড়া'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'اختيار الرفقة الصالحة',
+                        english: 'Choose righteous traveling companions',
+                        hindi: 'अच्छे सफर के साथियों का चुनाव',
+                        bengali: 'ভাল সফরসঙ্গী নির্বাচন'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'قصر الصلاة في السفر الطويل',
+                        english: 'Shorten prayers during long journeys',
+                        hindi: 'लंबी यात्रा में नमाज़ कसर करना',
+                        bengali: 'দীর্ঘ সফরে নামাজ কসর করা'
+                    }
+                },
+                {
+                    type: 'halal',
+                    text: {
+                        arabic: 'الصدقة قبل السفر للحماية',
+                        english: 'Give charity before travel for protection',
+                        hindi: 'सुरक्षा के लिए सफर से पहले सदका देना',
+                        bengali: 'নিরাপত্তার জন্য সফরের আগে সদকা দেওয়া'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'السفر إلى أماكن المعاصي',
+                        english: 'Traveling to places of sin',
+                        hindi: 'पाप के स्थानों की यात्रा',
+                        bengali: 'পাপের স্থানে ভ্রমণ'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'سفر المرأة بدون محرم لمسافة طويلة',
+                        english: 'Woman traveling long distances without mahram',
+                        hindi: 'महिला का महरम के बिना लंबी यात्रा',
+                        bengali: 'নারীর মাহরাম ছাড়া দূর সফর'
+                    }
+                },
+                {
+                    type: 'haram',
+                    text: {
+                        arabic: 'ترك الصلاة أثناء السفر',
+                        english: 'Abandoning prayer during travel',
+                        hindi: 'यात्रा के दौरान नमाज़ छोड़ना',
+                        bengali: 'সফরে নামাজ ছেড়ে দেওয়া'
+                    }
+                }
+            ],
+            calligraphy: {
+                arabic: 'سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ',
+                meaning: {
+                    english: 'Glory to Him who subjected this to us, and we could not have been capable of it',
+                    hindi: 'पाक है वह जिसने इसे हमारे काबू में कर दिया और हम इसे काबू में नहीं कर सकते थे',
+                    bengali: 'পবিত্র তিনি যিনি এটি আমাদের অধীন করে দিয়েছেন এবং আমরা এর নিয়ন্ত্রণকারী ছিলাম না'
+                }
+            }
+        },
+
+        // Add these 4 social interactions to your existing reflectionDataTemplate object:
+
+'greeting-etiquette': {
+    title: {
+        arabic: 'آداب السلام',
+        english: 'Greeting Etiquette',
+        hindi: 'सलाम के शिष्टाचार',
+        bengali: 'সালামের শিষ্টাচার'
+    },
+    subtitle: {
+        arabic: 'السنن والآداب الإسلامية في إلقاء السلام ورده',
+        english: 'Islamic Sunnah and etiquette in giving and returning Salam',
+        hindi: 'सलाम देने और वापस करने में इस्लामी सुन्नत और शिष्टाचार',
+        bengali: 'সালাম প্রদান ও প্রত্যুত্তরে ইসলামী সুন্নাত ও শিষ্টাচার'
+    },
+    verse: {
+        arabic: 'وَإِذَا حُيِّيتُم بِتَحِيَّةٍ فَحَيُّوا بِأَحْسَنَ مِنْهَا أَوْ رُدُّوهَا إِنَّ اللَّهَ كَانَ عَلَىٰ كُلِّ شَيْءٍ حَسِيبًا',
+        transliteration: 'Wa idha huyitum bi tahiyyatin fa hayu bi ahsana minha aw rudduha inna Allah kana ala kulli shayin hasiba',
+        translation: {
+            english: 'And when you are greeted with a greeting, greet with one better than it or return it. Indeed, Allah is ever, over all things, an Accountant',
+            hindi: 'और जब तुम्हें सलाम किया जाए तो उससे बेहतर सलाम करो या वैसा ही वापस करो। निःसंदेह अल्लाह हर चीज़ का हिसाब लेने वाला है',
+            bengali: 'আর যখন তোমাদের সালাম দেওয়া হয় তখন তার চেয়ে উত্তম সালাম দাও অথবা তার জবাব দাও। নিশ্চয় আল্লাহ সব বিষয়ের হিসাবকারী'
+        },
+        reference: 'Quran 4:86'
+    },
+    explanation: {
+        arabic: 'السلام تحية الإسلام وعلامة المحبة والسلام بين المؤمنين. البادئ بالسلام أولى بالأجر، ورد السلام فريضة. يُستحب السلام عند اللقاء والفراق.',
+        english: 'Salam is the greeting of Islam and a sign of love and peace among believers. The one who initiates Salam gets more reward, while returning Salam is obligatory. It\'s recommended when meeting and parting.',
+        hindi: 'सलाम इस्लाम का अभिवादन है और मोमिनों के बीच प्रेम और शांति का निशान है। सलाम शुरू करने वाले को अधिक पुण्य मिलता है, और सलाम का जवाब देना फ़र्ज़ है। मिलने और बिछड़ने के समय सलाम मुस्तहब है।',
+        bengali: 'সালাম ইসলামের অভিবাদন এবং মুমিনদের মধ্যে ভালোবাসা ও শান্তির চিহ্ন। যে প্রথমে সালাম দেয় সে বেশি সওয়াব পায়, আর সালামের জবাব দেওয়া ফরজ। সাক্ষাত ও বিদায়ের সময় সালাম মুস্তাহাব।'
+    },
+    lesson: {
+        arabic: 'السلام يخلق الأخوة والمحبة ويزيل العداوة بين القلوب',
+        english: 'Salam creates brotherhood and love and removes enmity between hearts',
+        hindi: 'सलाम भाईचारा और प्रेम पैदा करता है और दिलों के बीच दुश्मनी दूर करता है',
+        bengali: 'সালাম ভ্রাতৃত্ব ও ভালোবাসা সৃষ্টি করে এবং হৃদয়ের শত্রুতা দূর করে'
+    },
+    action: {
+        arabic: 'اليوم ابدأ بالسلام مع كل مسلم تلقاه واحرص على رد السلام بأحسن منه',
+        english: 'Today initiate Salam with every Muslim you meet and ensure to return Salam better than it was given',
+        hindi: 'आज हर मुसलमान से मिलने पर पहले सलाम करें और सलाम का जवाब उससे बेहतर दें',
+        bengali: 'আজ প্রতিটি মুসলিমের সাথে সাক্ষাতে প্রথমে সালাম দিন এবং প্রাপ্ত সালামের চেয়ে উত্তম জবাব দিন'
+    },
+    guidelines: [
+        {
+            type: 'halal',
+            text: {
+                arabic: 'البدء بالسلام عند اللقاء والفراق',
+                english: 'Initiate Salam when meeting and parting',
+                hindi: 'मिलने और बिछड़ने पर सलाम की शुरुआत करना',
+                bengali: 'সাক্ষাত ও বিদায়ে সালাম শুরু করা'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'رد السلام بأحسن منه أو مثله',
+                english: 'Return Salam better than it or similar to it',
+                hindi: 'सलाम का जवाब उससे बेहतर या वैसा ही देना',
+                bengali: 'সালামের জবাব তার চেয়ে উত্তম বা সমান দেওয়া'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'الصغير يسلم على الكبير والراكب على الماشي',
+                english: 'Younger greets elder, rider greets walker',
+                hindi: 'छोटा बड़े को, सवार पैदल चलने वाले को सलाम करे',
+                bengali: 'ছোট বড়কে, আরোহী পদচারীকে সালাম দেবে'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'السلام بصوت واضح ومسموع',
+                english: 'Give Salam with clear and audible voice',
+                hindi: 'स्पष्ट और सुनाई देने वाली आवाज़ में सलाम देना',
+                bengali: 'স্পষ্ট ও শ্রবণযোগ্য আওয়াজে সালাম দেওয়া'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'تجاهل السلام أو عدم رده',
+                english: 'Ignoring Salam or not returning it',
+                hindi: 'सलाम को नज़रअंदाज़ करना या जवाब न देना',
+                bengali: 'সালাম উপেক্ষা করা বা জবাব না দেওয়া'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'السלাম على أهل الكتاب بدءاً بالسلام عليكم',
+                english: 'Starting with "As-salamu alaykum" to non-Muslims',
+                hindi: 'गैर-मुसलमानों को "अस-सलामु अलैकुम" से सलाम शुरू करना',
+                bengali: 'অমুসলিমদের "আস-সালামু আলাইকুম" দিয়ে সালাম শুরু করা'
+            }
+        }
+    ],
+    calligraphy: {
+        arabic: 'السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ',
+        meaning: {
+            english: 'Peace be upon you and Allah\'s mercy and blessings',
+            hindi: 'आप पर शांति हो और अल्लाह की रहमत और बरकतें हों',
+            bengali: 'আপনার ওপর শান্তি ও আল্লাহর রহমত ও বরকত হোক'
+        }
+    }
+},
+
+'speaking-etiquette': {
+    title: {
+        arabic: 'آداب الكلام',
+        english: 'Speaking Etiquette',
+        hindi: 'बोलने के शिष्टाचार',
+        bengali: 'কথা বলার শিষ্টাচার'
+    },
+    subtitle: {
+        arabic: 'الآداب الإسلامية في الكلام والحديث مع الناس',
+        english: 'Islamic etiquette in speech and conversation with people',
+        hindi: 'लोगों के साथ बात करने में इस्लामी शिष्टाचार',
+        bengali: 'মানুষের সাথে কথাবার্তায় ইসলামী শিষ্টাচার'
+    },
+    verse: {
+        arabic: 'وَقُولُوا لِلنَّاسِ حُسْنًا',
+        transliteration: 'Wa qulu lin-nasi husna',
+        translation: {
+            english: 'And speak to people good words',
+            hindi: 'और लोगों से अच्छी बात कहो',
+            bengali: 'এবং মানুষের সাথে ভাল কথা বল'
+        },
+        reference: 'Quran 2:83'
+    },
+    explanation: {
+        arabic: 'الكلام الطيب صدقة والكلمة الطيبة كالشجرة الطيبة. الإسلام يحث على الكلام الحسن والصدق وتجنب الغيبة والنميمة والكذب. اللسان نعمة يجب استعمالها في طاعة الله.',
+        english: 'Good speech is charity and a good word is like a good tree. Islam encourages beautiful speech, truthfulness, and avoiding backbiting, tale-carrying, and lying. The tongue is a blessing to be used in Allah\'s obedience.',
+        hindi: 'अच्छी बात सदका है और अच्छा शब्द अच्छे पेड़ की तरह है। इस्लाम सुंदर भाषण, सच्चाई को प्रोत्साहित करता है और गीबत, चुगली और झूठ से बचने को कहता है। जुबान एक नेमत है जिसे अल्लाह की आज्ञाकारिता में इस्तेमाल करना चाहिए।',
+        bengali: 'ভাল কথা সদকা এবং উত্তম বাক্য উত্তম বৃক্ষের মত। ইসলাম সুন্দর কথা, সত্যবাদিতা উৎসাহিত করে এবং গীবত, চোগলখোরি ও মিথ্যা থেকে বিরত থাকতে বলে। জিহ্বা একটি নিয়ামত যা আল্লাহর আনুগত্যে ব্যবহার করা উচিত।'
+    },
+    lesson: {
+        arabic: 'الكلمة الطيبة تفتح القلوب وتقرب بين الناس',
+        english: 'Good words open hearts and bring people closer',
+        hindi: 'अच्छे शब्द दिलों को खोलते हैं और लोगों को करीब लाते हैं',
+        bengali: 'উত্তম বাক্য হৃদয় খুলে দেয় এবং মানুষকে কাছে আনে'
+    },
+    action: {
+        arabic: 'اليوم اختر كلماتك بعناية وتكلم بالصدق والخير فقط',
+        english: 'Today choose your words carefully and speak only truth and goodness',
+        hindi: 'आज अपने शब्दों को ध्यान से चुनें और केवल सच और भलाई की बात करें',
+        bengali: 'আজ আপনার শব্দ সতর্কতার সাথে বেছে নিন এবং শুধু সত্য ও কল্যাণের কথা বলুন'
+    },
+    guidelines: [
+        {
+            type: 'halal',
+            text: {
+                arabic: 'الصدق في القول والوفاء بالوعد',
+                english: 'Truthfulness in speech and keeping promises',
+                hindi: 'बात में सच्चाई और वादे को पूरा करना',
+                bengali: 'কথায় সত্যতা ও প্রতিশ্রুতি পালন'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'الكلام الطيب والأدب في الحديث',
+                english: 'Good speech and politeness in conversation',
+                hindi: 'अच्छी बात और बातचीत में शिष्टाचार',
+                bengali: 'ভাল কথা ও আলাপে সভ্যতা'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'الاستماع الجيد وعدم المقاطعة',
+                english: 'Good listening and not interrupting',
+                hindi: 'अच्छी तरह सुनना और बीच में न बोलना',
+                bengali: 'ভালভাবে শোনা ও মাঝে বাধা না দেওয়া'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'خفض الصوت وعدم الصراخ',
+                english: 'Lower voice and avoid shouting',
+                hindi: 'आवाज़ धीमी रखना और चिल्लाने से बचना',
+                bengali: 'আওয়াজ নিচু রাখা ও চিৎকার এড়ানো'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'الكذب والافتراء على الآخرين',
+                english: 'Lying and making false accusations against others',
+                hindi: 'झूठ बोलना और दूसरों पर मिथ्या आरोप लगाना',
+                bengali: 'মিথ্যা বলা ও অন্যদের বিরুদ্ধে মিথ্যা অভিযোग'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'الغيبة والنميمة وسوء الظن',
+                english: 'Backbiting, tale-carrying, and bad assumptions',
+                hindi: 'गीबत, चुगली और बुरी धारणा रखना',
+                bengali: 'গীবত, চোগলখোরি ও কুধারণা পোষণ'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'الكلام الفاحش والسب والشتم',
+                english: 'Obscene language, cursing, and abusive speech',
+                hindi: 'अश्लील भाषा, गाली-गलौज और अपमानजनक बातें',
+                bengali: 'অশ্লীল ভাষা, গালাগাল ও অপমানজনক কথা'
+            }
+        }
+    ],
+    calligraphy: {
+        arabic: 'وَقُل رَّبِّ اهْدِنِي لِأَحْسَنِ الْأَقْوَالِ',
+        meaning: {
+            english: 'And say: My Lord, guide me to the best of words',
+            hindi: 'और कहो: मेरे रब! मुझे सबसे अच्छी बातों की हिदायत दे',
+            bengali: 'এবং বল: আমার প্রভু! আমাকে সর্বোত্তম কথার পথ দেখান'
+        }
+    }
+},
+
+'business-etiquette': {
+    title: {
+        arabic: 'آداب التجارة',
+        english: 'Business Etiquette',
+        hindi: 'व्यापार के शिष्टाचार',
+        bengali: 'ব্যবসার শিষ্টাচার'
+    },
+    subtitle: {
+        arabic: 'الأخلاق والآداب الإسلامية في التجارة والمعاملات',
+        english: 'Islamic morals and etiquette in trade and transactions',
+        hindi: 'व्यापार और लेन-देन में इस्लामी नैतिकता और शिष्टाचार',
+        bengali: 'ব্যবসা ও লেনদেনে ইসলামী নৈতিকতা ও শিষ্টাচার'
+    },
+    verse: {
+        arabic: 'يَا أَيُّهَا الَّذِينَ آمَنُوا أَوْفُوا بِالْعُقُودِ',
+        transliteration: 'Ya ayyuhal-ladhina amanu awfu bil-\'uqud',
+        translation: {
+            english: 'O you who believe! Fulfill your contracts',
+            hindi: 'हे ईमान वालों! अपने वादों को पूरा करो',
+            bengali: 'হে মুমিনগণ! তোমরা অঙ্গীকার পূর্ণ কর'
+        },
+        reference: 'Quran 5:1'
+    },
+    explanation: {
+        arabic: 'الإسلام يحث على الصدق والأمانة في التجارة. التاجر الصدوق مع النبيين والصديقين يوم القيامة. يُحرم الغش والخداع والربا والاحتكار، ويُستحب التيسير على المعسر.',
+        english: 'Islam emphasizes honesty and trustworthiness in business. The truthful trader will be with Prophets and truthful ones on Judgment Day. Fraud, deception, usury, and hoarding are forbidden, while easing transactions for the needy is recommended.',
+        hindi: 'इस्लाम व्यापार में ईमानदारी और अमानतदारी पर जोर देता है। सच्चा व्यापारी क़यामत के दिन नबियों और सिद्दीकों के साथ होगा। धोखाधड़ी, फरेब, सूद और जमाखोरी हराम है, जबकि जरूरतमंदों के लिए आसानी करना मुस्तहब है।',
+        bengali: 'ইসলাম ব্যবসায় সততা ও বিশ্বস্ততার ওপর গুরুত্বারোপ করে। সত্যবাদী ব্যবসায়ী কিয়ামতের দিন নবী ও সিদ্দিকদের সাথে থাকবে। প্রতারণা, ধোঁকা, সুদ ও মজুদদারি হারাম, আর অভাবীদের সুবিধা দেওয়া মুস্তাহাব।'
+    },
+    lesson: {
+        arabic: 'التجارة الحلال بركة والصدق فيها يجلب النجاح',
+        english: 'Halal business is blessed and honesty in it brings success',
+        hindi: 'हलाल व्यापार में बरकत है और उसमें ईमानदारी सफलता लाती है',
+        bengali: 'হালাল ব্যবসায় বরকত আছে এবং তাতে সততা সফলতা আনে'
+    },
+    action: {
+        arabic: 'اليوم تعامل بالصدق والأمانة في جميع المعاملات المالية',
+        english: 'Today deal with honesty and trustworthiness in all financial transactions',
+        hindi: 'आज सभी वित्तीय लेन-देन में ईमानदारी और अमानत से काम लें',
+        bengali: 'আজ সকল আর্থিক লেনদেনে সততা ও বিশ্বস্ততার সাথে কাজ করুন'
+    },
+    guidelines: [
+        {
+            type: 'halal',
+            text: {
+                arabic: 'الصدق في البيع والشراء',
+                english: 'Honesty in buying and selling',
+                hindi: 'खरीद-बिक्री में ईमानदारी',
+                bengali: 'ক্রয়-বিক্রয়ে সততা'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'الوفاء بالعقود والمواعيد',
+                english: 'Fulfilling contracts and appointments',
+                hindi: 'अनुबंध और समय का पालन',
+                bengali: 'চুক্তি ও সময়ের পাবন্দি'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'إعطاء الوزن والكيل الصحيح',
+                english: 'Giving correct weight and measure',
+                hindi: 'सही तौल और माप देना',
+                bengali: 'সঠিক ওজন ও পরিমাপ দেওয়া'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'التيسير على المعسر والرحمة بالناس',
+                english: 'Easing for the needy and showing mercy to people',
+                hindi: 'जरूरतमंदों के लिए आसानी और लोगों पर दया',
+                bengali: 'অভাবীদের সুবিধা ও মানুষের প্রতি দয়া'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'الربا والفوائد المحرمة',
+                english: 'Usury and forbidden interest',
+                hindi: 'सूद और हराम ब्याज',
+                bengali: 'সুদ ও হারাম সুদ'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'الغش والخداع في البضائع',
+                english: 'Fraud and deception in goods',
+                hindi: 'सामान में धोखाधड़ी और फरेब',
+                bengali: 'পণ্যে প্রতারণা ও ধোঁকা'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'الاحتكار ومنع السلع عن الناس',
+                english: 'Hoarding and withholding goods from people',
+                hindi: 'जमाखोरी और लोगों से सामान रोकना',
+                bengali: 'মজুদদারি ও মানুষ থেকে পণ্য বিরত রাখা'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'بيع المحرمات والنجاسات',
+                english: 'Selling forbidden and impure items',
+                hindi: 'हराम और नापाक चीजों की बिक्री',
+                bengali: 'হারাম ও অপবিত্র জিনিস বিক্রয়'
+            }
+        }
+    ],
+    calligraphy: {
+        arabic: 'التَّاجِرُ الصَّدُوقُ الْأَمِينُ مَعَ النَّبِيِّينَ وَالصِّدِّيقِينَ',
+        meaning: {
+            english: 'The truthful, honest trader will be with the Prophets and the truthful ones',
+            hindi: 'सच्चा, ईमानदार व्यापारी नबियों और सिद्दीकों के साथ होगा',
+            bengali: 'সত্যবাদী, বিশ্বস্ত ব্যবসায়ী নবী ও সিদ্দিকদের সাথে থাকবে'
+        }
+    }
+},
+
+'family-etiquette': {
+    title: {
+        arabic: 'آداب الأسرة',
+        english: 'Family Etiquette',
+        hindi: 'पारिवारिक शिष्टाचार',
+        bengali: 'পারিবারিক শিষ্টাচার'
+    },
+    subtitle: {
+        arabic: 'الآداب الإسلامية في التعامل مع الأسرة والأقارب',
+        english: 'Islamic etiquette in dealing with family and relatives',
+        hindi: 'परिवार और रिश्तेदारों के साथ व्यवहार में इस्लामी शिष्टाचार',
+        bengali: 'পরিবার ও আত্মীয়দের সাথে আচরণে ইসলামী শিষ্টাচার'
+    },
+    verse: {
+        arabic: 'وَبِالْوَالِدَيْنِ إِحْسَانًا وَبِذِي الْقُرْبَىٰ وَالْيَتَامَىٰ وَالْمَسَاكِينِ',
+        transliteration: 'Wa bil-walidayni ihsanan wa bi dhil-qurba wal-yatama wal-masakin',
+        translation: {
+            english: 'And to parents do good and to relatives and orphans and the needy',
+            hindi: 'और माता-पिता के साथ अच्छा व्यवहार करो और रिश्तेदारों, यतीमों और जरूरतमंदों के साथ',
+            bengali: 'এবং মাতা-পিতার সাথে সদ্ব্যবহার কর এবং আত্মীয়-স্বজন, এতিম ও অভাবগ্রস্তদের সাথে'
+        },
+        reference: 'Quran 4:36'
+    },
+    explanation: {
+        arabic: 'الإسلام يؤكد على بر الوالدين وصلة الرحم. الجنة تحت أقدام الأمهات، والوالد أوسط أبواب الجنة. قطع الرحم محرم وصلته مستحبة، والزوج والزوجة لهما حقوق متبادلة.',
+        english: 'Islam emphasizes being good to parents and maintaining family ties. Paradise is under mothers\' feet, and father is the middle gate of Paradise. Cutting family ties is forbidden while maintaining them is recommended. Spouses have mutual rights.',
+        hindi: 'इस्लाम माता-पिता के साथ अच्छा व्यवहार और रिश्तेदारी के संबंधों पर जोर देता है। स्वर्ग माताओं के पैरों के नीचे है, और पिता स्वर्ग का मध्यम द्वार है। रिश्तेदारी तोड़ना हराम और जोड़ना मुस्तहब है। पति-पत्नी के पारस्परिक अधिकार हैं।',
+        bengali: 'ইসলাম মাতা-পিতার প্রতি সদাচরণ ও আত্মীয়তার বন্ধন রক্ষার ওপর গুরুত্বারোপ করে। মায়েদের পায়ের নিচে বেহেশত, আর বাবা বেহেশতের মধ্যম দরজা। আত্মীয়তার সম্পর্ক ছিন্ন করা হারাম ও বজায় রাখা মুস্তাহাব। স্বামী-স্ত্রীর পারস্পরিক অধিকার রয়েছে।'
+    },
+    lesson: {
+        arabic: 'الأسرة أساس المجتمع والبر بها طريق إلى رضا الله',
+        english: 'Family is the foundation of society and being good to them is a path to Allah\'s pleasure',
+        hindi: 'परिवार समाज की आधारशिला है और उनके साथ अच्छा व्यवहार अल्लाह की खुशी का रास्ता है',
+        bengali: 'পরিবার সমাজের ভিত্তি এবং তাদের সাথে সদাচরণ আল্লাহর সন্তুষ্টির পথ'
+    },
+    action: {
+        arabic: 'اليوم تواصل مع والديك وأقاربك واسأل عن أحوالهم',
+        english: 'Today contact your parents and relatives and ask about their well-being',
+        hindi: 'आज अपने माता-पिता और रिश्तेदारों से संपर्क करें और उनका हाल-चाल पूछें',
+        bengali: 'আজ আপনার মাতা-পিতা ও আত্মীয়দের সাথে যোগাযোগ করুন এবং তাদের খোঁজখবর নিন'
+    },
+    guidelines: [
+        {
+            type: 'halal',
+            text: {
+                arabic: 'بر الوالدين وطاعتهما في المعروف',
+                english: 'Being good to parents and obeying them in good',
+                hindi: 'माता-पिता के साथ अच्छा व्यवहार और भलाई में उनकी आज्ञा',
+                bengali: 'মাতা-পিতার সাথে সদাচরণ ও ভালো কাজে তাদের আনুগত্য'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'صلة الرحم والإحسان إلى الأقارب',
+                english: 'Maintaining family ties and being kind to relatives',
+                hindi: 'रिश्तेदारी के संबंध बनाए रखना और रिश्तेदारों के साथ अच्छा व्यवहार',
+                bengali: 'আত্মীয়তার সম্পর্ক বজায় রাখা ও আত্মীয়দের প্রতি দয়া'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'العدل بين الأولاد والعطف عليهم',
+                english: 'Justice among children and showing them affection',
+                hindi: 'बच्चों के बीच न्याय और उन पर स्नेह दिखाना',
+                bengali: 'সন্তানদের মধ্যে ন্যায়বিচার ও তাদের প্রতি স্নেহ প্রদর্শন'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'احترام الزوج والزوجة وحفظ الحقوق',
+                english: 'Respecting spouse and protecting mutual rights',
+                hindi: 'पति-पत्नी का सम्मान और पारस्परिक अधिकारों की रक्षा',
+                bengali: 'স্বামী-স্ত্রীর সম্মান ও পারস্পরিক অধিকার রক্ষা'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'عقوق الوالدين والإساءة إليهما',
+                english: 'Disobeying parents and being unkind to them',
+                hindi: 'माता-पिता की अवज्ञा और उनके साथ बुरा व्यवহार',
+                bengali: 'মাতা-পিতার অবাধ্যতা ও তাদের সাথে দুর্ব্যবহার'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'قطيعة الرحم وهجر الأقارب',
+                english: 'Cutting family ties and abandoning relatives',
+                hindi: 'रिश्तेदारी तोड़ना और रिश्तेदारों को छोड़ना',
+                bengali: 'আত্মীয়তার সম্পর্ক ছিন্ন করা ও আত্মীয়দের পরিত্যাগ'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'الظلم والعنف ضد أفراد الأسرة',
+                english: 'Injustice and violence against family members',
+                hindi: 'परिवारजनों के साथ अन्याय और हिंसा',
+                bengali: 'পরিবারের সদস্যদের প্রতি অন্যায় ও সহিংসতা'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'إهمال حقوق الزوج أو الزوجة',
+                english: 'Neglecting spouse\'s rights',
+                hindi: 'पति या पत्नी के अधिकारों की उपेक्षा',
+                bengali: 'স্বামী বা স্ত্রীর অধিকার উপেক্ষা'
+            }
+        }
+    ],
+    calligraphy: {
+        arabic: 'الْجَنَّةُ تَحْتَ أَقْدَامِ الْأُمَّهَاتِ',
+        meaning: {
+            english: 'Paradise lies under the feet of mothers',
+            hindi: 'स्वर्ग माताओं के पैरों के नीचे है',
+            bengali: 'মায়েদের পায়ের নিচে বেহেশত'
+        }
+    }
+},
+
+// Add these 3 evening routine activities to your existing reflectionDataTemplate object:
+
+'evening-dhikr': {
+    title: {
+        arabic: 'أذكار المساء',
+        english: 'Evening Dhikr',
+        hindi: 'शाम के अज़कार',
+        bengali: 'সন্ধ্যার জিকির'
+    },
+    subtitle: {
+        arabic: 'الأذكار والأدعية المستحبة في المساء',
+        english: 'Recommended remembrance and supplications in the evening',
+        hindi: 'शाम के समय मुस्तहब ज़िक्र और दुआएं',
+        bengali: 'সন্ধ্যায় মুস্তাহাব জিকির ও দোয়া'
+    },
+    verse: {
+        arabic: 'وَسَبِّحْ بِحَمْدِ رَبِّكَ بِالْعَشِيِّ وَالْإِبْكَارِ',
+        transliteration: 'Wa sabbih bi hamdi rabbika bil-\'ashiyyi wal-ibkar',
+        translation: {
+            english: 'And glorify the praises of your Lord in the evening and in the morning',
+            hindi: 'और अपने रब की प्रशंसा के साथ तस्बीह करो शाम और सुबह',
+            bengali: 'আর তোমার প্রভুর প্রশংসাসহ তাসবিহ পড় সন্ধ্যায় ও প্রভাতে'
+        },
+        reference: 'Quran 40:55'
+    },
+    explanation: {
+        arabic: 'أذكار المساء سنة مؤكدة تُقرأ من بعد صلاة العصر إلى المغرب. تشمل آية الكرسي والمعوذات والتسبيحات. هذه الأذكار حماية من الشياطين والشرور وجلب للبركات.',
+        english: 'Evening dhikr is a confirmed Sunnah recited from after Asr until Maghrib. It includes Ayat al-Kursi, Mu\'awwidhaat, and glorifications. These remembrances provide protection from devils and evils while bringing blessings.',
+        hindi: 'शाम के अज़कार एक सुन्नत-ए-मुअक्किदा हैं जो असर के बाद से मगरिब तक पढ़े जाते हैं। इसमें आयतुल कुर्सी, मुअव्विज़ात और तस्बीहात शामिल हैं। ये अज़कार शैतानों और बुराइयों से सुरक्षा देते हैं और बरकत लाते हैं।',
+        bengali: 'সন্ধ্যার জিকির একটি সুন্নাতে মুআক্কাদা যা আসরের পর থেকে মাগরিব পর্যন্ত পড়া হয়। এতে আয়াতুল কুরসি, মুআওবিজাত ও তাসবিহ রয়েছে। এই জিকিরগুলো শয়তান ও অনিষ্ট থেকে সুরক্ষা দেয় এবং বরকত আনে।'
+    },
+    lesson: {
+        arabic: 'ذكر الله في المساء يطمئن القلب ويحمي من شرور الليل',
+        english: 'Remembering Allah in the evening brings peace to the heart and protection from night\'s evils',
+        hindi: 'शाम में अल्लाह का ज़िक्र दिल को सुकून देता है और रात की बुराइयों से बचाता है',
+        bengali: 'সন্ধ্যায় আল্লাহর জিকির হৃদয়ে শান্তি আনে ও রাতের অনিষ্ট থেকে রক্ষা করে'
+    },
+    action: {
+        arabic: 'اليوم اقرأ أذكار المساء كاملة بعد صلاة العصر',
+        english: 'Today recite complete evening dhikr after Asr prayer',
+        hindi: 'आज असर की नमाज़ के बाद पूरे शाम के अज़कार पढ़ें',
+        bengali: 'আজ আসরের নামাজের পর সম্পূর্ণ সন্ধ্যার জিকির পড়ুন'
+    },
+    guidelines: [
+        {
+            type: 'halal',
+            text: {
+                arabic: 'قراءة آية الكرسي ثلاث مرات',
+                english: 'Recite Ayat al-Kursi three times',
+                hindi: 'आयतुल कुर्सी तीन बार पढ़ना',
+                bengali: 'আয়াতুল কুরসি তিনবার পড়া'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'قراءة المعوذات الثلاث ثلاث مرات',
+                english: 'Recite the three Quls (protective surahs) three times',
+                hindi: 'तीन कुल (सुरक्षा की सूरतें) तीन बार पढ़ना',
+                bengali: 'তিনটি কুল (সুরক্ষার সূরা) তিনবার পড়া'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'التسبيح والتحميد والتكبير',
+                english: 'Glorification, praise, and magnification of Allah',
+                hindi: 'अল्लाह की तस्बीह, हम्द और तकबीर',
+                bengali: 'আল্লাহর তাসবিহ, হামদ ও তাকবির'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'الدعاء للحماية من شرور المساء والليل',
+                english: 'Supplication for protection from evening and night evils',
+                hindi: 'शाम और रात की बुराइयों से सुरक्षा की दुआ',
+                bengali: 'সন্ধ্যা ও রাতের অনিষ্ট থেকে সুরক্ষার দোয়া'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'ترك الأذكار والانشغال بالملاهي',
+                english: 'Abandoning dhikr and getting busy with entertainment',
+                hindi: 'ज़िक्र छोड़ना और मनोরंजन में व्यस्त होना',
+                bengali: 'জিকির ছেড়ে দিয়ে বিনোদনে ব্যস্ত হওয়া'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'الاستعاذة بغير الله من الشرور',
+                english: 'Seeking protection from evils through other than Allah',
+                hindi: 'अल्लाह के अलावा किसी और से बुराइयों से पनाह मांगना',
+                bengali: 'আল্লাহ ছাড়া অন্যের কাছে অনিষ্ট থেকে আশ্রয় চাওয়া'
+            }
+        }
+    ],
+    calligraphy: {
+        arabic: 'أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ',
+        meaning: {
+            english: 'I seek refuge in Allah\'s perfect words from the evil of what He has created',
+            hindi: 'मैं अल्लाह के परिपूर्ण कलिमों की पनाह मांगता हूं उसकी सृष्टि की बुराई से',
+            bengali: 'আমি আল্লাহর পূর্ণাঙ্গ বাণীর আশ্রয় চাই তাঁর সৃষ্টির অনিষ্ট থেকে'
+        }
+    }
+},
+
+'sleeping-etiquette': {
+    title: {
+        arabic: 'آداب النوم',
+        english: 'Sleeping Etiquette',
+        hindi: 'सोने के शिष्टাचार',
+        bengali: 'ঘুমানোর শিষ্টাচার'
+    },
+    subtitle: {
+        arabic: 'السنن والآداب الإسلامية عند النوم',
+        english: 'Islamic Sunnah and etiquette when sleeping',
+        hindi: 'सोते समय इस्लामी सुन्नत और शिष्टाचार',
+        bengali: 'ঘুমানোর সময় ইসলামী সুন্নাত ও শিষ্টাচার'
+    },
+    verse: {
+        arabic: 'وَهُوَ الَّذِي جَعَلَ لَكُمُ اللَّيْلَ لِبَاسًا وَالنَّوْمَ سُبَاتًا وَجَعَلَ النَّهَارَ نُشُورًا',
+        transliteration: 'Wa huwal-ladhi ja\'ala lakumul-layla libasan wan-nawma subatan wa ja\'alan-nahara nushura',
+        translation: {
+            english: 'And it is He who made the night as clothing and sleep as rest and made the day a resurrection',
+            hindi: 'और वही है जिसने तुम्हारे लिए रात को आवरण बनाया और नींद को आराम, और दिन को जी उठने का समय बनाया',
+            bengali: 'আর তিনিই রাতকে তোমাদের জন্য আবরণ ও নিদ্রাকে বিশ্রাম এবং দিনকে পুনরুত্থানের সময় করেছেন'
+        },
+        reference: 'Quran 25:47'
+    },
+    explanation: {
+        arabic: 'النوم نعمة من الله للراحة والاستعداد لليوم التالي. الإسلام يحدد آداب النوم: النوم على الجانب الأيمن، قراءة أذكار النوم، الوضوء قبل النوم، وتجنب النوم على البطن.',
+        english: 'Sleep is Allah\'s blessing for rest and preparation for the next day. Islam defines sleep etiquettes: sleeping on the right side, reciting sleep supplications, performing ablution before sleep, and avoiding sleeping on the stomach.',
+        hindi: 'नींद अल्लाह की नेमत है आराम और अगले दिन की तैयारी के लिए। इस्लाम सोने के शिष्टाचार निर्धारित करता है: दाहिनी करवट सोना, सोने की दुआएं पढ़ना, सोने से पहले वुज़ू, और पेट के बल सोने से बचना।',
+        bengali: 'নিদ্রা আল্লাহর নিয়ামত বিশ্রাম ও পরদিনের প্রস্তুতির জন্য। ইসলাম ঘুমের শিষ্টাচার নির্ধারণ করে: ডান কাতে শোয়া, ঘুমের দোয়া পড়া, শোয়ার আগে ওযু, এবং উপুড় হয়ে শোয়া এড়ানো।'
+    },
+    lesson: {
+        arabic: 'النوم بالأدب الإسلامي يجلب البركة والحماية طوال الليل',
+        english: 'Sleeping with Islamic etiquette brings blessings and protection throughout the night',
+        hindi: 'इस्लामी शिष्टاचार के साथ सोना पूरी रात बरकत और सुरक्षा लाता है',
+        bengali: 'ইসলামী শিষ্টাচার সহকারে ঘুমানো সারারাত বরকত ও সুরক্ষা আনে'
+    },
+    action: {
+        arabic: 'الليلة نم على الجانب الأيمن واقرأ أذكار النوم',
+        english: 'Tonight sleep on your right side and recite sleep supplications',
+        hindi: 'आज रात दाहिनी करवट सोएं और सोने की दुआएं पढ़ें',
+        bengali: 'আজ রাতে ডান কাতে শুয়ে ঘুমের দোয়া পড়ুন'
+    },
+    guidelines: [
+        {
+            type: 'halal',
+            text: {
+                arabic: 'النوم على الجانب الأيمن',
+                english: 'Sleep on the right side',
+                hindi: 'दाहिनी करवट सोना',
+                bengali: 'ডান কাতে ঘুমানো'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'الوضوء قبل النوم',
+                english: 'Perform ablution before sleep',
+                hindi: 'सोने से पहले वुज़ू करना',
+                bengali: 'ঘুমানোর আগে ওযু করা'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'قراءة أذكار النوم والمعوذات',
+                english: 'Recite sleep supplications and protective chapters',
+                hindi: 'सोने की दुआएं और सुरक्षा की सूरतें पढ़ना',
+                bengali: 'ঘুমের দোয়া ও সুরক্ষার সূরা পড়া'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'وضع اليد تحت الخد الأيمن',
+                english: 'Place hand under the right cheek',
+                hindi: 'दाहिने गाल के नीचे हाथ रखना',
+                bengali: 'ডান গালের নিচে হাত রাখা'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'النوم على البطن',
+                english: 'Sleeping on the stomach',
+                hindi: 'पेट के बल सोना',
+                bengali: 'উপুড় হয়ে শোয়া'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'النوم بدون ذكر الله',
+                english: 'Sleeping without remembering Allah',
+                hindi: 'अल्लाह का ज़िक्र किए बिना सोना',
+                bengali: 'আল্লাহর জিকির ছাড়া ঘুমানো'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'النوم مع بقاء النور الشديد',
+                english: 'Sleeping with bright lights on unnecessarily',
+                hindi: 'बिना ज़रूरत तेज़ रोशनी में सोना',
+                bengali: 'অকারণে তীব্র আলো জ্বালিয়ে ঘুমানো'
+            }
+        }
+    ],
+    calligraphy: {
+        arabic: 'بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا',
+        meaning: {
+            english: 'In Your name, O Allah, I die and I live',
+            hindi: 'हे अल्लाह! तेरे नाम से मैं मरता हूं और जीता हूं',
+            bengali: 'হে আল্লাহ! তোমার নামে আমি মরি ও বাঁচি'
+        }
+    }
+},
+
+'night-worship': {
+    title: {
+        arabic: 'عبادة الليل',
+        english: 'Night Worship',
+        hindi: 'रात की इबादत',
+        bengali: 'রাতের ইবাদত'
+    },
+    subtitle: {
+        arabic: 'قيام الليل والعبادة في ساعات الليل المباركة',
+        english: 'Standing in night prayer and worship during blessed night hours',
+        hindi: 'रात की नमाज़ और रात के बरकत वाले घंटों में इबादत',
+        bengali: 'রাতের নামাজ ও বরকতময় রাতের ঘণ্টাগুলোতে ইবাদত'
+    },
+    verse: {
+        arabic: 'وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهِ نَافِلَةً لَّكَ عَسَىٰ أَن يَبْعَثَكَ رَبُّكَ مَقَامًا مَّحْمُودًا',
+        transliteration: 'Wa minal-layli fa tahajjad bihi nafilatan laka \'asa an yab\'athaka rabbuka maqaman mahmuda',
+        translation: {
+            english: 'And from the night, arise for prayer as additional worship for you; it is expected that your Lord will resurrect you to a praised station',
+            hindi: 'और रात में तहज्जुद पढ़ो, यह तुम्हारे लिए अतिरिक्त इबादत है; उम्मीद है कि तुम्हारा रब तुम्हें प्रशंसित स्थान पर पहुंचाएगा',
+            bengali: 'আর রাতে তাহাজ্জুদ পড়, এটি তোমার জন্য অতিরিক্ত ইবাদত; আশা করা যায় তোমার প্রভু তোমাকে প্রশংসিত স্থানে পৌঁছাবেন'
+        },
+        reference: 'Quran 17:79'
+    },
+    explanation: {
+        arabic: 'قيام الليل من أفضل العبادات النافلة. الثلث الأخير من الليل وقت إجابة الدعوات ونزول الرحمة. يشمل صلاة التهجد والتسبيح والدعاء وتلاوة القرآن.',
+        english: 'Night prayer is among the best voluntary worships. The last third of night is the time for answered supplications and descending mercy. It includes Tahajjud prayer, glorification, supplication, and Quran recitation.',
+        hindi: 'रात की इबादत सबसे बेहतरीन नफ़्ल इबादतों में से है। रात का अंतिम तिहाई दुआओं की स्वीकृति और रहमत के नाज़िल होने का समय है। इसमें तहज्जुद की नमाज़, तस्बीह, दुआ और क़ुरआन की तिलावत शामिल है।',
+        bengali: 'রাতের ইবাদত সর্বোত্তম নফল ইবাদতগুলোর অন্যতম। রাতের শেষ তৃতীয়াংশ দোয়া কবুল ও রহমত নাজিলের সময়। এতে তাহাজ্জুদ নামাজ, তাসবিহ, দোয়া ও কুরআন তেলাওয়াত রয়েছে।'
+    },
+    lesson: {
+        arabic: 'الليل خلوة مع الله والعبادة فيه تقرب القلب من الخالق',
+        english: 'Night is solitude with Allah and worship in it brings the heart closer to the Creator',
+        hindi: 'रात अल्लाह के साथ एकांत का समय है और इसमें इबादत दिल को खालिक के करीब ले जाती है',
+        bengali: 'রাত আল্লাহর সাথে নির্জনতার সময় এবং এতে ইবাদত হৃদয়কে স্রষ্টার নিকটবর্তী করে'
+    },
+    action: {
+        arabic: 'الليلة استيقظ في الثلث الأخير واقض ولو دقائق في العبادة',
+        english: 'Tonight wake up in the last third and spend even a few minutes in worship',
+        hindi: 'आज रात अंतिम तिहाई में उठें और कुछ मिनट ही सही इबादत में बिताएं',
+        bengali: 'আজ রাতে শেষ তৃতীয়াংশে উঠুন এবং কয়েক মিনিট হলেও ইবাদতে কাটান'
+    },
+    guidelines: [
+        {
+            type: 'halal',
+            text: {
+                arabic: 'صلاة التهجد في الثلث الأخير من الليل',
+                english: 'Tahajjud prayer in the last third of night',
+                hindi: 'रात के अंतिम तिहाई में तहज्जुद की नमाज़',
+                bengali: 'রাতের শেষ তৃতীয়াংশে তাহাজ্জুদ নামাজ'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'تلاوة القرآن بتدبر وخشوع',
+                english: 'Recite Quran with contemplation and humility',
+                hindi: 'गहराई और विनम्रता के साथ क़ुरआन की तिलावत',
+                bengali: 'চিন্তা-ভাবনা ও বিনয়ের সাথে কুরআন তেলাওয়াত'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'الدعاء والاستغفار والتوبة',
+                english: 'Supplication, seeking forgiveness, and repentance',
+                hindi: 'दुआ, इस्तिग़फ़ार और तौबा',
+                bengali: 'দোয়া, ইস্তেগফার ও তওবা'
+            }
+        },
+        {
+            type: 'halal',
+            text: {
+                arabic: 'التسبيح والذكر بصوت خافت',
+                english: 'Glorification and remembrance in low voice',
+                hindi: 'धीमी आवाज़ में तस्बीह और ज़िक्र',
+                bengali: 'নিচু আওয়াজে তাসবিহ ও জিকির'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'إضاعة الليل في اللهو واللعب',
+                english: 'Wasting night in entertainment and games',
+                hindi: 'रात को मनोरंजन और खेल में बर्बाد करना',
+                bengali: 'রাত বিনোদন ও খেলায় নষ্ট করা'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'السهر المفرط بدون فائدة',
+                english: 'Excessive staying awake without benefit',
+                hindi: 'बिना फ़ायदे अत्यधिक जागना',
+                bengali: 'উপকার ছাড়া অতিরিক্ত জেগে থাকা'
+            }
+        },
+        {
+            type: 'haram',
+            text: {
+                arabic: 'الجهر بالقراءة بما يؤذي النائمين',
+                english: 'Loud recitation that disturbs those sleeping',
+                hindi: 'ऊंची आवाज़ में पढ़ना जो सोने वालों को परेशान करे',
+                bengali: 'উচ্চস্বরে পড়া যা ঘুমন্তদের কষ্ট দেয়'
+            }
+        }
+    ],
+    calligraphy: {
+        arabic: 'تَتَجَافَىٰ جُنُوبُهُمْ عَنِ الْمَضَاجِعِ يَدْعُونَ رَبَّهُمْ خَوْفًا وَطَمَعًا',
+        meaning: {
+            english: 'Their sides forsake their beds, calling upon their Lord in fear and aspiration',
+            hindi: 'उनके पहलू बिस्तरों से अलग रहते हैं, अपने रब को डर और उम्मीद के साथ पुकारते हैं',
+            bengali: 'তাদের পার্শ্বদেশ বিছানা থেকে আলাদা থাকে, ভয় ও আশা নিয়ে তাদের প্রভুকে ডাকে'
+        }
+    }
+}
+
+
+
+        // Continue adding more reflection data for other activities...
+        // You can add all 15 reflection topics with similar detailed structure
+    };
+
+    // Populate reflection detail page
+    function populateReflectionDetail(data) {
+        document.getElementById('reflectionTitle').textContent = data.title[currentLanguage];
+        document.getElementById('reflectionTitle').setAttribute('data-reflection', Object.keys(reflectionDataTemplate).find(key => reflectionDataTemplate[key] === data));
+        document.getElementById('reflectionSubtitle').textContent = data.subtitle[currentLanguage];
+
+        updateReflectionLanguage(data, currentLanguage);
+    }
+
+    // Update content based on language
+    function updateReflectionLanguage(data, lang) {
+        // Update verse content
+        if (data.verse) {
+            document.getElementById('verseContent').innerHTML = `
+                <div class="verse-arabic">${data.verse.arabic}</div>
+                <div class="verse-transliteration">${data.verse.transliteration}</div>
+                <div class="verse-translation">${data.verse.translation[lang] || data.verse.translation.english}</div>
+                <div class="verse-reference">${data.verse.reference}</div>
+            `;
+        }
+
+        // Update explanation
+        if (data.explanation) {
+            document.getElementById('explanationContent').textContent = data.explanation[lang] || data.explanation.english;
+        }
+
+        // Update lesson
+        if (data.lesson) {
+            document.getElementById('lessonContent').textContent = data.lesson[lang] || data.lesson.english;
+        }
+
+        // Update action
+        if (data.action) {
+            document.getElementById('actionContent').textContent = data.action[lang] || data.action.english;
+        }
+
+        // Update guidelines
+        if (data.guidelines) {
+            document.getElementById('guidelinesContent').innerHTML = data.guidelines.map(guideline => `
+                <div class="guideline-item">
+                    <div class="guideline-icon ${guideline.type}">
+                        ${guideline.type === 'halal' ? '✓' : '✗'}
+                    </div>
+                    <div class="guideline-text">${guideline.text[lang] || guideline.text.english}</div>
+                </div>
+            `).join('');
+        }
+
+        // Update calligraphy
+        if (data.calligraphy) {
+            document.getElementById('calligraphyContent').innerHTML = `
+                <div class="calligraphy-arabic">${data.calligraphy.arabic}</div>
+                <div class="calligraphy-meaning">${data.calligraphy.meaning[lang] || data.calligraphy.meaning.english}</div>
+            `;
+        }
+    }
+});
+
+// Add this section in your updateReflectionLanguage function:
+
+// Update detailed steps (if available)
+if (data.detailedSteps) {
+    const stepsHtml = data.detailedSteps[lang].map((step, index) => `
+        <div class="detailed-step">
+            <div class="step-number">${index + 1}</div>
+            <div class="step-text">${step}</div>
+        </div>
+    `).join('');
+
+    // Add this to the method section or create a new section
+    const methodContent = document.getElementById('explanationContent');
+    if (methodContent && data.detailedSteps) {
+        methodContent.innerHTML += `
+            <div class="detailed-steps-section">
+                <h4 class="steps-title">Detailed Steps:</h4>
+                <div class="steps-container">
+                    ${stepsHtml}
+                </div>
+            </div>
+        `;
+    }
+}

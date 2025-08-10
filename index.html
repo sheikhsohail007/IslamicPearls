@@ -211,17 +211,7 @@
                         </div>
                     </div>
 
-                    <div class="luxury-card" data-category="quran" data-type="daily">
-                        <div class="card-glow"></div>
-                        <div class="card-content">
-                            <div class="feeling-icon">
-                                <i class="fas fa-calendar-day"></i>
-                            </div>
-                            <h3 data-text="daily-ayah">Daily Ayah</h3>
-                            <p data-text="daily-ayah-desc">Your daily dose of divine wisdom</p>
-                            <div class="card-accent"></div>
-                        </div>
-                    </div>
+                    
 
                     <div class="luxury-card" data-category="quran" data-type="daily">
                         <div class="card-glow"></div>
@@ -1545,6 +1535,248 @@
     </div>
 </div>
 
+
+<!-- Daily Reflection Section -->
+<div class="section" id="reflectionSection">
+    <div class="premium-section">
+        <!-- Back Button -->
+        <button class="back-btn" id="backToHomeFromReflection">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </button>
+        
+        <div class="luxury-header">
+            <div class="header-ornament">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h1 class="luxury-title">
+                <span class="title-line-1">Daily</span>
+                <span class="title-line-2">Reflection</span>
+            </h1>
+            <div class="subtitle-container">
+                <div class="subtitle-line"></div>
+                <p class="luxury-subtitle">Islamic guidance for daily life</p>
+                <div class="subtitle-line"></div>
+            </div>
+        </div>
+        
+        <div class="reflection-categories">
+            <!-- Morning Routine -->
+            <div class="reflection-category">
+                <h3 class="category-title">
+                    <i class="fas fa-sun"></i>
+                    Morning Routine
+                </h3>
+                <div class="compact-reflection-grid">
+                    <div class="compact-reflection-card" data-reflection="waking-up" data-color="#FFD700">
+                        <span>Waking Up</span>
+                        <small>First Dua</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="bathroom-etiquette" data-color="#4169E1">
+                        <span>Bathroom</span>
+                        <small>Etiquette</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="wudu-method" data-color="#32CD32">
+                        <span>Wudu</span>
+                        <small>Method</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="ghusl-method" data-color="#FF6347">
+                        <span>Ghusl</span>
+                        <small>Method</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Daily Activities -->
+            <div class="reflection-category">
+                <h3 class="category-title">
+                    <i class="fas fa-clock"></i>
+                    Daily Activities
+                </h3>
+                <div class="compact-reflection-grid">
+                    <div class="compact-reflection-card" data-reflection="eating-etiquette" data-color="#9370DB">
+                        <span>Eating</span>
+                        <small>Etiquette</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="drinking-etiquette" data-color="#20B2AA">
+                        <span>Drinking</span>
+                        <small>Etiquette</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="dressing-etiquette" data-color="#DDA0DD">
+                        <span>Dressing</span>
+                        <small>Etiquette</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="traveling-etiquette" data-color="#F0E68C">
+                        <span>Traveling</span>
+                        <small>Etiquette</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Interactions -->
+            <div class="reflection-category">
+                <h3 class="category-title">
+                    <i class="fas fa-users"></i>
+                    Social Interactions
+                </h3>
+                <div class="compact-reflection-grid">
+                    <div class="compact-reflection-card" data-reflection="greeting-etiquette" data-color="#FF1493">
+                        <span>Greeting</span>
+                        <small>Salam</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="speaking-etiquette" data-color="#87CEEB">
+                        <span>Speaking</span>
+                        <small>Etiquette</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="business-etiquette" data-color="#FFA07A">
+                        <span>Business</span>
+                        <small>Ethics</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="family-etiquette" data-color="#98FB98">
+                        <span>Family</span>
+                        <small>Relations</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Evening Routine -->
+            <div class="reflection-category">
+                <h3 class="category-title">
+                    <i class="fas fa-moon"></i>
+                    Evening Routine
+                </h3>
+                <div class="compact-reflection-grid">
+                    <div class="compact-reflection-card" data-reflection="evening-dhikr" data-color="#F5DEB3">
+                        <span>Evening</span>
+                        <small>Dhikr</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="sleeping-etiquette" data-color="#FFB6C1">
+                        <span>Sleeping</span>
+                        <small>Etiquette</small>
+                    </div>
+                    <div class="compact-reflection-card" data-reflection="night-worship" data-color="#AFEEEE">
+                        <span>Night</span>
+                        <small>Worship</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reflection Detail Section -->
+<div class="section" id="reflectionDetailSection">
+    <div class="reflection-detail-container">
+        <!-- Back Button -->
+        <button class="back-btn" id="backToReflection">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Reflections</span>
+        </button>
+        
+        <!-- Today's Date -->
+        <div class="reflection-date">
+            <h2 id="todayDate">Today's Reflection</h2>
+        </div>
+        
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="arabic">عربي</button>
+            <button class="lang-btn" data-lang="english">English</button>
+            <button class="lang-btn" data-lang="hindi">हिंदी</button>
+            <button class="lang-btn" data-lang="bengali">বাংলা</button>
+        </div>
+        
+        <!-- Reflection Header -->
+        <div class="reflection-detail-header">
+            <div class="reflection-icon" id="reflectionIcon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h1 class="reflection-title" id="reflectionTitle">Waking Up</h1>
+            <p class="reflection-subtitle" id="reflectionSubtitle">Islamic Etiquette for Starting Your Day</p>
+        </div>
+        
+        <!-- Content Grid -->
+        <div class="reflection-content-grid">
+            <!-- Verse/Hadith of the Day -->
+            <div class="content-card verse-card">
+                <div class="card-header">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Verse/Hadith of the Day</h3>
+                </div>
+                <div class="card-content">
+                    <div class="verse-content" id="verseContent">
+                        <!-- Verse/Hadith will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Explanation -->
+            <div class="content-card explanation-card">
+                <div class="card-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Explanation</h3>
+                </div>
+                <div class="card-content">
+                    <div class="explanation-content" id="explanationContent">
+                        <!-- Explanation will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Lesson -->
+            <div class="content-card lesson-card">
+                <div class="card-header">
+                    <i class="fas fa-star"></i>
+                    <h3>Key Lesson</h3>
+                </div>
+                <div class="card-content">
+                    <div class="lesson-content" id="lessonContent">
+                        <!-- Lesson will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action Step -->
+            <div class="content-card action-card">
+                <div class="card-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Today's Action</h3>
+                </div>
+                <div class="card-content">
+                    <div class="action-content" id="actionContent">
+                        <!-- Action step will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Halal/Haram Guidelines -->
+            <div class="content-card guidelines-card">
+                <div class="card-header">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Halal/Haram Guidelines</h3>
+                </div>
+                <div class="card-content">
+                    <div class="guidelines-content" id="guidelinesContent">
+                        <!-- Guidelines will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Islamic Calligraphy -->
+            <div class="content-card calligraphy-card">
+                <div class="card-header">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Islamic Calligraphy</h3>
+                </div>
+                <div class="card-content">
+                    <div class="calligraphy-content" id="calligraphyContent">
+                        <!-- Calligraphy will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
     </div>
