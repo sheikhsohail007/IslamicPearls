@@ -179,10 +179,10 @@
                         <div class="card-glow"></div>
                         <div class="card-content">
                             <div class="feeling-icon">
-                                <i class="fas fa-peace"></i>
+                                <i class="fas fa-pray"></i>
                             </div>
-                            <h3 data-text="spiritual-mood">Correct Your Salah</h3>
-                            <p data-text="spiritual-mood-desc">Connect with your inner peace</p>
+                            <h3 data-text="salah-guide">Correct Your Salah</h3>
+                            <p data-text="salah-guide-desc">Complete guide to Islamic prayers with detailed methods, duas, surahs, and benefits in multiple languages.</p>
                             <div class="card-accent"></div>
                         </div>
                     </div>
@@ -1306,7 +1306,245 @@
             </div>
         </div>
 
+        <!-- Salah Section -->
+<div class="section" id="salahSection">
+    <div class="premium-section">
+        <!-- Back Button -->
+        <button class="back-btn" id="backToHomeFromSalah">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </button>
         
+        <div class="luxury-header">
+            <div class="header-ornament">
+                <i class="fas fa-pray"></i>
+            </div>
+            <h1 class="luxury-title">
+                <span class="title-line-1">Correct Your</span>
+                <span class="title-line-2">Salah</span>
+            </h1>
+            <div class="subtitle-container">
+                <div class="subtitle-line"></div>
+                <p class="luxury-subtitle">Complete guide to Islamic prayers</p>
+                <div class="subtitle-line"></div>
+            </div>
+        </div>
+        
+        <div class="salah-categories">
+            <!-- Daily Prayers Section -->
+            <div class="prayer-category">
+                <h3 class="category-title">
+                    <i class="fas fa-sun"></i>
+                    Daily Prayers (Fard Salah)
+                </h3>
+                <div class="compact-salah-grid">
+                    <div class="compact-salah-card" data-prayer="fajr" data-color="#FFD700">
+                        <span>Fajr</span>
+                        <small>2 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="dhuhr" data-color="#4169E1">
+                        <span>Dhuhr</span>
+                        <small>4 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="asr" data-color="#FF6347">
+                        <span>Asr</span>
+                        <small>4 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="maghrib" data-color="#9370DB">
+                        <span>Maghrib</span>
+                        <small>3 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="isha" data-color="#20B2AA">
+                        <span>Isha</span>
+                        <small>4 Rakat</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Special Event Prayers -->
+            <div class="prayer-category">
+                <h3 class="category-title">
+                    <i class="fas fa-star-and-crescent"></i>
+                    Special Event Prayers
+                </h3>
+                <div class="compact-salah-grid">
+                    <div class="compact-salah-card" data-prayer="eid-fitr" data-color="#00B04F">
+                        <span>Eid ul Fitr</span>
+                        <small>2 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="eid-adha" data-color="#8B4513">
+                        <span>Eid ul Adha</span>
+                        <small>2 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="tarawih" data-color="#32CD32">
+                        <span>Tarawih</span>
+                        <small>8-20 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="shabe-barat" data-color="#DDA0DD">
+                        <span>Shab e Barat</span>
+                        <small>Variable</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="shabe-qadr" data-color="#F0E68C">
+                        <span>Shab e Qadr</span>
+                        <small>Variable</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sunnah & Nafl Prayers -->
+            <div class="prayer-category">
+                <h3 class="category-title">
+                    <i class="fas fa-hands-praying"></i>
+                    Sunnah & Nafl Prayers
+                </h3>
+                <div class="compact-salah-grid">
+                    <div class="compact-salah-card" data-prayer="tahajjud" data-color="#FF1493">
+                        <span>Tahajjud</span>
+                        <small>2-12 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="istikhara" data-color="#87CEEB">
+                        <span>Istikhara</span>
+                        <small>2 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="hajat" data-color="#FFA07A">
+                        <span>Salatul Hajat</span>
+                        <small>2 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="tawbah" data-color="#98FB98">
+                        <span>Salatul Tawbah</span>
+                        <small>2 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="tasbih" data-color="#F5DEB3">
+                        <span>Salatul Tasbih</span>
+                        <small>4 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="duha" data-color="#FFB6C1">
+                        <span>Duha</span>
+                        <small>2-8 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="awabeen" data-color="#AFEEEE">
+                        <span>Awabeen</span>
+                        <small>6 Rakat</small>
+                    </div>
+                    <div class="compact-salah-card" data-prayer="ishraq" data-color="#E6E6FA">
+                        <span>Ishraq</span>
+                        <small>2-4 Rakat</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Salah Detail Section -->
+<div class="section" id="salahDetailSection">
+    <div class="salah-detail-container">
+        <!-- Back Button -->
+        <button class="back-btn" id="backToSalah">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Prayers</span>
+        </button>
+        
+        <!-- Prayer Header -->
+        <div class="salah-detail-header">
+            <div class="salah-icon" id="salahIcon">
+                <i class="fas fa-pray"></i>
+            </div>
+            <h1 class="salah-title" id="salahTitle">Fajr Prayer</h1>
+            <p class="salah-subtitle" id="salahSubtitle">The Dawn Prayer - 2 Rakat</p>
+        </div>
+        
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="arabic">عربي</button>
+            <button class="lang-btn" data-lang="english">English</button>
+            <button class="lang-btn" data-lang="hindi">हिंदी</button>
+            <button class="lang-btn" data-lang="bengali">বাংলা</button>
+        </div>
+        
+        <!-- Content Grid -->
+        <div class="salah-content-grid">
+            <!-- Prayer Description -->
+            <div class="content-card description-card">
+                <div class="card-header">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Prayer Description</h3>
+                </div>
+                <div class="card-content">
+                    <div class="prayer-description" id="prayerDescription">
+                        Prayer description will be displayed here...
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Prayer Method -->
+            <div class="content-card method-card">
+                <div class="card-header">
+                    <i class="fas fa-list-ol"></i>
+                    <h3>Prayer Method</h3>
+                </div>
+                <div class="card-content">
+                    <div class="prayer-method" id="prayerMethod">
+                        Step by step method will be displayed here...
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Duas & Supplications -->
+            <div class="content-card duas-card">
+                <div class="card-header">
+                    <i class="fas fa-hands-praying"></i>
+                    <h3>Duas & Supplications</h3>
+                </div>
+                <div class="card-content">
+                    <div class="duas-list" id="prayerDuas">
+                        <!-- Duas will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Surahs to Recite -->
+            <div class="content-card surahs-card">
+                <div class="card-header">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Recommended Surahs</h3>
+                </div>
+                <div class="card-content">
+                    <div class="surahs-list" id="prayerSurahs">
+                        <!-- Surahs will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tasbih & Dhikr -->
+            <div class="content-card tasbih-card">
+                <div class="card-header">
+                    <i class="fas fa-circle-notch"></i>
+                    <h3>Tasbih & Dhikr</h3>
+                </div>
+                <div class="card-content">
+                    <div class="tasbih-list" id="prayerTasbih">
+                        <!-- Tasbih will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefits & Virtues -->
+            <div class="content-card benefits-card">
+                <div class="card-header">
+                    <i class="fas fa-star"></i>
+                    <h3>Benefits & Virtues</h3>
+                </div>
+                <div class="card-content">
+                    <div class="benefits-list" id="prayerBenefits">
+                        <!-- Benefits will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
     </div>

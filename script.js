@@ -3857,3 +3857,1650 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Salah System with Multi-language Content
+document.addEventListener('DOMContentLoaded', function () {
+    // Salah elements
+    const salahSection = document.getElementById('salahSection');
+    const salahDetailSection = document.getElementById('salahDetailSection');
+    const homeSection = document.getElementById('homeSection');
+    const backToHomeFromSalahBtn = document.getElementById('backToHomeFromSalah');
+    const backToSalahBtn = document.getElementById('backToSalah');
+    const salahCards = document.querySelectorAll('.compact-salah-card');
+    const langBtns = document.querySelectorAll('.lang-btn');
+
+    let currentLanguage = 'arabic';
+
+    // Home card click - Correct Your Salah
+    const salahCard = document.querySelector('[data-category="mood"][data-type="spiritual"]');
+    if (salahCard) {
+        salahCard.addEventListener('click', function () {
+            showSalahSection();
+        });
+    }
+
+    // Navigation buttons
+    if (backToHomeFromSalahBtn) {
+        backToHomeFromSalahBtn.addEventListener('click', function () {
+            hideSalahSection();
+        });
+    }
+
+    if (backToSalahBtn) {
+        backToSalahBtn.addEventListener('click', function () {
+            hideSalahDetail();
+        });
+    }
+
+    // Prayer card clicks
+    salahCards.forEach(card => {
+        card.addEventListener('click', function () {
+            const prayer = this.getAttribute('data-prayer');
+            showSalahDetail(prayer);
+        });
+    });
+
+    // Language button clicks
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const lang = this.getAttribute('data-lang');
+            switchLanguage(lang);
+        });
+    });
+
+    // Show salah section
+    function showSalahSection() {
+        homeSection.classList.remove('active');
+        salahSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Hide salah section
+    function hideSalahSection() {
+        salahSection.classList.remove('active');
+        homeSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show salah detail
+    function showSalahDetail(prayerName) {
+        const prayerData = salahDataTemplate[prayerName] || salahDataTemplate.default;
+        populateSalahDetail(prayerData);
+
+        salahSection.classList.remove('active');
+        salahDetailSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Hide salah detail
+    function hideSalahDetail() {
+        salahDetailSection.classList.remove('active');
+        salahSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Switch language
+    function switchLanguage(lang) {
+        currentLanguage = lang;
+
+        // Update active button
+        langBtns.forEach(btn => btn.classList.remove('active'));
+        const activeBtn = document.querySelector(`[data-lang="${lang}"]`);
+        if (activeBtn) activeBtn.classList.add('active');
+
+        // Update content based on current prayer
+        const currentPrayer = document.getElementById('salahTitle')?.getAttribute('data-prayer');
+        if (currentPrayer && salahDataTemplate[currentPrayer]) {
+            updateContentLanguage(salahDataTemplate[currentPrayer], lang);
+        }
+    }
+
+    // Complete Prayer Data Template with 4 Languages
+    const salahDataTemplate = {
+        fajr: {
+            title: {
+                arabic: 'صلاة الفجر',
+                english: 'Fajr Prayer',
+                hindi: 'फज्र की नमाज़',
+                bengali: 'ফজরের নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة الصبح - ركعتان',
+                english: 'The Dawn Prayer - 2 Rakat',
+                hindi: 'सुबह की नमाज़ - 2 रकात',
+                bengali: 'ভোরের নামাজ - 2 রাকাত'
+            },
+            description: {
+                arabic: 'صلاة الفجر هي أول صلاة في اليوم، تُصلى من طلوع الفجر الصادق إلى طلوع الشمس. وهي ركعتان فرض، وركعتان سنة قبلها.',
+                english: 'Fajr is the first prayer of the day, performed from true dawn until sunrise. It consists of 2 obligatory rakats with 2 sunnah rakats before.',
+                hindi: 'फज्र दिन की पहली नमाज़ है, जो सच्चे फज्र से सूर्योदय तक पढ़ी जाती है। इसमें 2 फ़र्ज़ रकात हैं और इससे पहले 2 सुन्नत रकात हैं।',
+                bengali: 'ফজর হল দিনের প্রথম নামাজ, যা সত্যিকারের ফজর থেকে সূর্যোদয় পর্যন্ত পড়া হয়। এটি 2 ফরজ রাকাত এবং এর আগে 2 সুন্নাত রাকাত।'
+            },
+            method: {
+                arabic: '1. الوضوء والنية\n2. تكبيرة الإحرام\n3. قراءة الفاتحة وسورة\n4. الركوع والسجود\n5. التشهد والسلام',
+                english: '1. Perform Wudu and make intention\n2. Takbir al-Ihram (Opening Allahu Akbar)\n3. Recite Al-Fatiha and another Surah\n4. Perform Ruku and Sujood\n5. Recite Tashahhud and give Salam',
+                hindi: '1. वुज़ू और नीयत करें\n2. तकबीर-उल-इहराम (अल्लाहु अकबर)\n3. अल-फ़ातिहा और दूसरी सूरह पढ़ें\n4. रुकू और सजदा करें\n5. तशह्हुद पढ़कर सलाम फेरें',
+                bengali: '1. ওযু করুন এবং নিয়ত করুন\n2. তাকবীর-উল-ইহরাম (আল্লাহু আকবার)\n3. আল-ফাতিহা ও অন্য সূরা পড়ুন\n4. রুকু ও সিজদা করুন\n5. তাশাহ্হুদ পড়ে সালাম ফিরান'
+            },
+            duas: [
+                {
+                    arabic: 'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ',
+                    transliteration: 'A\'udhu billahi minash-shaytanir-rajim',
+                    translation: {
+                        english: 'I seek refuge in Allah from Satan the accursed',
+                        hindi: 'मैं अल्लाह की शैतान से पनाह मांगता हूं',
+                        bengali: 'আমি অভিশপ্ত শয়তান থেকে আল্লাহর আশ্রয় প্রার্থনা করি'
+                    }
+                },
+                {
+                    arabic: 'رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ',
+                    transliteration: 'Rabbana atina fi\'d-dunya hasanatan wa fi\'l-akhirati hasanatan wa qina \'adhab an-nar',
+                    translation: {
+                        english: 'Our Lord! Give us good in this world and good in the Hereafter, and save us from the punishment of Fire',
+                        hindi: 'हे हमारे रब! हमें दुनिया में भलाई दे और आखिरत में भी भलाई दे और आग के अज़ाब से बचा',
+                        bengali: 'হে আমাদের প্রভু! আমাদের দুনিয়াতে কল্যাণ দিন ও আখেরাতে কল্যাণ দিন এবং আগুনের আজাব থেকে রক্ষা করুন'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Fatiha',
+                    arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+                    translation: {
+                        english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, the Lord of the worlds...',
+                        hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो जगत का पालनहार है...',
+                        bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সৃষ্টিকুলের প্রতিপালক...'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ',
+                    transliteration: 'Subhan Allah',
+                    translation: {
+                        english: 'Glory be to Allah',
+                        hindi: 'अल्लाह की महिमा है',
+                        bengali: 'আল্লাহর পবিত্রতা ও মহিমা'
+                    },
+                    count: '33 times'
+                },
+                {
+                    arabic: 'الْحَمْدُ لِلَّهِ',
+                    transliteration: 'Alhamdulillah',
+                    translation: {
+                        english: 'All praise is for Allah',
+                        hindi: 'सारी प्रशंसा अल्लाह के लिए है',
+                        bengali: 'সমস্ত প্রশংসা আল্লাহর জন্য'
+                    },
+                    count: '33 times'
+                },
+                {
+                    arabic: 'اللَّهُ أَكْبَرُ',
+                    transliteration: 'Allahu Akbar',
+                    translation: {
+                        english: 'Allah is Greatest',
+                        hindi: 'अल्लाह सबसे महान है',
+                        bengali: 'আল্লাহ সর্বশ্রেষ্ঠ'
+                    },
+                    count: '34 times'
+                }
+            ],
+            benefits: {
+                arabic: ['حماية الله طوال اليوم', 'شهادة الملائكة', 'نور في القلب', 'بركة في الرزق'],
+                english: ['Allah\'s protection throughout the day', 'Angels witness the prayer', 'Light in the heart', 'Blessings in sustenance'],
+                hindi: ['पूरे दिन अल्लाह की सुरक्षा', 'फरिश्तों की गवाही', 'दिल में नूर', 'रिज़्क में बरकत'],
+                bengali: ['সারাদিন আল্লাহর সুরক্ষা', 'ফেরেশতাদের সাক্ষ্য', 'হৃদয়ে আলো', 'রিজিকে বরকত']
+            }
+        },
+
+        // Add these 4 prayers to your existing salahDataTemplate object:
+
+        dhuhr: {
+            title: {
+                arabic: 'صلاة الظهر',
+                english: 'Dhuhr Prayer',
+                hindi: 'ज़ुहर की नमाज़',
+                bengali: 'জোহর নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة الظهر - أربع ركعات',
+                english: 'The Noon Prayer - 4 Rakat',
+                hindi: 'दोपहर की नमाज़ - 4 रकात',
+                bengali: 'দুপুরের নামাজ - ৪ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة الظهر هي الصلاة الثانية في اليوم، تُصلى بعد زوال الشمس من وسط السماء حتى دخول وقت العصر. وهي أربع ركعات فرض.',
+                english: 'Dhuhr is the second prayer of the day, performed after the sun passes its zenith until Asr time begins. It consists of 4 obligatory rakats[1][24].',
+                hindi: 'ज़ुहर दिन की दूसरी नमाज़ है, जो सूरज के आकाश के मध्य से गुज़रने के बाद असर के समय तक पढ़ी जाती है। इसमें 4 फ़र्ज़ रकात हैं।',
+                bengali: 'জোহর দিনের দ্বিতীয় নামাজ, যা সূর্য আকাশের মধ্যস্থল অতিক্রম করার পর আসর সময় পর্যন্ত পড়া হয়। এতে ৪ ফরজ রাকাত রয়েছে।'
+            },
+            method: {
+                arabic: '1. الوضوء والنية للظهر\n2. تكبيرة الإحرام "الله أكبر"\n3. قراءة الفاتحة وسورة سراً\n4. الركوع والسجود\n5. التشهد الأوسط بعد الركعة الثانية\n6. إكمال الركعتين الأخيرتين\n7. التشهد الأخير والسلام',
+                english: '1. Perform Wudu and make intention for Dhuhr\n2. Takbir al-Ihram "Allahu Akbar"\n3. Recite Al-Fatiha and Surah silently\n4. Perform Ruku and Sujood\n5. Middle Tashahhud after 2nd rakat\n6. Complete the last two rakats\n7. Final Tashahhud and Salam[1]',
+                hindi: '1. ज़ुहर के लिए वुज़ू और नीयत करें\n2. तकबीर-उल-इहराम "अल्लाहु अकबर"\n3. अल-फ़ातिहा और सूरह चुपचाप पढ़ें\n4. रुकू और सजदा करें\n5. दूसरी रकात के बाद बीच का तशह्हुद\n6. आखिरी दो रकात पूरी करें\n7. अंतिम तशह्हुद और सलाम',
+                bengali: '1. জোহরের জন্য ওযু ও নিয়ত করুন\n2. তাকবীর-উল-ইহরাম "আল্লাহু আকবার"\n3. আল-ফাতিহা ও সূরা নিঃশব্দে পড়ুন\n4. রুকু ও সিজদা করুন\n5. ২য় রাকাতের পর মধ্যবর্তী তাশাহ্হুদ\n6. শেষ দুই রাকাত সম্পূর্ণ করুন\n7. শেষ তাশাহ্হুদ ও সালাম'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
+                    transliteration: 'Allahumma a\'inni ala dhikrika wa shukrika wa husni ibadatik',
+                    translation: {
+                        english: 'O Allah, help me to remember You, thank You, and worship You in the best manner',
+                        hindi: 'हे अल्लाह! मुझे अपना ज़िक्र, शुक्र और बेहतरीन इबादत करने में मदद कर',
+                        bengali: 'হে আল্লাহ! আমাকে তোমার স্মরণ, কৃতজ্ঞতা ও উত্তম ইবাদতে সাহায্য কর'
+                    }
+                },
+                {
+                    arabic: 'رَبِّ اجْعَلْنِي مُقِيمَ الصَّلاَةِ وَمِن ذُرِّيَّتِي',
+                    transliteration: 'Rabbi ij\'alni muqimas-salati wa min dhurriyyati',
+                    translation: {
+                        english: 'My Lord, make me one who establishes prayer, and from my descendants',
+                        hindi: 'मेरे रब! मुझे और मेरी संतान को नमाज़ कायम करने वाला बना',
+                        bengali: 'আমার প্রভু! আমাকে ও আমার বংশধরদের নামাজ প্রতিষ্ঠাকারী বানাও'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Fatiha',
+                    arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+                    translation: {
+                        english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, Lord of all the worlds...',
+                        hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो सभी जगतों का पालनहार है...',
+                        bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সকল জগতের প্রতিপালক...'
+                    }
+                },
+                {
+                    name: 'Al-Ikhlas',
+                    arabic: 'قُلْ هُوَ اللَّهُ أَحَدٌ * اللَّهُ الصَّمَدُ * لَمْ يَلِدْ وَلَمْ يُولَدْ * وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ',
+                    translation: {
+                        english: 'Say: He is Allah, the One! Allah, the Eternal, Absolute. He begets not, nor is He begotten. And there is none like unto Him.',
+                        hindi: 'कह दो: वह अल्लाह एक है। अल्लाह निरपेक्ष है। न उसकी कोई संतान है, न वह किसी की संतान है। और उसके समान कोई नहीं है।',
+                        bengali: 'বলুন: তিনি আল্লাহ, একক। আল্লাহ অমুখাপেক্ষী। তিনি কাউকে জন্म দেননি এবং তাঁকেও জন্ম দেওয়া হয়নি। এবং তাঁর সমতুল্য কেউ নেই।'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ',
+                    transliteration: 'Subhan Allah',
+                    translation: {
+                        english: 'Glory be to Allah',
+                        hindi: 'अल्लाह पवित्र है',
+                        bengali: 'আল্লাহ পবিত্র'
+                    },
+                    count: '33 times'
+                },
+                {
+                    arabic: 'الْحَمْدُ لِلَّهِ',
+                    transliteration: 'Alhamdulillah',
+                    translation: {
+                        english: 'All praise is for Allah',
+                        hindi: 'सारी प्रशंसा अल्लाह के लिए है',
+                        bengali: 'সমস্ত প্রশংসা আল্লাহর জন্য'
+                    },
+                    count: '33 times'
+                },
+                {
+                    arabic: 'اللَّهُ أَكْبَرُ',
+                    transliteration: 'Allahu Akbar',
+                    translation: {
+                        english: 'Allah is Greatest',
+                        hindi: 'अल्लाह सबसे महान है',
+                        bengali: 'আল্লাহ সর্বশ্রেষ্ঠ'
+                    },
+                    count: '34 times'
+                }
+            ],
+            benefits: {
+                arabic: ['حماية من النار', 'رحمة الله في وقت فتح أبواب السماء', 'زيادة الحسنات', 'راحة البال'],
+                english: ['Protection from Hellfire[24]', 'Allah\'s mercy when heaven gates open[24]', 'Increase in good deeds', 'Peace of mind'],
+                hindi: ['जहन्नम से सुरक्षा', 'स्वर्ग के द्वार खुलने के समय अल्लाह की रहमत', 'अच्छे कामों में वृद्धि', 'मन की शांति'],
+                bengali: ['জাহান্নাম থেকে সুরক্ষা', 'স্বর্গের দ্বার খোলার সময় আল্লাহর রহমত', 'সৎকর্মে বৃদ্ধি', 'মানসিক শান্তি']
+            }
+        },
+
+        asr: {
+            title: {
+                arabic: 'صلاة العصر',
+                english: 'Asr Prayer',
+                hindi: 'असर की नमाज़',
+                bengali: 'আসর নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة العصر - أربع ركعات',
+                english: 'The Afternoon Prayer - 4 Rakat',
+                hindi: 'दोपहर बाद की नमाज़ - 4 रकात',
+                bengali: 'বিকেলের নামাজ - ৪ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة العصر هي الصلاة الثالثة في اليوم، تُصلى عندما يصبح ظل الشيء مثل طوله. وهي من أهم الصلوات وأكثرها تأكيداً في القرآن والسنة.',
+                english: 'Asr is the third prayer of the day, performed when the shadow of an object equals its length. It holds special importance in the Quran and Sunnah[25][31].',
+                hindi: 'असर दिन की तीसरी नमाज़ है, जो किसी वस्तु की छाया उसकी लंबाई के बराबर हो जाने पर पढ़ी जाती है। यह क़ुरआन और सुन्नत में विशेष महत्व रखती है।',
+                bengali: 'আসর দিনের তৃতীয় নামাজ, যা কোনো বস্তুর ছায়া তার দৈর্ঘ্যের সমান হলে পড়া হয়। কুরআন ও সুন্নাহতে এর বিশেষ গুরুত্ব রয়েছে।'
+            },
+            method: {
+                arabic: '1. الوضوء والنية للعصر\n2. تكبيرة الإحرام "الله أكبر"\n3. قراءة الفاتحة وسورة سراً\n4. الركوع والسجود\n5. التشهد الأوسط بعد الركعة الثانية\n6. إكمال الركعتين الأخيرتين\n7. التشهد الأخير والسلام',
+                english: '1. Perform Wudu and make intention for Asr\n2. Takbir al-Ihram "Allahu Akbar"\n3. Recite Al-Fatiha and Surah silently\n4. Perform Ruku and Sujood[6]\n5. Middle Tashahhud after 2nd rakat\n6. Complete the last two rakats\n7. Final Tashahhud and Salam',
+                hindi: '1. असर के लिए वुज़ू और नीयत करें\n2. तकबीर-उल-इहराम "अल्लाहु अकबर"\n3. अल-फ़ातिहा और सूरह चुपचाप पढ़ें\n4. रुकू और सजदा करें\n5. दूसरी रकात के बाद बीच का तशह्हुद\n6. आखिरी दो रकात पूरी करें\n7. अंतिम तशह्हुद और सलाम',
+                bengali: '1. আসরের জন্য ওযু ও নিয়ত করুন\n2. তাকবীর-উল-ইহরাম "আল্লাহু আকবার"\n3. আল-ফাতিহা ও সূরা নিঃশব্দে পড়ুন\n4. রুকু ও সিজদা করুন\n5. ২য় রাকাতের পর মধ্যবর্তী তাশাহ্হুদ\n6. শেষ দুই রাকাত সম্পূর্ণ করুন\n7. শেষ তাশাহ্হুদ ও সালাম'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
+                    transliteration: 'Allahumma a\'inni ala dhikrika wa shukrika wa husni ibadatik',
+                    translation: {
+                        english: 'O Allah, help me to remember You, thank You, and worship You in the best manner',
+                        hindi: 'हे अल्लाह! मुझे अपना ज़िक्र, शुक्र और बेहतरीन इबादत करने में मदद कर',
+                        bengali: 'হে আল্লাহ! আমাকে তোমার স্মরণ, কৃতজ্ঞতা ও উত্তম ইবাদতে সাহায্য কর'
+                    }
+                },
+                {
+                    arabic: 'رَحْمَةُ اللَّهِ عَلَى مَنْ صَلَّى أَرْبَعًا قَبْلَ الْعَصْرِ',
+                    transliteration: 'Rahmatu Allah ala man salla arba\'an qabla al-Asr',
+                    translation: {
+                        english: 'May Allah have mercy on the person who prays four rakats before Asr[25]',
+                        hindi: 'अल्लाह की रहमत हो उस व्यक्ति पर जो असर से पहले चार रकात पढ़े',
+                        bengali: 'আল্লাহর রহমত সেই ব্যক্তির ওপর যে আসরের আগে চার রাকাত পড়ে'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Fatiha',
+                    arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+                    translation: {
+                        english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, Lord of all the worlds...',
+                        hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो सभी जगतों का पालनहार है...',
+                        bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সকল জগতের প্রতিপালক...'
+                    }
+                },
+                {
+                    name: 'Al-Asr',
+                    arabic: 'وَالْعَصْرِ * إِنَّ الْإِنسَانَ لَفِي خُسْرٍ * إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ',
+                    translation: {
+                        english: 'By time, Indeed, mankind is in loss, Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.',
+                        hindi: 'समय की कसम, निःसंदेह इंसान घाटे में है, सिवाय उनके जो ईमान लाए और अच्छे काम किए और एक दूसरे को सच्चाई की नसीहत की और एक दूसरे को धैर्य की नसीहत की।',
+                        bengali: 'সময়ের শপথ, নিশ্চয়ই মানুষ ক্ষতিগ্রস্ত, তারা ছাড়া যারা ঈমান এনেছে ও সৎকর্ম করেছে এবং পরস্পরকে সত্যের উপদেশ দিয়েছে ও ধৈর্যের উপদেশ দিয়েছে।'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ',
+                    transliteration: 'Subhan Allah',
+                    translation: {
+                        english: 'Glory be to Allah',
+                        hindi: 'अल्लाह पवित्र है',
+                        bengali: 'আল্লাহ পবিত্র'
+                    },
+                    count: '33 times'
+                },
+                {
+                    arabic: 'الْحَمْدُ لِلَّهِ',
+                    transliteration: 'Alhamdulillah',
+                    translation: {
+                        english: 'All praise is for Allah',
+                        hindi: 'सारी प्रशंसा अल्लाह के लिए है',
+                        bengali: 'সমস্ত প্রশংসা আল্লাহর জন্য'
+                    },
+                    count: '33 times'
+                },
+                {
+                    arabic: 'اللَّهُ أَكْبَرُ',
+                    transliteration: 'Allahu Akbar',
+                    translation: {
+                        english: 'Allah is Greatest',
+                        hindi: 'अल्लाह सबसे महान है',
+                        bengali: 'আল্লাহ সর্বশ্রেষ্ঠ'
+                    },
+                    count: '34 times'
+                }
+            ],
+            benefits: {
+                arabic: ['الجمع بين العبادة والحياة الدنيا', 'حماية خاصة من الله', 'ثواب عظيم', 'تقوية الروحانية'],
+                english: ['Bridge between worship and worldly matters[31]', 'Special protection from Allah', 'Great reward', 'Strengthening spirituality'],
+                hindi: ['इबादत और दुनियावी मामलों के बीच संतुलन', 'अल्लाह से विशेष सुरक्षा', 'महान पुण्य', 'आध्यात्मिकता को मजबूत बनाना'],
+                bengali: ['ইবাদত ও পার্থিব বিষয়ের মধ্যে সেতু', 'আল্লাহর বিশেষ সুরক্ষা', 'মহান সওয়াব', 'আধ্যাত্মিকতা বৃদ্ধি']
+            }
+        },
+
+        maghrib: {
+            title: {
+                arabic: 'صلاة المغرب',
+                english: 'Maghrib Prayer',
+                hindi: 'मगरिब की नमाज़',
+                bengali: 'মাগরিব নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة المغرب - ثلاث ركعات',
+                english: 'The Sunset Prayer - 3 Rakat',
+                hindi: 'सूर्यास्त की नमाज़ - 3 रकात',
+                bengali: 'সূর্যাস্তের নামাজ - ৩ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة المغرب هي الصلاة الرابعة في اليوم، تُصلى بعد غروب الشمس مباشرة. وهي ثلاث ركعات فرض، والقراءة فيها جهرية في الركعتين الأوليين.',
+                english: 'Maghrib is the fourth prayer of the day, performed immediately after sunset. It consists of 3 obligatory rakats with audible recitation in the first two rakats[7][28].',
+                hindi: 'मगरिब दिन की चौथी नमाज़ है, जो सूर्यास्त के तुरंत बाद पढ़ी जाती है। इसमें 3 फ़र्ज़ रकात हैं और पहली दो रकातों में आवाज़ के साथ पढ़ा जाता है।',
+                bengali: 'মাগরিব দিনের চতুর্থ নামাজ, যা সূর্যাস্তের সাথে সাথে পড়া হয়। এতে ৩ ফরজ রাকাত রয়েছে এবং প্রথম দুই রাকাতে উচ্চস্বরে পড়া হয়।'
+            },
+            method: {
+                arabic: '1. الوضوء والنية للمغرب\n2. تكبيرة الإحرام "الله أكبر"\n3. قراءة الفاتحة وسورة جهراً في الأولى والثانية\n4. الركوع والسجود\n5. التشهد الأوسط بعد الركعة الثانية\n6. الركعة الثالثة بالفاتحة فقط سراً\n7. التشهد الأخير والسلام',
+                english: '1. Perform Wudu and make intention for Maghrib\n2. Takbir al-Ihram "Allahu Akbar"\n3. Recite Al-Fatiha and Surah audibly in 1st and 2nd rakats[28]\n4. Perform Ruku and Sujood\n5. Middle Tashahhud after 2nd rakat\n6. 3rd rakat with only Al-Fatiha silently\n7. Final Tashahhud and Salam',
+                hindi: '1. मगरिब के लिए वुज़ू और नीयत करें\n2. तकबीर-उल-इहराम "अल्लाहु अकबर"\n3. पहली और दूसरी रकात में अल-फ़ातिहा और सूरह आवाज़ के साथ\n4. रुकू और सजदा करें\n5. दूसरी रकात के बाद बीच का तशह्हुद\n6. तीसरी रकात में केवल अल-फ़ातिहा चुपचाप\n7. अंतिम तशह्हुद और सलाम',
+                bengali: '1. মাগরিবের জন্য ওযু ও নিয়ত করুন\n2. তাকবীর-উল-ইহরাম "আল্লাহু আকবার"\n3. ১ম ও ২য় রাকাতে আল-ফাতিহা ও সূরা উচ্চস্বরে\n4. রুকু ও সিজদা করুন\n5. ২য় রাকাতের পর মধ্যবর্তী তাশাহ্হুদ\n6. ৩য় রাকাতে শুধু আল-ফাতিহা নিঃশব্দে\n7. শেষ তাশাহ্হুদ ও সালাম'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
+                    transliteration: 'Allahumma a\'inni ala dhikrika wa shukrika wa husni ibadatik',
+                    translation: {
+                        english: 'O Allah, help me to remember You, thank You, and worship You in the best manner',
+                        hindi: 'हे अल्लाह! मुझे अपना ज़िक्र, शुक्र और बेहतरीन इबादत करने में मदद कर',
+                        bengali: 'হে আল্লাহ! আমাকে তোমার স্মরণ, কৃতজ্ঞতা ও উত্তম ইবাদতে সাহায্য কর'
+                    }
+                },
+                {
+                    arabic: 'اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا',
+                    transliteration: 'Allahumma barik lana fima razaqtana',
+                    translation: {
+                        english: 'O Allah, bless us in what You have provided for us',
+                        hindi: 'हे अल्लाह! जो कुछ तूने हमें दिया है उसमें बरकत दे',
+                        bengali: 'হে আল্লাহ! তুমি আমাদের যা দিয়েছ তাতে বরকত দাও'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Fatiha',
+                    arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+                    translation: {
+                        english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, Lord of all the worlds...',
+                        hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो सभी जगतों का पालनहार है...',
+                        bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সকল জগতের প্রতিপালক...'
+                    }
+                },
+                {
+                    name: 'Al-Kafirun',
+                    arabic: 'قُلْ يَا أَيُّهَا الْكَافِرُونَ * لَا أَعْبُدُ مَا تَعْبُدُونَ * وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ * وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ * وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ * لَكُمْ دِينُكُمْ وَلِيَ دِينِ',
+                    translation: {
+                        english: 'Say: O you who reject faith! I do not worship what you worship, nor do you worship what I worship...',
+                        hindi: 'कह दो: हे काफिरों! मैं उसकी इबादत नहीं करता जिसकी तुम इबादत करते हो, और न तुम उसकी इबादत करते हो जिसकी मैं इबादत करता हूं...',
+                        bengali: 'বলুন: হে কাফেরগণ! আমি তার ইবাদত করি না যার ইবাদত তোমরা কর, আর তোমরাও তার ইবাদত কর না যার ইবাদত আমি করি...'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ',
+                    transliteration: 'Subhan Allah',
+                    translation: {
+                        english: 'Glory be to Allah',
+                        hindi: 'अल्लाह पवित्र है',
+                        bengali: 'আল্লাহ পবিত্র'
+                    },
+                    count: '33 times'
+                },
+                {
+                    arabic: 'الْحَمْدُ لِلَّهِ',
+                    transliteration: 'Alhamdulillah',
+                    translation: {
+                        english: 'All praise is for Allah',
+                        hindi: 'सारी प्रशंसा अल्लाह के लिए है',
+                        bengali: 'সমস্ত প্রশংসা আল্লাহর জন্য'
+                    },
+                    count: '33 times'
+                },
+                {
+                    arabic: 'اللَّهُ أَكْبَرُ',
+                    transliteration: 'Allahu Akbar',
+                    translation: {
+                        english: 'Allah is Greatest',
+                        hindi: 'अल्लाह सबसे महान है',
+                        bengali: 'আল্লাহ সর্বশ্রেষ্ঠ'
+                    },
+                    count: '34 times'
+                }
+            ],
+            benefits: {
+                arabic: ['التفكر في نهاية اليوم', 'الشكر على النعم', 'الاستعداد للمساء', 'السكينة والطمأنينة'],
+                english: ['Reflection on the end of day[7]', 'Gratitude for blessings', 'Preparation for evening', 'Peace and tranquility'],
+                hindi: ['दिन के अंत में चिंतन', 'नेमतों के लिए आभार', 'शाम की तैयारी', 'शांति और सुकून'],
+                bengali: ['দিনের শেষে চিন্তা-ভাবনা', 'নিয়ামতের জন্য কৃতজ্ঞতা', 'সন্ধ্যার প্রস্তুতি', 'শান্তি ও স্বস্তি']
+            }
+        },
+
+        isha: {
+            title: {
+                arabic: 'صلاة العشاء',
+                english: 'Isha Prayer',
+                hindi: 'इशा की नमाज़',
+                bengali: 'এশার নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة العشاء - أربع ركعات',
+                english: 'The Night Prayer - 4 Rakat',
+                hindi: 'रात की नमाज़ - 4 रकात',
+                bengali: 'রাতের নামাজ - ৪ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة العشاء هي الصلاة الخامسة والأخيرة في اليوم، تُصلى بعد اختفاء الشفق الأحمر. وهي أربع ركعات فرض، والقراءة فيها جهرية في الركعتين الأوليين.',
+                english: 'Isha is the fifth and final prayer of the day, performed after the red twilight disappears completely. It consists of 4 obligatory rakats with audible recitation in the first two rakats[8][26][29].',
+                hindi: 'इशा दिन की पांचवीं और अंतिम नमाज़ है, जो लाल संध्या के पूरी तरह गायब होने के बाद पढ़ी जाती है। इसमें 4 फ़र्ज़ रकात हैं और पहली दो रकातों में आवाज़ के साथ पढ़ा जाता है।',
+                bengali: 'এশা দিনের পঞ্চম ও শেষ নামাজ, যা লাল গোধূলি সম্পূর্ণ অদৃশ্য হওয়ার পর পড়া হয়। এতে ৪ ফরজ রাকাত রয়েছে এবং প্রথম দুই রাকাতে উচ্চস্বরে পড়া হয়।'
+            },
+            method: {
+                arabic: '1. الوضوء والنية للعشاء\n2. تكبيرة الإحرام "الله أكبر"\n3. قراءة الفاتحة وسورة جهراً في الأولى والثانية\n4. الركوع والسجود\n5. التشهد الأوسط بعد الركعة الثانية\n6. إكمال الركعتين الأخيرتين سراً\n7. التشهد الأخير والسلام',
+                english: '1. Perform Wudu and make intention for Isha\n2. Takbir al-Ihram "Allahu Akbar"\n3. Recite Al-Fatiha and Surah audibly in 1st and 2nd rakats[8]\n4. Perform Ruku and Sujood\n5. Middle Tashahhud after 2nd rakat\n6. Complete last two rakats silently\n7. Final Tashahhud and Salam',
+                hindi: '1. इशा के लिए वुज़ू और नीयत करें\n2. तकबीर-उल-इहराम "अल्लाहु अकबर"\n3. पहली और दूसरी रकात में अल-फ़ातिहा और सूरह आवाज़ के साथ\n4. रुकू और सजदा करें\n5. दूसरी रकात के बाद बीच का तशह्हुद\n6. आखिरी दो रकात चुपचाप पूरी करें\n7. अंतिम तशह्हुद और सलाम',
+                bengali: '1. এশার জন্য ওযু ও নিয়ত করুন\n2. তাকবীর-উল-ইহরাম "আল্লাহু আকবার"\n3. ১ম ও ২য় রাকাতে আল-ফাতিহা ও সূরা উচ্চস্বরে\n4. রুকু ও সিজদা করুন\n5. ২য় রাকাতের পর মধ্যবর্তী তাশাহ্হুদ\n6. শেষ দুই রাকাত নিঃশব্দে সম্পূর্ণ করুন\n7. শেষ তাশাহ্হুদ ও সালাম'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
+                    transliteration: 'Allahumma a\'inni ala dhikrika wa shukrika wa husni ibadatik',
+                    translation: {
+                        english: 'O Allah, help me to remember You, thank You, and worship You in the best manner',
+                        hindi: 'हे अल्लाह! मुझे अपना ज़िक्र, शुक्र और बेहतरीन इबादत करने में मदद कर',
+                        bengali: 'হে আল্লাহ! আমাকে তোমার স্মরণ, কৃতজ্ঞতা ও উত্তম ইবাদতে সাহায্য কর'
+                    }
+                },
+                {
+                    arabic: 'اللَّهُمَّ أَجِرْنِي مِنَ النَّارِ',
+                    transliteration: 'Allahumma ajirni mina an-naar',
+                    translation: {
+                        english: 'O Allah, save me from the Hellfire',
+                        hindi: 'हे अल्लाह! मुझे जहन्नम की आग से बचा',
+                        bengali: 'হে আল্লাহ! আমাকে জাহান্নামের আগুন থেকে রক্ষা কর'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Fatiha',
+                    arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+                    translation: {
+                        english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, Lord of all the worlds...',
+                        hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो सभी जगतों का पालनहार है...',
+                        bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সকল জগতের প্রতিপালক...'
+                    }
+                },
+                {
+                    name: 'Al-Isra (17:78)',
+                    arabic: 'أَقِمِ الصَّلَاةَ لِدُلُوكِ الشَّمْسِ إِلَىٰ غَسَقِ اللَّيْلِ وَقُرْآنَ الْفَجْرِ إِنَّ قُرْآنَ الْفَجْرِ كَانَ مَشْهُودًا',
+                    translation: {
+                        english: 'Establish prayer at the decline of the sun until the darkness of the night and [also] the Quran of dawn. Indeed, the recitation of dawn is ever witnessed[29].',
+                        hindi: 'सूरज के ढलने से लेकर रात के अंधेरे तक नमाज़ कायम करो और फज्र का क़ुरआन (भी)। निःसंदेह फज्र का क़ुरआन देखा जाता है।',
+                        bengali: 'সূর্য ঢলে যাওয়া থেকে রাতের অন্ধকার পর্যন্ত নামাজ কায়েম কর এবং ফজরের কুরআনও। নিশ্চয় ফজরের কুরআন সাক্ষ্য প্রাপ্ত।'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ',
+                    transliteration: 'Subhan Allah',
+                    translation: {
+                        english: 'Glory be to Allah',
+                        hindi: 'अल्लाह पवित्र है',
+                        bengali: 'আল্লাহ পবিত্র'
+                    },
+                    count: '33 times'
+                },
+                {
+                    arabic: 'الْحَمْدُ لِلَّهِ',
+                    transliteration: 'Alhamdulillah',
+                    translation: {
+                        english: 'All praise is for Allah',
+                        hindi: 'सारी प्रशंसा अल्लाह के लिए है',
+                        bengali: 'সমস্ত প্রশংসা আল্লাহর জন্য'
+                    },
+                    count: '33 times'
+                },
+                {
+                    arabic: 'اللَّهُ أَكْبَرُ',
+                    transliteration: 'Allahu Akbar',
+                    translation: {
+                        english: 'Allah is Greatest',
+                        hindi: 'अल्लाह सबसे महान है',
+                        bengali: 'আল্লাহ সর্বশ্রেষ্ঠ'
+                    },
+                    count: '34 times'
+                }
+            ],
+            benefits: {
+                arabic: ['انضباط الحياة', 'تقوية الأخلاق', 'حماية من الشيطان', 'استعداد للنوم بسكينة'],
+                english: ['Life discipline[29]', 'Strengthening morality[29]', 'Protection from Satan', 'Peaceful preparation for sleep'],
+                hindi: ['जीवन में अनुशासन', 'नैतिकता को मजबूत बनाना', 'शैतान से सुरक्षा', 'शांति से सोने की तैयारी'],
+                bengali: ['জীবনে শৃঙ্খলা', 'নৈতিকতা বৃদ্ধি', 'শয়তান থেকে সুরক্ষা', 'শান্তিপূর্ণ ঘুমের প্রস্তুতি']
+            }
+        },
+
+        // Add these 5 special event prayers to your existing salahDataTemplate object:
+
+        "eid-fitr": {
+            title: {
+                arabic: 'صلاة عيد الفطر',
+                english: 'Eid ul Fitr Prayer',
+                hindi: 'ईद उल फ़ित्र की नमाज़',
+                bengali: 'ঈদুল ফিতর নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة عيد الفطر - ركعتان',
+                english: 'The Festival of Breaking Fast - 2 Rakat',
+                hindi: 'रोज़ा खत्म होने की खुशी - 2 रकात',
+                bengali: 'রোজা শেষের আনন্দ - ২ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة عيد الفطر تُصلى في صباح أول يوم من شوال بعد انتهاء شهر رمضان. وهي ركعتان مع تكبيرات إضافية، سبع في الأولى وخمس في الثانية.',
+                english: 'Eid ul Fitr prayer is performed on the morning of the first day of Shawwal after Ramadan ends. It consists of 2 rakats with additional takbirs: 7 in the first rakat and 5 in the second[1][2].',
+                hindi: 'ईद उल फ़ित्र की नमाज़ रमज़ान के बाद शव्वाल के पहले दिन सुबह पढ़ी जाती है। इसमें 2 रकात हैं जिसमें अतिरिक्त तकबीर हैं: पहली में 7 और दूसरी में 5।',
+                bengali: 'ঈদুল ফিতরের নামাজ রমজানের পর শাওয়ালের প্রথম দিন সকালে পড়া হয়। এতে ২ রাকাত রয়েছে অতিরিক্ত তাকবীরসহ: প্রথমে ৭টি ও দ্বিতীয়ে ৫টি।'
+            },
+            method: {
+                arabic: '1. النية لصلاة عيد الفطر\n2. تكبيرة الإحرام ثم 6 تكبيرات إضافية\n3. قراءة الفاتحة وسورة الأعلى\n4. الركوع والسجود\n5. في الثانية: 5 تكبيرات ثم الفاتحة والغاشية\n6. إكمال الصلاة بالتشهد والسلام',
+                english: '1. Make intention for Eid ul Fitr prayer\n2. Takbir al-Ihram then 6 additional takbirs[2]\n3. Recite Al-Fatiha and Surah Al-A\'la\n4. Perform Ruku and Sujood\n5. In second rakat: 5 takbirs then Al-Fatiha and Al-Ghashiyah[6]\n6. Complete prayer with Tashahhud and Salam',
+                hindi: '1. ईद उल फ़ित्र की नमाज़ की नीयत करें\n2. तकबीर-उल-इहराम फिर 6 अतिरिक्त तकबीर\n3. अल-फ़ातिहा और सूरह अल-आला पढ़ें\n4. रुकू और सजदा करें\n5. दूसरी रकात में: 5 तकबीर फिर अल-फ़ातिहा और अल-गाशिया\n6. तशह्हुद और सलाम के साथ नमाज़ पूरी करें',
+                bengali: '1. ঈদুল ফিতর নামাজের নিয়ত করুন\n2. তাকবীর-উল-ইহরাম তারপর ৬টি অতিরিক্ত তাকবীর\n3. আল-ফাতিহা ও সূরা আল-আ\'লা পড়ুন\n4. রুকু ও সিজদা করুন\n5. দ্বিতীয় রাকাতে: ৫টি তাকবীর তারপর আল-ফাতিহা ও আল-গাশিয়া\n6. তাশাহ্হুদ ও সালামের সাথে নামাজ সম্পূর্ণ করুন'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ لَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ وَلِلَّهِ الْحَمْدُ',
+                    transliteration: 'Allahu Akbar Allahu Akbar la ilaha illa Allah wa Allahu Akbar Allahu Akbar wa lillahi\'l-hamd',
+                    translation: {
+                        english: 'Allah is Greatest, Allah is Greatest, there is no god but Allah, and Allah is Greatest, Allah is Greatest, and to Allah belongs all praise[5]',
+                        hindi: 'अल्लाह सबसे महान है, अल्लाह सबसे महान है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है, अल्लाह सबसे महान है, और सारी प्रशंसा अल्लाह के लिए है',
+                        bengali: 'আল্লাহ সর্বশ্রেষ্ঠ, আল্লাহ সর্বশ্রেষ্ঠ, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ, আল্লাহ সর্বশ্রেষ্ঠ, এবং সমস্ত প্রশংসা আল্লাহর জন্য'
+                    }
+                },
+                {
+                    arabic: 'اللَّهُمَّ تَقَبَّلْ مِنَّا صِيَامَنَا وَقِيَامَنَا',
+                    transliteration: 'Allahumma taqabbal minna siyamana wa qiyamana',
+                    translation: {
+                        english: 'O Allah, accept from us our fasting and our standing in prayer',
+                        hindi: 'हे अल्लाह! हमारे रोज़े और रात की इबादत को क़बूल फ़रما',
+                        bengali: 'হে আল্লাহ! আমাদের রোজা ও রাতের ইবাদত কবুল করুন'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-A\'la',
+                    arabic: 'سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى * الَّذِي خَلَقَ فَسَوَّىٰ * وَالَّذِي قَدَّرَ فَهَدَىٰ * وَالَّذِي أَخْرَجَ الْمَرْعَىٰ',
+                    translation: {
+                        english: 'Glorify the name of your Lord, the Most High, Who created and proportioned, Who determined and guided, Who brings out the pasture[6]',
+                        hindi: 'अपने सबसे बुलंद रब के नाम की तस्बीह करो, जिसने पैदा किया और ठीक बनाया, और जिसने अंदाज़ा लगाया फिर राह दिखाई',
+                        bengali: 'তোমার প্রভুর নামের পবিত্রতা ও মহিমা ঘোষণা কর, যিনি সর্বোচ্চ, যিনি সৃষ্টি করেছেন ও সুবিন্যস্ত করেছেন'
+                    }
+                },
+                {
+                    name: 'Al-Ghashiyah',
+                    arabic: 'هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ * وُجُوهٌ يَوْمَئِذٍ خَاشِعَةٌ * عَامِلَةٌ نَّاصِبَةٌ * تَصْلَىٰ نَارًا حَامِيَةً',
+                    translation: {
+                        english: 'Has there reached you the report of the Overwhelming [Event]? [Some] faces, that Day, will be humbled, Working [hard] and exhausted[6]',
+                        hindi: 'क्या तुम्हें घेरने वाली (क़यामत) की खबर पहुंची है? उस दिन कुछ चेहरे झुके हुए होंगे, मेहनत करने वाले, थके हुए',
+                        bengali: 'তোমার কাছে কি সর্বব্যাপী বিপর্যয়ের সংবাদ পৌঁছেছে? সেদিন কিছু মুখমণ্ডল হবে অবনত, পরিশ্রমক্লান্ত ও ক্লান্ত'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'التَّكْبِيرَاتُ',
+                    transliteration: 'Takbirat (Eid Takbirs)',
+                    translation: {
+                        english: 'Special Eid Takbirs to be recited',
+                        hindi: 'ईद की विशेष तकबीरें',
+                        bengali: 'ঈদের বিশেষ তাকবীর'
+                    },
+                    count: 'After prayer'
+                }
+            ],
+            benefits: {
+                arabic: ['الفرح والسرور المشروع', 'تكفير الذنوب', 'الأجر العظيم', 'الوحدة بين المسلمين'],
+                english: ['Legitimate joy and happiness[5]', 'Forgiveness of sins', 'Great reward', 'Unity among Muslims'],
+                hindi: ['वैध खुशी और आनंद', 'पापों की माफी', 'महान पुण्य', 'मुसलमानों में एकता'],
+                bengali: ['বৈধ আনন্দ ও খুশি', 'গুনাহ মাফ', 'মহান সওয়াব', 'মুসলিমদের মধ্যে ঐক্য']
+            }
+        },
+
+        "eid-adha": {
+            title: {
+                arabic: 'صلاة عيد الأضحى',
+                english: 'Eid ul Adha Prayer',
+                hindi: 'ईद उल अज़हा की नमाज़',
+                bengali: 'ঈদুল আজহা নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة عيد الأضحى - ركعتان',
+                english: 'The Festival of Sacrifice - 2 Rakat',
+                hindi: 'क़ुर्बानी की ईद - 2 रकात',
+                bengali: 'কুরবানির ঈদ - ২ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة عيد الأضحى تُصلى في العاشر من ذي الحجة تيمناً بحج إبراهيم وذبحه للكبش فداءً لإسماعيل. وهي ركعتان مع تكبيرات إضافية.',
+                english: 'Eid ul Adha prayer is performed on the 10th of Dhul Hijjah commemorating Ibrahim\'s pilgrimage and sacrifice. It consists of 2 rakats with additional takbirs[11][16].',
+                hindi: 'ईद उल अज़हा की नमाज़ ज़िल्हिज्जा की 10 तारीख को इब्राहीम के हज और क़ुर्बानी की याद में पढ़ी जाती है। इसमें अतिरिक्त तकबीरों के साथ 2 रकात हैं।',
+                bengali: 'ঈদুল আজহার নামাজ জিলহজের ১০ তারিখে ইব্রাহিমের হজ ও কুরবানির স্মরণে পড়া হয়। এতে অতিরিক্ত তাকবীরসহ ২ রাকাত রয়েছে।'
+            },
+            method: {
+                arabic: '1. النية لصلاة عيد الأضحى\n2. تكبيرة الإحرام ثم 6 تكبيرات إضافية\n3. قراءة الفاتحة وسورة الأعلى\n4. الركوع والسجود\n5. في الثانية: 5 تكبيرات ثم الفاتحة والغاشية\n6. إكمال الصلاة والاستعداد للخطبة',
+                english: '1. Make intention for Eid ul Adha prayer\n2. Takbir al-Ihram then 6 additional takbirs[16]\n3. Recite Al-Fatiha and Surah Al-A\'la\n4. Perform Ruku and Sujood\n5. In second rakat: 5 takbirs then Al-Fatiha and Al-Ghashiyah\n6. Complete prayer and listen to Khutbah',
+                hindi: '1. ईद उल अज़हा की नमाज़ की नीयत करें\n2. तकबीर-उल-इहराम फिर 6 अतिरिक्त तकबीर\n3. अल-फ़ातिहा और सूरह अल-आला पढ़ें\n4. रुकू और सजदा करें\n5. दूसरी रकात में: 5 तकबीर फिर अल-फ़ातिहा और अल-गाशिया\n6. नमाज़ पूरी करें और ख़ुत्बा सुनें',
+                bengali: '1. ঈদুল আজহা নামাজের নিয়ত করুন\n2. তাকবীর-উল-ইহরাম তারপর ৬টি অতিরিক্ত তাকবীর\n3. আল-ফাতিহা ও সূরা আল-আ\'লা পড়ুন\n4. রুকু ও সিজদা করুন\n5. দ্বিতীয় রাকাতে: ৫টি তাকবীর তারপর আল-ফাতিহা ও আল-গাশিয়া\n6. নামাজ সম্পূর্ণ করুন ও খুতবা শুনুন'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ لَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ وَلِلَّهِ الْحَمْدُ',
+                    transliteration: 'Allahu Akbar Allahu Akbar la ilaha illa Allah wa Allahu Akbar Allahu Akbar wa lillahi\'l-hamd',
+                    translation: {
+                        english: 'Allah is Greatest, Allah is Greatest, there is no god but Allah, and Allah is Greatest, Allah is Greatest, and to Allah belongs all praise[11]',
+                        hindi: 'अल्लाह सबसे महान है, अल्लाह सबसे महान है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है, अल्लाह सबसे महान है, और सारी प्रशंसा अल्लाह के लिए है',
+                        bengali: 'আল্লাহ সর্বশ্রেষ্ঠ, আল্লাহ সর্বশ্রেষ্ঠ, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ, আল্লাহ সর্বশ্রেষ্ঠ, এবং সমস্ত প্রশংসা আল্লাহর জন্য'
+                    }
+                },
+                {
+                    arabic: 'اللَّهُمَّ تَقَبَّلْ مِنَّا حَجَّنَا وَقُرْبَانَنَا',
+                    transliteration: 'Allahumma taqabbal minna hajjana wa qurbanana',
+                    translation: {
+                        english: 'O Allah, accept from us our pilgrimage and our sacrifice',
+                        hindi: 'हे अल्लाह! हमारे हज और क़ुर्बानी को क़बूल फ़रमा',
+                        bengali: 'হে আল্লাহ! আমাদের হজ ও কুরবানি কবুল করুন'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-A\'la',
+                    arabic: 'سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى * الَّذِي خَلَقَ فَسَوَّىٰ * وَالَّذِي قَدَّرَ فَهَدَىٰ * وَالَّذِي أَخْرَجَ الْمَرْعَىٰ',
+                    translation: {
+                        english: 'Glorify the name of your Lord, the Most High, Who created and proportioned, Who determined and guided, Who brings out the pasture',
+                        hindi: 'अपने सबसे बुलंद रब के नाम की तस्बीह करो, जिसने पैदा किया और ठीक बनाया, और जिसने अंदाज़ा लगाया फिर राह दिखाई',
+                        bengali: 'তোমার প্রভুর নামের পবিত্রতা ও মহিমা ঘোষণা কর, যিনি সর্বোচ্চ, যিনি সৃষ্টি করেছেন ও সুবিন্যস্ত করেছেন'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'التَّكْبِيرَاتُ الْأَيَّامِ',
+                    transliteration: 'Takbirat al-Ayyam (Days of Takbir)',
+                    translation: {
+                        english: 'Takbirs of the days of sacrifice',
+                        hindi: 'क़ुर्बानी के दिनों की तकबीरें',
+                        bengali: 'কুরবানির দিনগুলোর তাকবীর'
+                    },
+                    count: 'After each prayer'
+                }
+            ],
+            benefits: {
+                arabic: ['تذكر قصة إبراهيم وإسماعيل', 'تعلم التضحية والطاعة', 'وحدة الأمة الإسلامية', 'الأجر العظيم'],
+                english: ['Remembrance of Ibrahim and Ismail\'s story', 'Learning sacrifice and obedience', 'Unity of Islamic Ummah', 'Great reward'],
+                hindi: ['इब्राहीम और इस्माईल की कहानी की याद', 'त्याग और आज्ञाकारिता की शिक्षा', 'इस्लामी उम्मह की एकता', 'महान पुण्य'],
+                bengali: ['ইব্রাহিম ও ইসমাইলের কাহিনীর স্মরণ', 'ত্যাগ ও আনুগত্যের শিক্ষা', 'ইসলামী উম্মাহর ঐক্য', 'মহান সওয়াব']
+            }
+        },
+
+        tarawih: {
+            title: {
+                arabic: 'صلاة التراويح',
+                english: 'Tarawih Prayer',
+                hindi: 'तरावीह की नमाज़',
+                bengali: 'তারাবিহ নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة التراويح - 8 إلى 20 ركعة',
+                english: 'The Ramadan Night Prayer - 8 to 20 Rakat',
+                hindi: 'रमज़ान की रात की नमाज़ - 8 से 20 रकात',
+                bengali: 'রমজানের রাতের নামাজ - ৮ থেকে ২০ রাকাত'
+            },
+            description: {
+                arabic: 'صلاة التراويح سنة مؤكدة تُصلى كل ليلة في شهر رمضان بعد صلاة العشاء. تُصلى ركعتين ركعتين، وفيها يُقرأ القرآن تدريجياً ليُختم خلال الشهر.',
+                english: 'Tarawih is a highly recommended Sunnah prayer performed every night during Ramadan after Isha. It is prayed in sets of 2 rakats, with gradual Quran recitation to complete it during the month[7][12].',
+                hindi: 'तरावीह एक अत्यधिक महत्वपूर्ण सुन्नत नमाज़ है जो रमज़ान में हर रात इशा के बाद पढ़ी जाती है। यह 2-2 रकात के सेट में पढ़ी जाती है, जिसमें क़ुरआन को धीरे-धीरे पढ़कर महीने भर में पूरा किया जाता है।',
+                bengali: 'তারাবিহ একটি অত্যন্ত গুরুত্वপূর্ণ সুন্নাত নামাজ যা রমজানে প্রতি রাতে এশার পর পড়া হয়। এটি ২-২ রাকাত করে পড়া হয়, যাতে ক্রমশ কুরআন পাঠের মাধ্যমে মাসব্যাপী সম্পূর্ণ করা হয়।'
+            },
+            method: {
+                arabic: '1. صلاة العشاء وسننها أولاً\n2. النية لصلاة التراويح\n3. صلاة ركعتين ركعتين حتى 8 أو 20\n4. راحة قصيرة كل 4 ركعات\n5. قراءة جزء من القرآن تدريجياً\n6. انتهاء بصلاة الوتر',
+                english: '1. Pray Isha and its Sunnah first\n2. Make intention for Tarawih prayer[7]\n3. Pray 2 rakats at a time until 8 or 20 total\n4. Short rest after every 4 rakats[7]\n5. Gradual Quran recitation throughout month[12]\n6. End with Witr prayer',
+                hindi: '1. पहले इशा और उसकी सुन्नत पढ़ें\n2. तरावीह की नमाज़ की नीयत करें\n3. 2-2 रकात करके कुल 8 या 20 तक पढ़ें\n4. हर 4 रकात के बाद थोड़ा आराम\n5. महीने भर में क़ुरआन का क्रमिक पाठ\n6. वित्र की नमाज़ के साथ समाप्ति',
+                bengali: '1. প্রথমে এশা ও তার সুন্নাত পড়ুন\n2. তারাবিহ নামাজের নিয়ত করুন\n3. ২-২ রাকাত করে মোট ৮ বা ২০ পর্যন্ত পড়ুন\n4. প্রতি ৪ রাকাতের পর সামান্য বিশ্রাম\n5. মাসব্যাপী ক্রমশ কুরআন তেলাওয়াত\n6. বিতর নামাজের সাথে সমাপ্তি'
+            },
+            duas: [
+                {
+                    arabic: 'سُبْحَانَ ذِي الْمُلْكِ وَالْمَلَكُوتِ سُبْحَانَ ذِي الْعِزَّةِ وَالْعَظَمَةِ وَالْهَيْبَةِ وَالْقُدْرَةِ وَالْكِبْرِيَاءِ وَالْجَبَرُوتِ',
+                    transliteration: 'Subhana dhil-mulki wal-malakut, subhana dhil-\'izzati wal-\'azamati wal-haybati wal-qudrati wal-kibriya\'i wal-jabarut',
+                    translation: {
+                        english: 'Glory be to the Owner of dominion and sovereignty, glory be to the Owner of honor, greatness, awe, power, pride and might',
+                        hindi: 'पवित्र है वह जो राज्य और सम्राज्य का मालिक है, पवित्र है वह जो इज़्ज़त, अज़मत, रोब, कुदरत, किब्रिया और जबरूत का मालिक है',
+                        bengali: 'পবিত্র তিনি যিনি রাজত্ব ও সার্বভৌমত্বের মালিক, পবিত্র তিনি যিনি মর্যাদা, মহত্ত্व, ভীতি, শক্তি, গর্ব ও পরাক্রমের মালিক'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Portions of Quran',
+                    arabic: 'أجزاء من القرآن الكريم تُقرأ تدريجياً خلال شهر رمضان',
+                    translation: {
+                        english: 'Portions of the Holy Quran recited gradually throughout Ramadan to complete the entire Quran[12]',
+                        hindi: 'पवित्र क़ुरआन के भाग जो रमज़ान के दौरान क्रमिक रूप से पढ़े जाते हैं ताकि पूरा क़ुरआन पूरा हो सके',
+                        bengali: 'পবিত্র কুরআনের অংশগুলো যা রমজান জুড়ে ক্রমান্বয়ে পাঠ করা হয় সম্পূর্ণ কুরআন শেষ করার জন্য'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
+                    transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
+                    translation: {
+                        english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest',
+                        hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
+                        bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
+                    },
+                    count: 'After each set'
+                }
+            ],
+            benefits: {
+                arabic: ['غفران الذنوب الماضية', 'أجر قيام الليل كاملاً', 'تلاوة القرآن جماعة', 'تقوية الروحانية في رمضان'],
+                english: ['Forgiveness of past sins[7]', 'Reward of standing entire night in prayer[12]', 'Collective Quran recitation', 'Strengthening spirituality in Ramadan'],
+                hindi: ['पिछले पापों की माफी', 'पूरी रात इबादत का पुण्य', 'सामूहिक क़ुरआन पाठ', 'रमज़ान में आध्यात्मिकता को मजबूत बनाना'],
+                bengali: ['অতীত পাপের ক্ষমা', 'সারারাত ইবাদতের সওয়াব', 'সামূহিক কুরআন তেলাওয়াত', 'রমজানে আধ্যাত্মিকতা বৃদ্ধি']
+            }
+        },
+
+        "shabe-barat": {
+            title: {
+                arabic: 'صلاة ليلة البراءة',
+                english: 'Shab e Barat Prayer',
+                hindi: 'शब-ए-बरात की नमाज़',
+                bengali: 'শবে বরাতের নামাজ'
+            },
+            subtitle: {
+                arabic: 'ليلة النصف من شعبان - نوافل متنوعة',
+                english: 'The Night of Forgiveness - Various Nafl Prayers',
+                hindi: 'मुक्ति की रात - विभिन्न नफ़्ल नमाज़ें',
+                bengali: 'ক্ষমার রাত - বিভিন্ন নফল নামাজ'
+            },
+            description: {
+                arabic: 'ليلة النصف من شعبان ليلة مباركة يُستحب فيها الإكثار من النوافل والدعاء والاستغفار. تُصلى نوافل متعددة بنيات مختلفة للبركة والمغفرة.',
+                english: 'The 15th night of Sha\'ban is blessed, recommended for abundant nafl prayers, duas, and seeking forgiveness. Multiple voluntary prayers are performed with different intentions for blessings and forgiveness[8][13].',
+                hindi: 'शाबान की 15वीं रात बरकत वाली है, जिसमें बहुत सारी नफ़्ल नमाज़ें, दुआएं और इस्तिग़फ़ार की सिफ़ारिश की जाती है। बरकत और मग़फ़िरत के लिए अलग-अलग नीयतों से कई नफ़्ल नमाज़ें पढ़ी जाती हैं।',
+                bengali: 'শাবানের ১৫তম রাত বরকতময়, যাতে প্রচুর নফল নামাজ, দোয়া ও ক্ষমা প্রার্থনার সুপারিশ করা হয়। বরকত ও ক্ষমার জন্য বিভিন্ন নিয়তে একাধিক নফল নামাজ পড়া হয়।'
+            },
+            method: {
+                arabic: '1. صلاة 6 ركعات (2+2+2) بعد المغرب\n2. قراءة سورة يس والإخلاص 21 مرة\n3. صلاة 12 ركعة مع الإخلاص 10 مرات\n4. الإكثار من الدعاء والاستغفار\n5. صلاة 100 ركعة للمغفرة العظمى',
+                english: '1. Pray 6 rakats (2+2+2) after Maghrib[8]\n2. Recite Surah Yasin and Ikhlas 21 times[8]\n3. Pray 12 rakats with Ikhlas 10 times each[8]\n4. Abundant duas and seeking forgiveness[13]\n5. 100 rakats for greatest forgiveness[8]',
+                hindi: '1. मगरिब के बाद 6 रकात (2+2+2) पढ़ें\n2. सूरह यासीन और इख़्लास 21 बार पढ़ें\n3. हर रकात में इख़्लास 10 बार के साथ 12 रकात\n4. बहुत सारी दुआएं और इस्तिग़फ़ार\n5. सबसे बड़ी मग़फ़िरत के लिए 100 रकात',
+                bengali: '1. মাগরিবের পর ৬ রাকাত (২+২+২) পড়ুন\n2. সূরা ইয়াসিন ও ইখলাস ২১ বার পড়ুন\n3. প্রতি রাকাতে ইখলাস ১০ বার সহ ১২ রাকাত\n4. প্রচুর দোয়া ও ক্ষমা প্রার্থনা\n5. সর্বোচ্চ ক্ষমার জন্য ১০০ রাকাত'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ وَالْمُعَافَاةَ الدَّائِمَةَ فِي الدُّنْيَا وَالْآخِرَةِ',
+                    transliteration: 'Allahumma inni as\'aluka al-\'afwa wal-\'afiyata wal-mu\'afata ad-da\'imata fi\'d-dunya wal-akhirah',
+                    translation: {
+                        english: 'O Allah, I ask You for forgiveness, well-being, and lasting protection in this world and the next[8]',
+                        hindi: 'हे अल्लाह! मैं तुझसे माफी, आफ़ियत और दुनिया व आख़िरत में हमेशा की सुरक्षा मांगता हूं',
+                        bengali: 'হে আল্লাহ! আমি তোমার কাছে ক্ষমা, নিরাপত্তা ও দুনিয়া-আখেরাতে স্থায়ী সুরক্ষা চাই'
+                    }
+                },
+                {
+                    arabic: 'اللَّهُمَّ إِنَّكَ عَفُوٌّ كَرِيمٌ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي',
+                    transliteration: 'Allahumma innaka \'afuwwun karimun tuhibbul-\'afwa fa\'fu \'anni',
+                    translation: {
+                        english: 'O Allah, You are Most Forgiving and Generous, You love forgiveness, so forgive me[13]',
+                        hindi: 'हे अल्लाह! तू माफ करने वाला और करीम है, तू माफी को पसंद करता है, सो मुझे माफ कर दे',
+                        bengali: 'হে আল্লাহ! তুমি ক্ষমাশীল ও দানশীল, তুমি ক্ষমা পছন্দ কর, তাই আমাকে ক্ষমা কর'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Yasin',
+                    arabic: 'يس * وَالْقُرْآنِ الْحَكِيمِ * إِنَّكَ لَمِنَ الْمُرْسَلِينَ * عَلَىٰ صِرَاطٍ مُّسْتَقِيمٍ',
+                    translation: {
+                        english: 'Yasin. By the Quran, full of Wisdom, Indeed you are one of the messengers, On a Straight Path[8]',
+                        hindi: 'यासीन। हिकमत वाले क़ुरआन की कसम, बेशक तुम रसूलों में से हो, सीधे रास्ते पर',
+                        bengali: 'ইয়াসিন। প্রজ্ঞাপূর্ণ কুরআনের শপথ, নিশ্চয় তুমি রাসূলদের অন্তর্ভুক্ত, সরল পথের উপর'
+                    }
+                },
+                {
+                    name: 'Al-Ikhlas',
+                    arabic: 'قُلْ هُوَ اللَّهُ أَحَدٌ * اللَّهُ الصَّمَدُ * لَمْ يَلِدْ وَلَمْ يُولَدْ * وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ',
+                    translation: {
+                        english: 'Say: He is Allah, the One! Allah, the Eternal, Absolute. He begets not, nor is He begotten. And there is none like unto Him.',
+                        hindi: 'कह दो: वह अल्लाह एक है। अल्लाह निरपेक्ष है। न उसकी कोई संतान है, न वह किसी की संतान है। और उसके समान कोई नहीं है।',
+                        bengali: 'বলুন: তিনি আল্লাহ, একক। আল্লাহ অমুখাপেক্ষী। তিনি কাউকে জন্म দেননি এবং তাঁকেও জন্ম দেওয়া হয়নি। এবং তাঁর সমতুল্য কেউ নেই।'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'الْكَلِمَةُ الثَّالِثَةُ وَالرَّابِعَةُ',
+                    transliteration: 'Third and Fourth Kalima',
+                    translation: {
+                        english: 'Recite Third Kalima (Tamjeed) and Fourth Kalima (Tawheed)[8]',
+                        hindi: 'तीसरा कलिमा (तमजीद) और चौथा कलिमा (तौहीद) पढ़ें',
+                        bengali: 'তৃতীয় কালিমা (তামজীদ) ও চতুর্থ কালিমা (তাওহীদ) পড়ুন'
+                    },
+                    count: '10 times each'
+                }
+            ],
+            benefits: {
+                arabic: ['ترتيب أمور السنة القادمة', 'المغفرة العظمى', 'الحماية من البلاء', 'البركة في الحياة'],
+                english: ['Arrangement of next year\'s affairs[8]', 'Greatest forgiveness[13]', 'Protection from calamities[8]', 'Blessings in life[8]'],
+                hindi: ['अगले साल के मामलों की व्यवस्था', 'सबसे बड़ी मग़फ़िरत', 'आपदाओं से सुरक्षा', 'जीवन में बरकत'],
+                bengali: ['আগামী বছরের বিষয়াদির ব্যবস্থাপনা', 'সর্বোচ্চ ক্ষমা', 'বিপদ থেকে সুরক্ষা', 'জীবনে বরকত']
+            }
+        },
+
+        "shabe-qadr": {
+            title: {
+                arabic: 'صلاة ليلة القدر',
+                english: 'Shab e Qadr Prayer',
+                hindi: 'शब-ए-क़द्र की नमाज़',
+                bengali: 'শবে কদরের নামাজ'
+            },
+            subtitle: {
+                arabic: 'ليلة القدر - خير من ألف شهر',
+                english: 'The Night of Power - Better than 1000 months',
+                hindi: 'शक्ति की रात - हज़ार महीनों से बेहतर',
+                bengali: 'শক্তির রাত - হাজার মাসের চেয়ে উত্তম'
+            },
+            description: {
+                arabic: 'ليلة القدر أعظم ليالي السنة، خير من ألف شهر. تقع في العشر الأواخر من رمضان، وفيها نزل القرآن. يُستحب فيها الإكثار من النوافل والدعاء.',
+                english: 'Laylatul Qadr is the greatest night of the year, better than 1000 months. It occurs in the last 10 nights of Ramadan when the Quran was revealed. Abundant nafl prayers and duas are recommended[9][14].',
+                hindi: 'लैलतुल क़द्र साल की सबसे महान रात है, हज़ार महीनों से बेहतर। यह रमज़ान के आखिरी 10 दिनों में आती है जब क़ुरआन नाज़िल हुआ था। इसमें बहुत सारी नफ़्ल नमाज़ें और दुआएं सुन्नत हैं।',
+                bengali: 'লায়লাতুল কদর বছরের সর্বোচ্চ রাত, হাজার মাসের চেয়ে উত্তম। এটি রমজানের শেষ ১০ রাতে আসে যখন কুরআন নাজিল হয়েছিল। এতে প্রচুর নফল নামাজ ও দোয়া সুন্নাত।'
+            },
+            method: {
+                arabic: '1. صلاة 4 ركعات مع قراءة سورة القدر والإخلاص\n2. صلاة 10 ركعات (5×2) مع الإخلاص 21 مرة\n3. الإكثار من الدعاء والاستغفار\n4. قراءة القرآن والتسبيح\n5. صلاة 12 ركعة للمغفرة',
+                english: '1. Pray 4 rakats with Surah Qadr and Ikhlas[14]\n2. Pray 10 rakats (5×2) with Ikhlas 21 times[9]\n3. Abundant duas and seeking forgiveness[9]\n4. Quran recitation and dhikr[9]\n5. 12 rakats for complete forgiveness',
+                hindi: '1. सूरह क़द्र और इख़्लास के साथ 4 रकात\n2. इख़्लास 21 बार के साथ 10 रकात (5×2)\n3. बहुत सारी दुआएं और इस्तिग़फ़ार\n4. क़ुरआन पाठ और तस्बीह\n5. पूर्ण मग़फ़िरत के लिए 12 रकात',
+                bengali: '1. সূরা কদর ও ইখলাসসহ ৪ রাকাত\n2. ইখলাস ২১ বার সহ ১০ রাকাত (৫×২)\n3. প্রচুর দোয়া ও ক্ষমা প্রার্থনা\n4. কুরআন তেলাওয়াত ও জিকির\n5. সম্পূর্ণ ক্ষমার জন্য ১২ রাকাত'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي',
+                    transliteration: 'Allahumma innaka \'afuwwun tuhibbul-\'afwa fa\'fu \'anni',
+                    translation: {
+                        english: 'O Allah, You are Most Forgiving and You love forgiveness, so forgive me',
+                        hindi: 'हे अल्लाह! तू माफ करने वाला है और माफी को पसंद करता है, सो मुझे माफ कर दे',
+                        bengali: 'হে আল্লাহ! তুমি ক্ষমাশীল এবং ক্ষমা পছন্দ কর, তাই আমাকে ক্ষমা কর'
+                    }
+                },
+                {
+                    arabic: 'لَا إِلَٰهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ',
+                    transliteration: 'La ilaha illa Allah Muhammadur Rasul Allah',
+                    translation: {
+                        english: 'There is no god but Allah, Muhammad is the Messenger of Allah[9]',
+                        hindi: 'अल्लाह के सिवा कोई माबूद नहीं, मुहम्मद अल्लाह के रसूल हैं',
+                        bengali: 'আল্লাহ ছাড়া কোনো ইলাহ নেই, মুহাম্মদ আল্লাহর রাসূল'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Qadr',
+                    arabic: 'إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ * وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ * لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ * تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ * سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ',
+                    translation: {
+                        english: 'Indeed, We sent the Quran down during the Night of Decree. And what can make you know what is the Night of Decree? The Night of Decree is better than a thousand months. The angels and the Spirit descend therein by permission of their Lord for every matter. Peace it is until the emergence of dawn[14]',
+                        hindi: 'निःसंदेह हमने इसे (क़ुरआन को) शब-ए-क़द्र में नाज़िल किया है। और तुम क्या जानो कि शब-ए-क़द्र क्या है? शब-ए-क़द्र हज़ार महीनों से बेहतर है।',
+                        bengali: 'নিশ্চয় আমি এটি (কুরআন) লায়লাতুল কদরে নাজিল করেছি। আর তুমি কি জান লায়লাতুল কদর কী? লায়লাতুল কদর হাজার মাসের চেয়ে উত্তম।'
+                    }
+                },
+                {
+                    name: 'Al-Ikhlas',
+                    arabic: 'قُلْ هُوَ اللَّهُ أَحَدٌ * اللَّهُ الصَّمَدُ * لَمْ يَلِدْ وَلَمْ يُولَدْ * وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ',
+                    translation: {
+                        english: 'Say: He is Allah, the One! Allah, the Eternal, Absolute. He begets not, nor is He begotten. And there is none like unto Him.',
+                        hindi: 'कह दो: वह अल्लाह एक है। अल्लाह निरपेक्ष है। न उसकी कोई संतान है, न वह किसी की संतान है। और उसके समान कोई नहीं है।',
+                        bengali: 'বলুন: তিনি আল্লাহ, একক। আল্লাহ অমুখাপেক্ষী। তিনি কাউকে জন্ম দেননি এবং তাঁকেও জন্ম দেওয়া হয়নি। এবং তাঁর সমতুল্য কেউ নেই।'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
+                    transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
+                    translation: {
+                        english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest',
+                        hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
+                        bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
+                    },
+                    count: '100 times'
+                }
+            ],
+            benefits: {
+                arabic: ['أجر ألف شهر من العبادة', 'مغفرة جميع الذنوب', 'قبول الدعوات', 'نزول الملائكة والبركات'],
+                english: ['Reward of 1000 months of worship[9]', 'Forgiveness of all sins[9]', 'Acceptance of all prayers', 'Descent of angels and blessings'],
+                hindi: ['हज़ार महीने की इबादत का पुण्य', 'सभी पापों की माफी', 'सभी दुआओं की स्वीकृति', 'फरिश्तों का उतरना और बरकत'],
+                bengali: ['হাজার মাসের ইবাদতের সওয়াব', 'সব গুনাহের ক্ষমা', 'সব দোয়া কবুল', 'ফেরেশতাদের অবতরণ ও বরকত']
+            }
+        },
+
+
+        tahajjud: {
+            title: {
+                arabic: 'صلاة التهجد',
+                english: 'Tahajjud Prayer',
+                hindi: 'तहज्जुद की नमाज़',
+                bengali: 'তাহাজ্জুদের নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة الليل - 2 إلى 12 ركعة',
+                english: 'The Night Prayer - 2 to 12 Rakat',
+                hindi: 'रात की नमाज़ - 2 से 12 रकात',
+                bengali: 'রাতের নামাজ - 2 থেকে 12 রাকাত'
+            },
+            description: {
+                arabic: 'صلاة التهجد سنة مؤكدة تُصلى في الثلث الأخير من الليل بعد النوم. وهي من أفضل النوافل وأقربها إلى الله تعالى.',
+                english: 'Tahajjud is a highly recommended Sunnah prayer performed in the last third of the night after sleeping. It is among the best voluntary prayers and closest to Allah.',
+                hindi: 'तहज्जुद एक अत्यधिक महत्वपूर्ण सुन्नत नमाज़ है जो रात के अंतिम तिहाई में सोने के बाद पढ़ी जाती है। यह सबसे बेहतरीन नफ़्ल नमाज़ों में से है।',
+                bengali: 'তাহাজ্জুদ অত্যন্ত গুরুত্বপূর্ণ সুন্নাত নামাজ যা রাতের শেষ তৃতীয়াংশে ঘুমানোর পর পড়া হয়। এটি সর্বোত্তম নফল নামাজগুলোর অন্যতম।'
+            },
+            method: {
+                arabic: '1. النوم بعد صلاة العشاء\n2. الاستيقاظ في الثلث الأخير\n3. الوضوء والنية\n4. صلاة ركعتين ركعتين\n5. الدعاء والاستغفار',
+                english: '1. Sleep after Isha prayer\n2. Wake up in the last third of night\n3. Perform Wudu and make intention\n4. Pray in pairs of 2 rakats\n5. Make dua and seek forgiveness',
+                hindi: '1. इशा के बाद सो जाएं\n2. रात के अंतिम तिहाई में उठें\n3. वुज़ू करें और नीयत करें\n4. 2-2 रकात करके पढ़ें\n5. दुआ और इस्तिग़फ़ार करें',
+                bengali: '1. ইশার পর ঘুমিয়ে যান\n2. রাতের শেষ তৃতীয়াংশে উঠুন\n3. ওযু করে নিয়ত করুন\n4. 2-2 রাকাত করে পড়ুন\n5. দোয়া ও ইস্তেগফার করুন'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ نُورُ السَّمَاوَاتِ وَالْأَرْضِ وَمَنْ فِيهِنَّ',
+                    transliteration: 'Allahumma laka\'l-hamdu anta nurus-samawati wa\'l-ardi wa man fihinn',
+                    translation: {
+                        english: 'O Allah, to You belongs all praise. You are the light of the heavens and earth and all that is in them',
+                        hindi: 'हे अल्लाह! तेरे लिए ही सब प्रशंसा है। तू आसमानों और ज़मीन और जो कुछ उनमें है सबका नूर है',
+                        bengali: 'হে আল্লাহ! সব প্রশংসা তোমারই। তুমি আসমান ও জমিনের এবং এতে যা কিছু আছে সবকিছুর নূর'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Muzammil',
+                    arabic: 'يَا أَيُّهَا الْمُزَّمِّلُ * قُمِ اللَّيْلَ إِلَّا قَلِيلًا * نِّصْفَهُ أَوِ انقُصْ مِنْهُ قَلِيلًا * أَوْ زِدْ عَلَيْهِ وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا',
+                    translation: {
+                        english: 'O you wrapped in garments! Stand (to pray) all night, except a little. Half of it, or a little less than that. Or a little more; and recite the Quran (aloud) in a slow, (pleasant tone and) style.',
+                        hindi: 'हे चादर ओढ़ने वाले! रात को (नमाज़ में) खड़े हो सिवाय थोड़ी सी के। आधी रात या उससे कुछ कम करो। या उससे कुछ ज़्यादा करो और क़ुरआन को ठहर-ठहरकर पढ़ो।',
+                        bengali: 'হে চাদরাবৃত! রাত জেগে নামাজ পড়ুন সামান্য ছাড়া। অর্ধ রাত্রি অথবা তার চেয়ে কিছু কম। অথবা তার চেয়ে কিছু বেশি এবং কুরআন স্পষ্টভাবে তেলাওয়াত করুন।'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ',
+                    transliteration: 'La ilaha illa Allah wahdahu la sharika lahu lahul mulku wa lahul hamdu wa huwa ala kulli shayin qadir',
+                    translation: {
+                        english: 'There is no god but Allah, alone without partner. His is the dominion and His is the praise, and He has power over all things',
+                        hindi: 'अल्लाह के सिवा कोई माबूद नहीं, वह अकेला है, उसका कोई साझीदार नहीं। उसी का राज्य है और उसी के लिए प्रशंसा है, और वह हर चीज़ पर सक्षम है',
+                        bengali: 'আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একক, তার কোনো শরীক নেই। রাজত্व তারই এবং প্রশংসা তারই, আর তিনি সবকিছুর ওপর ক্ষমতাবান'
+                    },
+                    count: '100 times'
+                }
+            ],
+            benefits: {
+                arabic: ['قرب من الله', 'إجابة الدعوات', 'محو الذنوب', 'راحة القلب'],
+                english: ['Closeness to Allah', 'Acceptance of prayers', 'Forgiveness of sins', 'Peace of heart'],
+                hindi: ['अल्लाह से निकटता', 'दुआओं की स्वीकृति', 'पापों की माफी', 'दिल की शांति'],
+                bengali: ['আল্লাহর নৈকট্য', 'দোয়া কবুল', 'গুনাহ মাফ', 'মানসিক শান্তি']
+            }
+        },
+
+        istikhara: {
+            title: {
+                arabic: 'صلاة الاستخارة',
+                english: 'Istikhara Prayer',
+                hindi: 'इस्तिख़ारा की नमाज़',
+                bengali: 'ইস্তেখারার নামাজ'
+            },
+            subtitle: {
+                arabic: 'صلاة طلب الخيرة - ركعتان',
+                english: 'Prayer for Guidance - 2 Rakat',
+                hindi: 'मार्गदर्शन की नमाज़ - 2 रकात',
+                bengali: 'পথপ্রদর্শনের নামাজ - 2 রাকাত'
+            },
+            description: {
+                arabic: 'صلاة الاستخارة سنة مؤكدة تُصلى عند الحاجة إلى اتخاذ قرار مهم. يطلب فيها المسلم من الله أن يختار له الخير وييسر له الأمر.',
+                english: 'Istikhara is a recommended Sunnah prayer performed when making important decisions. In it, the Muslim asks Allah to choose what is best and make the matter easy.',
+                hindi: 'इस्तिख़ारा एक सुन्नत नमाज़ है जो महत्वपूर्ण फ़ैसले लेते समय पढ़ी जाती है। इसमें मुसलमान अल्लाह से बेहतर चुनने और मामले को आसान बनाने की दुआ करता है।',
+                bengali: 'ইস্তেখারা একটি সুন্নাত নামাজ যা গুরুত্বপূর্ণ সিদ্ধান্ত নেওয়ার সময় পড়া হয়। এতে মুসলিম আল্লাহর কাছে সর্বোত্তম বেছে নেওয়ার এবং বিষয়টি সহজ করার দোয়া করে।'
+            },
+            method: {
+                arabic: '1. الوضوء والنية للاستخارة\n2. صلاة ركعتين بالفاتحة وسورة\n3. التسليم من الصلاة\n4. قراءة دعاء الاستخارة\n5. النوم والانتظار للرؤية أو الشعور',
+                english: '1. Perform Wudu and make intention for Istikhara\n2. Pray 2 rakats with Al-Fatiha and another Surah\n3. Give Salam to end the prayer\n4. Recite the Istikhara dua\n5. Sleep and wait for a dream or feeling',
+                hindi: '1. वुज़ू करें और इस्तिख़ारा की नीयत करें\n2. फ़ातिहा और दूसरी सूरह के साथ 2 रकात पढ़ें\n3. सलाम फेरकर नमाज़ समाप्त करें\n4. इस्तिख़ारा की दुआ पढ़ें\n5. सो जाएं और सपने या अहसास का इंतज़ार करें',
+                bengali: '1. ওযু করুন এবং ইস্তেখারার নিয়ত করুন\n2. ফাতিহা ও অন্য সূরা দিয়ে 2 রাকাত পড়ুন\n3. সালাম ফিরিয়ে নামাজ শেষ করুন\n4. ইস্তেখারার দোয়া পড়ুন\n5. ঘুমান এবং স্বপ্ন বা অনুভূতির জন্য অপেক্ষা করুন'
+            },
+            duas: [
+                {
+                    arabic: 'اللَّهُمَّ إِنِّي أَسْتَخِيرُكَ بِعِلْمِكَ وَأَسْتَقْدِرُكَ بِقُدْرَتِكَ وَأَسْأَلُكَ مِنْ فَضْلِكَ الْعَظِيمِ فَإِنَّكَ تَقْدِرُ وَلا أَقْدِرُ وَتَعْلَمُ وَلا أَعْلَمُ وَأَنْتَ عَلامُ الْغُيُوبِ',
+                    transliteration: 'Allahumma inni astakheeruka bi\'ilmika wa astaqdiruka biqudratika wa as\'aluka min fadlikal azeem fa\'innaka taqdiru wa la aqdir wa ta\'lamu wa la a\'lam wa anta allamul ghuyoob',
+                    translation: {
+                        english: 'O Allah, I seek Your guidance through Your knowledge, and I seek Your help through Your power, and I ask You of Your great bounty. For You have power while I have none, and You have knowledge while I have none, and You are the Knower of the unseen',
+                        hindi: 'हे अल्लाह! मैं तेरे इल्म के ज़रिए तुझसे भलाई मांगता हूं और तेरी क़ुदरत के ज़रिए तुझसे मदद चाहता हूं और तेरे बड़े फ़ज़्ल से सवाल करता हूं। क्योंकि तू क़ादिर है और मैं क़ादिर नहीं, तू जानता है और मैं नहीं जानता, और तू गै़बों का जानने वाला है',
+                        bengali: 'হে আল্লাহ! আমি তোমার জ্ঞানের মাধ্যমে তোমার কাছে কল্যাণ প্রার্থনা করি এবং তোমার ক্ষমতার মাধ্যমে তোমার কাছে সাহায্য চাই এবং তোমার মহান অনুগ্রহ থেকে প্রার্থনা করি। কারণ তুমি ক্ষমতাবান আর আমি ক্ষমতাবান নই, তুমি জান আর আমি জানি না, আর তুমি অদৃশ্যের জ্ঞাতা'
+                    }
+                }
+            ],
+            surahs: [
+                {
+                    name: 'Al-Kafirun',
+                    arabic: 'قُلْ يَا أَيُّهَا الْكَافِرُونَ * لَا أَعْبُدُ مَا تَعْبُدُونَ * وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ * وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ * وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ * لَكُمْ دِينُكُمْ وَلِيَ دِينِ',
+                    translation: {
+                        english: 'Say: O you disbelievers! I worship not that which you worship; Nor worship you that which I worship. And I shall not worship that which you worship. Nor will you worship that which I worship. Unto you your religion, and unto me my religion.',
+                        hindi: 'कह दो: हे काफ़िरो! मैं उसकी इबादत नहीं करता जिसकी तुम इबादत करते हो। और न तुम उसकी इबादत करने वाले हो जिसकी मैं इबादत करता हूं। और न मैं उसकी इबादत करने वाला हूं जिसकी तुमने इबादत की है। और न तुम उसकी इबादत करने वाले हो जिसकी मैं इबादत करता हूं। तुम्हारे लिए तुम्हारा दीन और मेरे लिए मेरा दीन।',
+                        bengali: 'বলুন: হে কাফিরগণ! আমি তার ইবাদত করি না যার ইবাদত তোমরা কর। এবং তোমরাও তার ইবাদত কর না যার ইবাদত আমি করি। এবং আমি তার ইবাদতকারী নই যার ইবাদত তোমরা করেছ। এবং তোমরাও তার ইবাদতকারী নও যার ইবাদত আমি করি। তোমাদের জন্য তোমাদের দীন এবং আমার জন্য আমার দীন।'
+                    }
+                }
+            ],
+            tasbih: [
+                {
+                    arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ',
+                    transliteration: 'Allahumma salli ala Muhammadin wa ala ali Muhammad',
+                    translation: {
+                        english: 'O Allah, send blessings upon Muhammad and upon the family of Muhammad',
+                        hindi: 'हे अल्लाह! मुहम्मद पर और मुहम्मद के परिवार पर रहमत भेज',
+                        bengali: 'হে আল্লাহ! মুহাম্মদের উপর এবং মুহাম্মদের পরিবারের উপর রহমত পাঠান'
+                    },
+                    count: '3 times'
+                }
+            ],
+            benefits: {
+                arabic: ['الهداية في القرارات المهمة', 'راحة البال', 'التوفيق من الله', 'تجنب الندم'],
+                english: ['Guidance in important decisions', 'Peace of mind', 'Success from Allah', 'Avoiding regret'],
+                hindi: ['महत्वपूर्ण फ़ैसलों में मार्गदर्शन', 'मन की शांति', 'अल्लाह से तौफ़ीक़', 'पछतावे से बचना'],
+                bengali: ['গুরুত্বপূর্ণ সিদ্ধান্তে পথপ্রদর্শন', 'মানসিক শান্তি', 'আল্লাহর পক্ষ থেকে তওফীক', 'অনুশোচনা থেকে বাঁচা']
+            }
+        },
+
+        // Add these 6 prayers to your existing salahDataTemplate object:
+
+hajat: {
+    title: {
+        arabic: 'صلاة الحاجة',
+        english: 'Salatul Hajat',
+        hindi: 'हाजत की नमाज़',
+        bengali: 'হাজাতের নামাজ'
+    },
+    subtitle: {
+        arabic: 'صلاة الحاجة - ركعتان',
+        english: 'The Prayer of Need - 2 Rakat',
+        hindi: 'आवश्यकता की नमाज़ - 2 रकात',
+        bengali: 'প্রয়োজনের নামাজ - ২ রাকাত'
+    },
+    description: {
+        arabic: 'صلاة الحاجة سنة مستحبة تُصلى عند الحاجة إلى شيء من أمور الدنيا أو الآخرة. يدعو فيها المسلم ربه ويطلب منه قضاء حاجته وتفريج كربه.',
+        english: 'Salatul Hajat is a recommended Sunnah prayer performed when in need of something from worldly or religious matters. The Muslim supplicates to Allah and asks for fulfillment of needs and relief from distress[23][24].',
+        hindi: 'सलातुल हाजत एक मुस्तहब सुन्नत नमाज़ है जो दुनियावी या धार्मिक मामलों में किसी चीज़ की ज़रूरत के समय पढ़ी जाती है। इसमें मुसलमान अपने रब से दुआ करता है और अपनी ज़रूरत पूरी करने की प्रार्थना करता है।',
+        bengali: 'সালাতুল হাজাত একটি মুস্তাহাব সুন্নাত নামাজ যা পার্থিব বা ধর্মীয় বিষয়ে কোনো প্রয়োজনের সময় পড়া হয়। এতে মুসলিম আল্লাহর কাছে দোয়া করে এবং প্রয়োজন পূরণের জন্য প্রার্থনা করে।'
+    },
+    method: {
+        arabic: '1. الوضوء الكامل والنية لصلاة الحاجة\n2. صلاة ركعتين بالفاتحة وسورة\n3. التسليم من الصلاة\n4. الصلاة على النبي صلى الله عليه وسلم\n5. قراءة دعاء الحاجة\n6. الدعاء بما يريد من خير الدنيا والآخرة',
+        english: '1. Perform complete Wudu and make intention for Hajat prayer[24]\n2. Pray 2 rakats with Al-Fatiha and another Surah\n3. Give Salam to complete the prayer\n4. Send blessings upon Prophet Muhammad (PBUH)[24]\n5. Recite the specific Hajat dua\n6. Make personal supplications for worldly and religious needs',
+        hindi: '1. पूरा वुज़ू करें और हाजत की नमाज़ की नीयत करें\n2. फ़ातिहा और दूसरी सूरह के साथ 2 रकात पढ़ें\n3. सलाम फेरकर नमाज़ पूरी करें\n4. नबी صلى الله عليه وسلم पर दरूद भेजें\n5. हाजत की खास दुआ पढ़ें\n6. दुनिया और आख़िरत की भलाई के लिए निजी दुआ करें',
+        bengali: '1. সম্পূর্ণ ওযু করুন ও হাজাত নামাজের নিয়ত করুন\n2. ফাতিহা ও অন্য সূরা দিয়ে ২ রাকাত পড়ুন\n3. সালাম ফিরিয়ে নামাজ সম্পূর্ণ করুন\n4. নবী صلى الله عليه وسلم এর ওপর দরূদ পাঠান\n5. হাজাতের বিশেষ দোয়া পড়ুন\n6. দুনিয়া ও আখেরাতের কল্যাণের জন্য ব্যক্তিগত দোয়া করুন'
+    },
+    duas: [
+        {
+            arabic: 'لَا إِلَٰهَ إِلَّا اللَّهُ الْحَلِيمُ الْكَرِيمُ سُبْحَانَ اللَّهِ رَبِّ الْعَرْشِ الْعَظِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+            transliteration: 'La ilaha illa Allah al-Haleem al-Kareem, Subhan Allah Rabbi\'l-\'arsh al-\'azeem, al-hamdu lillahi Rabbi\'l-\'alameen',
+            translation: {
+                english: 'There is no god but Allah, the Forbearing, the Generous. Glory be to Allah, Lord of the Mighty Throne. Praise be to Allah, Lord of the worlds[24]',
+                hindi: 'अल्लाह के सिवा कोई माबूद नहीं जो सबर वाला और करीम है। अल्लाह पाक है जो अर्श-ए-अज़ीम का रब है। सारी तारीफ़ अल्लाह के लिए है जो आलमों का रब है',
+                bengali: 'আল্লাহ ছাড়া কোনো ইলাহ নেই যিনি ধৈর্যশীল ও দানশীল। আল্লাহ পবিত্র যিনি মহান আরশের প্রভু। সমস্ত প্রশংসা আল্লাহর যিনি জগতসমূহের প্রতিপালক'
+            }
+        },
+        {
+            arabic: 'أَسْأَلُكَ مِنْ فَضْلِكَ وَرَحْمَتِكَ فَإِنَّهُ لَا يَمْلِكُهَا إِلَّا أَنْتَ',
+            transliteration: 'As\'aluka min fadlika wa rahmatika fa\'innahu la yamlikuha illa ant',
+            translation: {
+                english: 'I ask You of Your favor and mercy, for indeed no one possesses them except You[23]',
+                hindi: 'मैं तुझसे तेरे फ़ज़्ल और रहमत की दरख्वास्त करता हूं क्योंकि तेरे सिवा किसी के पास यह नहीं है',
+                bengali: 'আমি তোমার অনুগ্রহ ও রহমত প্রার্থনা করি, কারণ তুমি ছাড়া কারো কাছে এগুলো নেই'
+            }
+        }
+    ],
+    surahs: [
+        {
+            name: 'Al-Fatiha',
+            arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+            translation: {
+                english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, Lord of all the worlds...',
+                hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो सभी जगतों का पालनहार है...',
+                bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সকল জগতের প্রতিপালক...'
+            }
+        }
+    ],
+    tasbih: [
+        {
+            arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ',
+            transliteration: 'Allahumma salli ala Muhammadin wa ala ali Muhammad',
+            translation: {
+                english: 'O Allah, send blessings upon Muhammad and upon the family of Muhammad',
+                hindi: 'हे अल्लाह! मुहम्मद पर और मुहम्मद के परिवार पर रहमत भेज',
+                bengali: 'হে আল্লাহ! মুহাম্মদের উপর এবং মুহাম্মদের পরিবারের উপর রহমত পাঠান'
+            },
+            count: '3 times'
+        }
+    ],
+    benefits: {
+        arabic: ['إجابة الدعوات', 'قضاء الحوائج', 'تفريج الكروب', 'راحة القلب'],
+        english: ['Acceptance of supplications[23]', 'Fulfillment of needs[24]', 'Relief from distress', 'Peace of heart'],
+        hindi: ['दुआओं की स्वीकृति', 'ज़रूरतों की पूर्ति', 'परेशानियों से राहत', 'दिल की शांति'],
+        bengali: ['দোয়া কবুল', 'প্রয়োজন পূরণ', 'সমস্যা থেকে মুক্তি', 'মানসিক শান্তি']
+    }
+},
+
+tawbah: {
+    title: {
+        arabic: 'صلاة التوبة',
+        english: 'Salatul Tawbah',
+        hindi: 'तौबा की नमाज़',
+        bengali: 'তওবার নামাজ'
+    },
+    subtitle: {
+        arabic: 'صلاة التوبة - ركعتان',
+        english: 'The Prayer of Repentance - 2 Rakat',
+        hindi: 'पश्चाताप की नमाज़ - 2 रकात',
+        bengali: 'অনুতাপের নামাজ - ২ রাকাত'
+    },
+    description: {
+        arabic: 'صلاة التوبة سنة مشروعة تُصلى عند التوبة من أي ذنب صغير أو كبير. يصليها المسلم ندماً على ما فعل وطلباً للمغفرة من الله تعالى.',
+        english: 'Salatul Tawbah is a legislated Sunnah prayer performed when repenting from any sin, whether major or minor. Muslims pray it in regret for their actions and seeking Allah\'s forgiveness[25][31].',
+        hindi: 'सलातुल तौबा एक मशरू सुन्नत नमाज़ है जो किसी भी छोटे या बड़े गुनाह से तौबा करते समय पढ़ी जाती है। मुसलमान इसे अपने कार्यों पर पछतावे और अल्लाह की माफी की तलब में पढ़ता है।',
+        bengali: 'সালাতুল তওবা একটি বৈধ সুন্নাত নামাজ যা যেকোনো ছোট বা বড় গুনাহ থেকে তওবা করার সময় পড়া হয়। মুসলিমরা নিজেদের কর্মের জন্য অনুশোচনা ও আল্লাহর ক্ষমা প্রার্থনায় এটি পড়ে।'
+    },
+    method: {
+        arabic: '1. الوضوء الكامل بعد ارتكاب الذنب\n2. النية للتوبة وصلاة ركعتين\n3. قراءة الفاتحة وسورة بخشوع\n4. التسليم من الصلاة\n5. الاستغفار والتوبة النصوح\n6. العزم على عدم العودة للذنب',
+        english: '1. Perform complete Wudu after committing the sin\n2. Make intention for repentance and pray 2 rakats[31]\n3. Recite Al-Fatiha and Surah with humility\n4. Complete prayer with Salam\n5. Seek forgiveness and sincere repentance[25]\n6. Resolve not to return to the sin',
+        hindi: '1. गुनाह करने के बाद पूरा वुज़ू करें\n2. तौबा की नीयत करके 2 रकात पढ़ें\n3. विनम्रता के साथ फ़ातिहा और सूरह पढ़ें\n4. सलाम के साथ नमाज़ पूरी करें\n5. इस्तिग़फ़ार और सच्ची तौबा करें\n6. गुनाह की तरफ़ वापस न जाने का इरादा करें',
+        bengali: '1. গুনাহ করার পর সম্পূর্ণ ওযু করুন\n2. তওবার নিয়ত করে ২ রাকাত পড়ুন\n3. বিনয়ের সাথে ফাতিহা ও সূরা পড়ুন\n4. সালামের সাথে নামাজ সম্পূর্ণ করুন\n5. ইস্তেগফার ও সত্যিকারের তওবা করুন\n6. গুনাহের দিকে ফিরে না যাওয়ার সংকল্প করুন'
+    },
+    duas: [
+        {
+            arabic: 'اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ وَارْحَمْنِي إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ',
+            transliteration: 'Allahumma inni zalamtu nafsi zulman kathiran wa la yaghfiru\'dh-dhunuba illa ant, faghfir li maghfiratan min \'indika warhamni innaka anta\'l-Ghafur ar-Rahim',
+            translation: {
+                english: 'O Allah, indeed I have wronged myself with great injustice. And no one can forgive sins except You. So forgive me with forgiveness from Your side and have mercy on me. You are indeed Oft-Forgiving, Most Merciful[25]',
+                hindi: 'हे अल्लाह! मैंने अपने नफ़्स पर बहुत ज़ुल्म किया है और तेरे सिवा कोई गुनाहों को माफ नहीं कर सकता। तो अपनी तरफ़ से मुझे माफ कर दे और मुझ पर रहम कर। तू बख़्शने वाला और रहम करने वाला है',
+                bengali: 'হে আল্লাহ! আমি নিজের ওপর বড় অন্যায় করেছি এবং তুমি ছাড়া কেউ গুনাহ মাফ করতে পারে না। তাই তোমার পক্ষ থেকে আমাকে ক্ষমা কর ও দয়া কর। তুমি অবশ্যই ক্ষমাশীল ও দয়ালু'
+            }
+        },
+        {
+            arabic: 'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ',
+            transliteration: 'Allahumma anta rabbi la ilaha illa ant, khalaqtani wa ana \'abduk, wa ana ala \'ahdika wa wa\'dika mastata\'t',
+            translation: {
+                english: 'O Allah, You are my Lord, there is no god but You. You created me and I am Your servant, and I am upon Your covenant and promise as much as I am able[25]',
+                hindi: 'हे अल्लाह! तू मेरा रब है, तेरे सिवा कोई माबूद नहीं। तूने मुझे पैदा किया है और मैं तेरा बंदा हूं, और मैं तेरे अहद और वादे पर हूं जितनी मेरी ताकत है',
+                bengali: 'হে আল্লাহ! তুমি আমার প্রভু, তুমি ছাড়া কোনো ইলাহ নেই। তুমি আমাকে সৃষ্টি করেছ এবং আমি তোমার বান্দা, আর আমি তোমার প্রতিশ্রুতি ও অঙ্গীকারের ওপর আছি যতটুকু সক্ষম'
+            }
+        }
+    ],
+    surahs: [
+        {
+            name: 'Al-Fatiha',
+            arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ * الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ * الرَّحْمَٰنِ الرَّحِيمِ * مَالِكِ يَوْمِ الدِّينِ * إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ * اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+            translation: {
+                english: 'In the name of Allah, Most Gracious, Most Merciful. Praise be to Allah, Lord of all the worlds...',
+                hindi: 'अल्लाह के नाम से जो दयावान और कृपाशील है। सारी प्रशंसा अल्लाह के लिए है जो सभी जगतों का पालनहार है...',
+                bengali: 'পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর যিনি সকল জগতের প্রতিপালক...'
+            }
+        }
+    ],
+    tasbih: [
+        {
+            arabic: 'أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ',
+            transliteration: 'Astaghfiru Allah alladhi la ilaha illa Huwa\'l-Hayy al-Qayyum wa atubu ilayh',
+            translation: {
+                english: 'I seek forgiveness from Allah besides whom there is no god, the Living, the Sustainer, and I repent to Him',
+                hindi: 'मैं अल्लाह से माफी मांगता हूं जिसके सिवा कोई माबूद नहीं, जो ज़िंदा और कायम रहने वाला है, और मैं उससे तौबा करता हूं',
+                bengali: 'আমি আল্লাহর কাছে ক্ষমা প্রার্থনা করি যিনি ছাড়া কোনো ইলাহ নেই, যিনি চিরঞ্জীব ও চিরস্থায়ী, এবং আমি তাঁর কাছে তওবা করি'
+            },
+            count: '100 times'
+        }
+    ],
+    benefits: {
+        arabic: ['محو جميع الذنوب', 'قبول التوبة', 'راحة الضمير', 'القرب من الله'],
+        english: ['Erasure of all sins[31]', 'Acceptance of repentance[25]', 'Peace of conscience', 'Closeness to Allah'],
+        hindi: ['सभी गुनाहों का मिटना', 'तौबा की स्वीकृति', 'अंतरात्मा की शांति', 'अल्लाह से निकटता'],
+        bengali: ['সমস্ত গুনাহ মিটে যাওয়া', 'তওবা কবুল', 'বিবেকের শান্তি', 'আল্লাহর নৈকট্য']
+    }
+},
+
+tasbih: {
+    title: {
+        arabic: 'صلاة التسبيح',
+        english: 'Salatul Tasbih',
+        hindi: 'तसबीह की नमाज़',
+        bengali: 'তাসবিহ নামাজ'
+    },
+    subtitle: {
+        arabic: 'صلاة التسبيح - أربع ركعات',
+        english: 'The Prayer of Glorification - 4 Rakat',
+        hindi: 'तस्बीह की नमाज़ - 4 रकात',
+        bengali: 'তাসবিহ নামাজ - ৪ রাকাত'
+    },
+    description: {
+        arabic: 'صلاة التسبيح أربع ركعات يُقرأ فيها تسبيح معين 300 مرة. وهي صلاة عظيمة الأجر تُكفر الذنوب وتجلب البركات، 75 تسبيحة في كل ركعة.',
+        english: 'Salatul Tasbih is a 4-rakat prayer with specific glorifications recited 300 times. It is a prayer of great reward that forgives sins and brings blessings, with 75 glorifications in each rakat[28][33][36].',
+        hindi: 'सलातुल तसबीह 4 रकात की नमाज़ है जिसमें विशेष तस्बीह 300 बार पढ़ी जाती है। यह महान पुण्य की नमाज़ है जो गुनाहों को माफ करती है और बरकत लाती है, हर रकात में 75 तस्बीह।',
+        bengali: 'সালাতুল তাসবিহ ৪ রাকাতের নামাজ যাতে নির্দিষ্ট তাসবিহ ৩০০ বার পড়া হয়। এটি মহান সওয়াবের নামাজ যা গুনাহ মাফ করে ও বরকত আনে, প্রতি রাকাতে ৭৫ তাসবিহ।'
+    },
+    method: {
+        arabic: '1. النية لصلاة التسبيح أربع ركعات\n2. قراءة التسبيح 15 مرة بعد الثناء\n3. قراءة التسبيح 10 مرات بعد القراءة\n4. قراءة التسبيح 10 مرات في الركوع\n5. قراءة التسبيح 10 مرات بعد الركوع\n6. قراءة التسبيح 10 مرات في كل سجدة\n7. قراءة التسبيح 10 مرات بين السجدتين',
+        english: '1. Make intention for 4 rakats of Tasbih prayer[28]\n2. Recite tasbih 15 times after opening supplication[36]\n3. Recite tasbih 10 times after Quran recitation[28]\n4. Recite tasbih 10 times in Ruku[36]\n5. Recite tasbih 10 times after Ruku[28]\n6. Recite tasbih 10 times in each Sajdah[36]\n7. Recite tasbih 10 times between two Sajdahs[28]',
+        hindi: '1. तसबीह की 4 रकात नमाज़ की नीयत करें\n2. सना के बाद 15 बार तस्बीह पढ़ें\n3. क़ुरआन पढ़ने के बाद 10 बार तस्बीह\n4. रुकू में 10 बार तस्बीह पढ़ें\n5. रुकू के बाद 10 बार तस्बीह\n6. हर सजदे में 10 बार तस्बीह\n7. दो सजदों के बीच 10 बार तस्बीह',
+        bengali: '1. তাসবিহ নামাজের ৪ রাকাতের নিয়ত করুন\n2. সানার পর ১৫ বার তাসবিহ পড়ুন\n3. কুরআন পড়ার পর ১০ বার তাসবিহ\n4. রুকুতে ১০ বার তাসবিহ পড়ুন\n5. রুকুর পর ১০ বার তাসবিহ\n6. প্রতি সিজদায় ১০ বার তাসবিহ\n7. দুই সিজদার মাঝে ১০ বার তাসবিহ'
+    },
+    duas: [
+        {
+            arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
+            transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
+            translation: {
+                english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest[28][36]',
+                hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
+                bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
+            }
+        }
+    ],
+    surahs: [
+        {
+            name: 'Any Surah after Al-Fatiha',
+            arabic: 'يُستحب قراءة أي سورة بعد الفاتحة في كل ركعة',
+            translation: {
+                english: 'It is recommended to recite any Surah after Al-Fatiha in each rakat[33]',
+                hindi: 'हर रकात में अल-फ़ातिहा के बाद कोई भी सूरह पढ़ना मुस्तहब है',
+                bengali: 'প্রতি রাকাতে আল-ফাতিহার পর যেকোনো সূরা পড়া মুস্তাহাব'
+            }
+        }
+    ],
+    tasbih: [
+        {
+            arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
+            transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
+            translation: {
+                english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest',
+                hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
+                bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
+            },
+            count: '300 times total'
+        }
+    ],
+    benefits: {
+        arabic: ['مغفرة جميع الذنوب السابقة واللاحقة', 'الأجر العظيم', 'محو السيئات', 'رفع الدرجات'],
+        english: ['Forgiveness of all past and future sins[33][36]', 'Great reward[28]', 'Erasure of bad deeds', 'Elevation of ranks'],
+        hindi: ['पिछले और भविष्य के सभी गुनाहों की माफी', 'महान पुण्य', 'बुराइयों का मिटना', 'दर्जों की बुलंदी'],
+        bengali: ['অতীত ও ভবিষ্যতের সব গুনাহের ক্ষমা', 'মহান সওয়াব', 'মন্দ কাজ মিটে যাওয়া', 'মর্যাদা বৃদ্ধি']
+    }
+},
+
+duha: {
+    title: {
+        arabic: 'صلاة الضحى',
+        english: 'Duha Prayer',
+        hindi: 'चाश्त की नमाज़',
+        bengali: 'চাশত নামাজ'
+    },
+    subtitle: {
+        arabic: 'صلاة الضحى - 2 إلى 8 ركعات',
+        english: 'The Forenoon Prayer - 2 to 8 Rakat',
+        hindi: 'दोपहर पूर्व की नमाज़ - 2 से 8 रकात',
+        bengali: 'পূর্বাহ্নের নামাজ - ২ থেকে ৮ রাকাত'
+    },
+    description: {
+        arabic: 'صلاة الضحى سنة مؤكدة تُصلى في الضحى بعد ارتفاع الشمس وقبل الزوال. تُصلى من 2 إلى 8 ركعات، وهي صلاة الأوابين التائبين إلى الله.',
+        english: 'Duha prayer is a confirmed Sunnah prayed in the forenoon after sunrise and before noon. It ranges from 2 to 8 rakats, and it is the prayer of the Awabeen (those who turn to Allah)[29][32].',
+        hindi: 'दुहा की नमाज़ एक सुन्नत-ए-मुअक्किदा है जो सूर्योदय के बाद और दोपहर से पहले पढ़ी जाती है। यह 2 से 8 रकात तक होती है, और यह अव्वाबीन (अल्लाह की तरफ़ रुजू करने वालों) की नमाज़ है।',
+        bengali: 'দুহার নামাজ একটি সুন্নাতে মুআক্কাদা যা সূর্যোদয়ের পর ও দুপুরের আগে পড়া হয়। এটি ২ থেকে ৮ রাকাত পর্যন্ত হয়, এবং এটি আওয়াবীনদের (আল্লাহর দিকে প্রত্যাবর্তনকারী) নামাজ।'
+    },
+    method: {
+        arabic: '1. النية لصلاة الضحى\n2. صلاة ركعتين ركعتين حتى 8 ركعات\n3. القراءة سراً في جميع الركعات\n4. الأفضل 4 ركعات أو 6 ركعات\n5. الدعاء بعد الصلاة\n6. الوقت من الإشراق حتى قبل الزوال',
+        english: '1. Make intention for Duha prayer[32]\n2. Pray 2 rakats at a time up to 8 total[29]\n3. Recite silently in all rakats\n4. Preferably 4 or 6 rakats[32]\n5. Make dua after prayer\n6. Time: from sunrise until before noon[29]',
+        hindi: '1. दुहा की नमाज़ की नीयत करें\n2. 2-2 रकात करके कुल 8 तक पढ़ें\n3. सभी रकातों में चुपचाप पढ़ें\n4. बेहतर यह है कि 4 या 6 रकात पढ़ें\n5. नमाज़ के बाद दुआ करें\n6. समय: सूर्योदय से दोपहर से पहले तक',
+        bengali: '1. দুহা নামাজের নিয়ত করুন\n2. ২-২ রাকাত করে মোট ৮ পর্যন্ত পড়ুন\n3. সব রাকাতে নিঃশব্দে পড়ুন\n4. উত্তম হল ৪ বা ৬ রাকাত পড়া\n5. নামাজের পর দোয়া করুন\n6. সময়: সূর্যোদয় থেকে দুপুরের আগে পর্যন্ত'
+    },
+    duas: [
+        {
+            arabic: 'اللَّهُمَّ إِنَّ الضُّحَى ضُحَاؤُكَ وَالْبَهَاءَ بَهَاؤُكَ وَالْجَمَالَ جَمَالُكَ وَالْقُوَّةَ قُوَّتُكَ وَالْقُدْرَةَ قُدْرَتُكَ',
+            transliteration: 'Allahumma inna\'d-duha duha\'uka wal-baha\'a baha\'uka wal-jamala jamaluka wal-quwwata quwwatuka wal-qudrata qudratuk',
+            translation: {
+                english: 'O Allah, indeed the forenoon is Your forenoon, the brightness is Your brightness, the beauty is Your beauty, the strength is Your strength, and the power is Your power',
+                hindi: 'हे अल्लाह! निःसंदेह चाश्त तेरा चाश्त है, रौनक़ तेरी रौनक़ है, जमाल तेरा जमाल है, ताकत तेरी ताकत है, और कुदरत तेरी कुदरत है',
+                bengali: 'হে আল্লাহ! নিশ্চয় পূর্বাহ্ন তোমার পূর্বাহ্ন, উজ্জ্বলতা তোমার উজ্জ্বলতা, সৌন্দর্য তোমার সৌন্দর্য, শক্তি তোমার শক্তি, আর ক্ষমতা তোমার ক্ষমতা'
+            }
+        }
+    ],
+    surahs: [
+        {
+            name: 'Ad-Duha',
+            arabic: 'وَالضُّحَىٰ * وَاللَّيْلِ إِذَا سَجَىٰ * مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ * وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ',
+            translation: {
+                english: 'By the morning brightness, And by the night when it covers with darkness, Your Lord has not taken leave of you, nor has He detested you. And the Hereafter is better for you than the first [life][29]',
+                hindi: 'चाश्त की कसम, और रात की कसम जब वह छा जाए, तुम्हारे रब ने तुम्हें नहीं छोड़ा है और न ही नाराज़ हुआ है। और आखिरत तुम्हारे लिए पहले से बेहतर है',
+                bengali: 'পূর্বাহ্নের শপথ, আর রাতের শপথ যখন তা স্থির হয়, তোমার প্রভু তোমাকে পরিত্যাগ করেননি এবং অসন্তুষ্টও হননি। আর আখেরাত তোমার জন্য পূর্বের চেয়ে উত্তম'
+            }
+        }
+    ],
+    tasbih: [
+        {
+            arabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',
+            transliteration: 'Subhan Allah wa bihamdih',
+            translation: {
+                english: 'Glory be to Allah and with His praise',
+                hindi: 'अल्लाह पाक है और उसकी तारीफ़ के साथ',
+                bengali: 'আল্লাহ পবিত্র ও তাঁর প্রশংসা সহকারে'
+            },
+            count: '100 times'
+        }
+    ],
+    benefits: {
+        arabic: ['أجر حج وعمرة تامة', 'كفاف اليوم كله', 'صدقة عن كل مفصل', 'حماية من الفقر'],
+        english: ['Reward of complete Hajj and Umrah[29]', 'Sufficiency for the entire day[32]', 'Charity for every joint[29]', 'Protection from poverty'],
+        hindi: ['पूर्ण हज और उमरे का पुण्य', 'पूरे दिन की काफी', 'हर जोड़ के लिए सदका', 'गरीबी से सुरक्षा'],
+        bengali: ['পূর্ণ হজ ও উমরার সওয়াব', 'সারাদিনের জন্য যথেষ্ট', 'প্রতি জয়েন্টের জন্য সদকা', 'দারিদ্র্য থেকে সুরক্ষা']
+    }
+},
+
+awabeen: {
+    title: {
+        arabic: 'صلاة الأوابين',
+        english: 'Awabeen Prayer',
+        hindi: 'अव्वाबीन की नमाज़',
+        bengali: 'আওয়াবীন নামাজ'
+    },
+    subtitle: {
+        arabic: 'صلاة الأوابين - 6 ركعات',
+        english: 'Prayer of the Penitent - 6 Rakat',
+        hindi: 'तौबा करने वालों की नमाज़ - 6 रकात',
+        bengali: 'অনুতাপকারীদের নামাজ - ৬ রাকাত'
+    },
+    description: {
+        arabic: 'صلاة الأوابين هي النوافل التي تُصلى بين المغرب والعشاء، وقيل هي صلاة الضحى. الأوابون هم التائبون الراجعون إلى الله تعالى.',
+        english: 'Awabeen prayer refers to voluntary prayers performed between Maghrib and Isha, though some scholars say it refers to Duha prayer. Awabeen means those who repent and return to Allah[26][35].',
+        hindi: 'अव्वाबीन की नमाज़ मगरिब और इशा के बीच पढ़ी जाने वाली नफ़्ल नमाज़ें हैं, हालांकि कुछ उलेमा कहते हैं कि यह दुहा की नमाज़ है। अव्वाबीन का मतलब है तौबा करने वाले और अल्लाह की तरफ़ लौटने वाले।',
+        bengali: 'আওয়াবীন নামাজ মাগরিব ও এশার মধ্যে পড়া নফল নামাজ, যদিও কিছু আলেম বলেন এটি দুহার নামাজ। আওয়াবীন মানে তওবাকারী ও আল্লাহর দিকে প্রত্যাবর্তনকারী।'
+    },
+    method: {
+        arabic: '1. النية لصلاة الأوابين بين المغرب والعشاء\n2. صلاة 6 ركعات (2+2+2)\n3. القراءة سراً في جميع الركعات\n4. يمكن زيادتها إلى 20 ركعة\n5. الدعاء والاستغفار بعد الصلاة\n6. الوقت من بعد سنة المغرب إلى العشاء',
+        english: '1. Make intention for Awabeen prayer between Maghrib and Isha[26]\n2. Pray 6 rakats (2+2+2)\n3. Recite silently in all rakats\n4. Can be increased up to 20 rakats[26]\n5. Make dua and seek forgiveness after prayer[35]\n6. Time: after Maghrib Sunnah until Isha',
+        hindi: '1. मगरिब और इशा के बीच अव्वाबीन की नीयत करें\n2. 6 रकात (2+2+2) पढ़ें\n3. सभी रकातों में चुपचाप पढ़ें\n4. 20 रकात तक बढ़ाया जा सकता है\n5. नमाज़ के बाद दुआ और इस्तिग़फ़ार करें\n6. समय: मगरिब की सुन्नत के बाद से इशा तक',
+        bengali: '1. মাগরিব ও এশার মধ্যে আওয়াবীনের নিয়ত করুন\n2. ৬ রাকাত (২+২+২) পড়ুন\n3. সব রাকাতে নিঃশব্দে পড়ুন\n4. ২০ রাকাত পর্যন্ত বাড়ানো যায়\n5. নামাজের পর দোয়া ও ইস্তেগফার করুন\n6. সময়: মাগরিবের সুন্নাতের পর থেকে এশা পর্যন্ত'
+    },
+    duas: [
+        {
+            arabic: 'اللَّهُمَّ اغْفِرْ لِي ذَنْبِي وَوَسِّعْ لِي فِي دَارِي وَبَارِكْ لِي فِي رِزْقِي',
+            transliteration: 'Allahumma ghfir li dhanbi wa wassi\' li fi dari wa barik li fi rizqi',
+            translation: {
+                english: 'O Allah, forgive my sins, expand my home for me, and bless my sustenance',
+                hindi: 'हे अल्लाह! मेरे गुनाहों को माफ कर दे, मेरे घर में कुशादगी दे और मेरे रिज़्क में बरकत दे',
+                bengali: 'হে আল্লাহ! আমার গুনাহ মাফ কর, আমার ঘরে প্রশস্ততা দাও এবং আমার রিজিকে বরকত দাও'
+            }
+        }
+    ],
+    surahs: [
+        {
+            name: 'Al-Fatiha and short Surahs',
+            arabic: 'يُستحب قراءة الفاتحة والسور القصيرة',
+            translation: {
+                english: 'It is recommended to recite Al-Fatiha and short Surahs[26]',
+                hindi: 'अल-फ़ातिहा और छोटी सूरतें पढ़ना मुस्तहब है',
+                bengali: 'আল-ফাতিহা ও ছোট সূরাগুলো পড়া মুস্তাহাব'
+            }
+        }
+    ],
+    tasbih: [
+        {
+            arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
+            transliteration: 'Subhan Allah wal-hamdu lillah wa la ilaha illa Allah wa Allahu Akbar',
+            translation: {
+                english: 'Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is Greatest',
+                hindi: 'अल्लाह पवित्र है, अल्लाह की प्रशंसा है, अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे महान है',
+                bengali: 'আল্লাহ পবিত্র, আল্লাহর প্রশংসা, আল্লাহ ছাড়া কোনো ইলাহ নেই, আর আল্লাহ সর্বশ্রেষ্ঠ'
+            },
+            count: 'After prayer'
+        }
+    ],
+    benefits: {
+        arabic: ['التوبة والرجوع إلى الله', 'تكفير السيئات', 'رفع الدرجات', 'البركة في المساء'],
+        english: ['Repentance and return to Allah[35]', 'Expiation of sins', 'Elevation of ranks', 'Blessings in the evening'],
+        hindi: ['तौबा और अल्लाह की तरफ़ रुजू', 'गुनाहों का कफ़्फ़ारा', 'दर्जों की बुलंदी', 'शाम में बरकत'],
+        bengali: ['তওবা ও আল্লাহর দিকে প্রত্যাবর্তন', 'গুনাহের কাফফারা', 'মর্যাদা বৃদ্ধি', 'সন্ধ্যায় বরকত']
+    }
+},
+
+ishraq: {
+    title: {
+        arabic: 'صلاة الإشراق',
+        english: 'Ishraq Prayer',
+        hindi: 'इश्राक़ की नमाज़',
+        bengali: 'ইশরাক নামাজ'
+    },
+    subtitle: {
+        arabic: 'صلاة الإشراق - ركعتان إلى 4',
+        english: 'The Sunrise Prayer - 2 to 4 Rakat',
+        hindi: 'सूर्योदय की नमाज़ - 2 से 4 रकात',
+        bengali: 'সূর্যোদয় নামাজ - ২ থেকে ৪ রাকাত'
+    },
+    description: {
+        arabic: 'صلاة الإشراق نافلة تُصلى بعد شروق الشمس بـ 12-15 دقيقة. لها أجر عظيم يعادل حج وعمرة تامة تامة. هي من أفضل النوافل.',
+        english: 'Ishraq prayer is a voluntary prayer performed 12-15 minutes after sunrise. It has great reward equivalent to a complete Hajj and Umrah. It is among the best voluntary prayers[27].',
+        hindi: 'इश्राक़ की नमाज़ एक नफ़्ल नमाज़ है जो सूर्योदय के 12-15 मिनट बाद पढ़ी जाती है। इसका महान पुण्य है जो पूरे हज और उमरे के बराबर है। यह सबसे बेहतरीन नफ़्ल नमाज़ों में से है।',
+        bengali: 'ইশরাক নামাজ একটি নফল নামাজ যা সূর্যোদয়ের ১২-১৫ মিনিট পর পড়া হয়। এর মহান সওয়াব পূর্ণ হজ ও উমরার সমান। এটি সর্বোত্তম নফল নামাজগুলোর অন্যতম।'
+    },
+    method: {
+        arabic: '1. الجلوس في المصلى بعد صلاة الفجر\n2. الذكر والتسبيح حتى الشروق\n3. الانتظار 12-15 دقيقة بعد الشروق\n4. النية لصلاة الإشراق\n5. صلاة ركعتين أو 4 ركعات\n6. الدعاء بعد الصلاة',
+        english: '1. Remain seated in prayer place after Fajr prayer[27]\n2. Do dhikr and tasbih until sunrise\n3. Wait 12-15 minutes after sunrise[27]\n4. Make intention for Ishraq prayer\n5. Pray 2 or 4 rakats[27]\n6. Make dua after prayer',
+        hindi: '1. फज्र के बाद नमाज़ की जगह बैठे रहें\n2. सूर्योदय तक ज़िक्र और तस्बीह करें\n3. सूर्योदय के 12-15 मिनट बाद प्रतीक्षा करें\n4. इश्राक़ की नमाज़ की नीयत करें\n5. 2 या 4 रकात पढ़ें\n6. नमाज़ के बाद दुआ करें',
+        bengali: '1. ফজরের পর নামাজের জায়গায় বসে থাকুন\n2. সূর্যোদয় পর্যন্ত জিকির ও তাসবিহ করুন\n3. সূর্যোদয়ের ১২-১৫ মিনিট পর অপেক্ষা করুন\n4. ইশরাক নামাজের নিয়ত করুন\n5. ২ বা ৪ রাকাত পড়ুন\n6. নামাজের পর দোয়া করুন'
+    },
+    duas: [
+        {
+            arabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
+            transliteration: 'Allahumma a\'inni ala dhikrika wa shukrika wa husni ibadatik',
+            translation: {
+                english: 'O Allah, help me to remember You, thank You, and worship You in the best manner',
+                hindi: 'हे अल्लाह! मुझे अपना ज़िक्र, शुक्र और बेहतरीन इबादत करने में मदद कर',
+                bengali: 'হে আল্লাহ! আমাকে তোমার স্মরণ, কৃতজ্ঞতা ও উত্তম ইবাদতে সাহায্য কর'
+            }
+        }
+    ],
+    surahs: [
+        {
+            name: 'Al-Fatiha and Ash-Shams',
+            arabic: 'الفاتحة وسورة الشمس مستحبة',
+            translation: {
+                english: 'Al-Fatiha and Surah Ash-Shams are recommended[27]',
+                hindi: 'अल-फ़ातिहा और सूरह अश-शम्स मुस्तहब है',
+                bengali: 'আল-ফাতিহা ও সূরা আশ-শামস মুস্তাহাব'
+            }
+        }
+    ],
+    tasbih: [
+        {
+            arabic: 'لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ',
+            transliteration: 'La ilaha illa Allah wahdahu la sharika lahu lahul mulku wa lahul hamdu wa huwa ala kulli shayin qadir',
+            translation: {
+                english: 'There is no god but Allah, alone without partner. His is the dominion and His is the praise, and He has power over all things',
+                hindi: 'अल्लाह के सिवा कोई माबूद नहीं, वह अकेला है, उसका कोई साझीदार नहीं। उसी का राज्य है और उसी के लिए प्रशंसा है, और वह हर चीज़ पर सक्षम है',
+                bengali: 'আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একক, তার কোনো শরীক নেই। রাজত্व তারই এবং প্রশংসা তারই, আর তিনি সবকিছুর ওপর ক্ষমতাবান'
+            },
+            count: '100 times'
+        }
+    ],
+    benefits: {
+        arabic: ['أجر حج وعمرة تامة تامة', 'مغفرة الذنوب الصغيرة', 'غنيمة عظيمة', 'بركة في اليوم'],
+        english: ['Reward of complete Hajj and Umrah[27]', 'Forgiveness of minor sins[27]', 'Great spiritual gain[27]', 'Blessings throughout the day'],
+        hindi: ['पूर्ण हज और उमरे का पुण्य', 'छोटे गुनाहों की माफी', 'महान आध्यात्मिक लाभ', 'पूरे दिन बरकत'],
+        bengali: ['পূর্ণ হজ ও উমরার সওয়াব', 'ছোট গুনাহের ক্ষমা', 'মহান আধ্যাত্মিক লাভ', 'সারাদিন বরকত']
+    }
+}
+
+
+        // Add more prayers following the same pattern...
+        // You can add all other prayers like dhuhr, asr, maghrib, isha, eid prayers, etc.
+    };
+
+    // Populate salah detail page
+    function populateSalahDetail(data) {
+        document.getElementById('salahTitle').textContent = data.title[currentLanguage];
+        document.getElementById('salahTitle').setAttribute('data-prayer', Object.keys(salahDataTemplate).find(key => salahDataTemplate[key] === data));
+        document.getElementById('salahSubtitle').textContent = data.subtitle[currentLanguage];
+
+        updateContentLanguage(data, currentLanguage);
+    }
+
+    // Update content based on language
+    function updateContentLanguage(data, lang) {
+        // Update description
+        if (data.description && data.description[lang]) {
+            document.getElementById('prayerDescription').textContent = data.description[lang];
+        }
+
+        // Update method
+        if (data.method && data.method[lang]) {
+            document.getElementById('prayerMethod').innerHTML = data.method[lang].split('\n').map(step =>
+                `<div class="method-step">${step}</div>`
+            ).join('');
+        }
+
+        // Update duas
+        if (data.duas) {
+            document.getElementById('prayerDuas').innerHTML = data.duas.map(dua => `
+                <div class="dua-item">
+                    <div class="dua-arabic">${dua.arabic}</div>
+                    <div class="dua-transliteration">${dua.transliteration}</div>
+                    <div class="dua-translation">${dua.translation[lang] || dua.translation.english}</div>
+                </div>
+            `).join('');
+        }
+
+        // Update surahs
+        if (data.surahs) {
+            document.getElementById('prayerSurahs').innerHTML = data.surahs.map(surah => `
+                <div class="surah-item">
+                    <h4>${surah.name}</h4>
+                    <div class="surah-arabic">${surah.arabic}</div>
+                    <div class="surah-translation">${surah.translation[lang] || surah.translation.english}</div>
+                </div>
+            `).join('');
+        }
+
+        // Update tasbih
+        if (data.tasbih) {
+            document.getElementById('prayerTasbih').innerHTML = data.tasbih.map(tasbih => `
+                <div class="tasbih-item">
+                    <div class="tasbih-arabic">${tasbih.arabic}</div>
+                    <div class="tasbih-transliteration">${tasbih.transliteration}</div>
+                    <div class="tasbih-translation">${tasbih.translation[lang] || tasbih.translation.english}</div>
+                    <div class="tasbih-count">${tasbih.count}</div>
+                </div>
+            `).join('');
+        }
+
+        // Update benefits
+        if (data.benefits && data.benefits[lang]) {
+            document.getElementById('prayerBenefits').innerHTML = data.benefits[lang].map(benefit => `
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>${benefit}</span>
+                </div>
+            `).join('');
+        }
+    }
+});
